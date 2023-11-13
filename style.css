@@ -7,11 +7,21 @@ body {
   width: min(900px, 100% - 3rem);
   margin-inline: auto;
 }
-table, caption {
+
+table {
+  border-collapse: collapse;
   background: #323232;
   width: 100%;
 }
 
 th {
   font-weight: bold;
+  padding: 1rem;
 }
+
+caption,
+th, 
+td {
+  padding: 1rem;
+}
+
