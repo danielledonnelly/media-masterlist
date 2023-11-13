@@ -7,7 +7,8 @@ body {
   width: min(900px, 100% - 3rem);
   margin-inline: auto;
 }
-table {
+table, caption {
+  background: #323232;
   width: 100%;
 }
 
