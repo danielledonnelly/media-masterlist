@@ -6,6 +6,9 @@ body
 header
     {
       padding: 1%;
+      color: aliceblue;
+      font-size: large;
+      font-weight: 200;
     }
 
 table
@@ -13,3 +16,4 @@ table
       border: none !important;
       border-radius: 5px !important;
     }
+
