@@ -12,9 +12,7 @@ header
       font-weight:500
     }
 
-table
-    {
-      border: none !important;
-      border-radius: 5px !important;
-    }
+div
+    {margin: 10px;
 
+}
