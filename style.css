@@ -1,6 +1,6 @@
 body
     {
-    	background:#313e4b !important;
+    	background:#2c343b !important;
     }
 
 header
@@ -8,11 +8,25 @@ header
       text-align: center;
       padding: 1%;
       color: aliceblue;
-      font-size: larger;
+      font-size: x-large;
       font-weight:500
     }
 
 div
     {
-      border-radius: 10px;
+    width: 100%;
+    }
+
+img
+    {
+     padding-right: 1%;
+    }
+
+table 
+    {
+      width: ;
+      border-collapse: separate;
+      border-radius: 10px !important;
+      border-spacing: 50px !important;
+      padding: 0 50px 0 50px !important;
     }
