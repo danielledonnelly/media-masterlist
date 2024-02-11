@@ -10,6 +10,7 @@
     <title>Media Masterlist</title>
   </head>
 <body>
+  <script src="script.js"></script>
   <header ><img width="600" class = "image"
     src ="images\media-masterlist.png" id="logo" alt="Media Masterlist - Edit the table below to create a list of your favourite games!"/>
 <!--    <button type="button" class="btn btn-light">Home</button>
@@ -17,18 +18,18 @@
     <button type="button" class="btn btn-light">Share</button> -->
   </header>
   <div class="tbl-container bdr">
-  <table class="table table-striped table-dark">
+  <table id="game-table" class="table table-striped table-dark">
     <thead>
-      <tr contenteditable>
+      <tr>
         <th scope="col">Title</th>
         <th scope="col">Score</th>
         <th scope="col">Platform</th>
         <th scope="col">Genre</th>
         <th scope="col">Status</th>
-        <th scope="col" >Comments</th>
+        <th scope="col">Comments</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody id="game-table-body">
       <tr contenteditable>
         <th scope="row" contenteditable>Game 1</th>
         <td>10</td>
@@ -109,6 +110,7 @@
         <td></td>
         <td></td>
       </tr>
+      <!-- <div id="my-test-div">Hellooooo</div> -->
     </tbody>
   </table>
   </div>
