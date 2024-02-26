@@ -32,7 +32,7 @@
     </thead>
     <tbody id="game-table-body">
       <tr contenteditable>
-        <th scope="row" contenteditable>Game 1</th>
+        <th scope="row" contenteditable>
         <td><select>
           <option></option>
           <option>1</option>
@@ -46,26 +46,19 @@
           <option>9</option>
           <option>10</option>
         </select></td>
-        <td>PC</td>
-        <td>Adventure</td>
+        <!--I found a way to make a placeholder field, but it doesn't match the styling-->
+        <td><input placeholder="PC"></td>
+        <td></td>
         <td><select>
           <option></option>
           <option>Want to Play</option>
           <option>Currently Playing</option>
           <option>Completed</option>
           <option>Dropped</option></td>
-        <td>Nice</td>
-      </tr>
-      <tr contenteditable>
-        <th scope="row">Game 2</th>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
         <td></td>
       </tr>
       <tr contenteditable>
-        <th scope="row">Game 3</th>
+        <th scope="row"></th>
         <td></td>
         <td></td>
         <td></td>
@@ -73,7 +66,7 @@
         <td></td>
       </tr>
       <tr contenteditable>
-        <th scope="row">Game 4</th>
+        <th scope="row"></th>
         <td></td>
         <td></td>
         <td></td>
@@ -81,7 +74,7 @@
         <td></td>
       </tr>
       <tr contenteditable>
-        <th scope="row">Game 5</th>
+        <th scope="row"></th>
         <td></td>
         <td></td>
         <td></td>
@@ -89,7 +82,7 @@
         <td></td>
       </tr>
       <tr contenteditable>
-        <th scope="row">Game 6</th>
+        <th scope="row"></th>
         <td></td>
         <td></td>
         <td></td>
@@ -97,7 +90,7 @@
         <td></td>
       </tr>
       <tr contenteditable>
-        <th scope="row">Game 7</th>
+        <th scope="row"></th>
         <td></td>
         <td></td>
         <td></td>
@@ -105,7 +98,7 @@
         <td></td>
       </tr>
       <tr contenteditable>
-        <th scope="row">Game 8</th>
+        <th scope="row"></th>
         <td></td>
         <td></td>
         <td></td>
@@ -113,7 +106,7 @@
         <td></td>
       </tr>
       <tr contenteditable>
-        <th scope="row">Game 9</th>
+        <th scope="row"></th>
         <td></td>
         <td></td>
         <td></td>
@@ -121,7 +114,15 @@
         <td></td>
       </tr>
       <tr contenteditable>
-        <th scope="row">Game 10</th>
+        <th scope="row"></th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr contenteditable>
+        <th scope="row"></th>
         <td></td>
         <td></td>
         <td></td>
@@ -135,5 +136,24 @@
   </table>
   </div>
   <button id="button1">Clear</button>
-  </body>
+  <!-- I tried for ages to make a button that would clear the rows in Javascript, but couldn't do it. 
+  ChatGPT ended up writing this solution for me, but I don't understand it.-->
+  <script>
+    document.getElementById('button1').addEventListener('click', function() {
+        // Clear text content of cells in the tbody
+        var table = document.getElementById('game-table');
+        var tbody = table.getElementsByTagName('tbody')[0];
+        var rows = tbody.getElementsByTagName('tr');
+
+        for (var i = 0; i < rows.length; i++) {
+            var cells = rows[i].cells;
+
+            for (var j = 0; j < cells.length; j++) {
+                cells[j].textContent = '';
+            }
+        }
+    });
+</script>
   </html>
+
+ 

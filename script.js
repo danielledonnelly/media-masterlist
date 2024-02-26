@@ -33,10 +33,11 @@ $("#table_of_items tr").remove();
 /*this code is supposed to serve a similar function, but I don't know how to call it 
 how woulc i attach it to a button?*/
 
-document.getElementById('tbody').innerHTML = '';
 
 const button1 = document.getElementById("button1"):
 
-button1.addEventListener("click", function() {
-  $('#table > tbody > tr').remove();
-})
+document.getElementById('button1').addEventListener('click', function()) {
+  // Clear all rows from the table
+  var table = document.getElementById('game-table');
+  while (table.rows.length > 0) {
+      table.deleteRow(0);}}
