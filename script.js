@@ -26,3 +26,17 @@
   }
 
 })(window, document);
+
+/*this code is supposed to empty the table, but I don't know how to call it */
+$("#table_of_items tr").remove(); 
+
+/*this code is supposed to serve a similar function, but I don't know how to call it 
+how woulc i attach it to a button?*/
+
+document.getElementById('tbody').innerHTML = '';
+
+const button1 = document.getElementById("button1"):
+
+button1.addEventListener("click", function() {
+  document.getElementById('tbody').innerHTML = '';
+}
