@@ -38,5 +38,5 @@ document.getElementById('tbody').innerHTML = '';
 const button1 = document.getElementById("button1"):
 
 button1.addEventListener("click", function() {
-  document.getElementById('tbody').innerHTML = '';
-}
+  $('#table > tbody > tr').remove();
+})
