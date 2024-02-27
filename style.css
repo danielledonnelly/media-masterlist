@@ -8,6 +8,7 @@ header {
       color: aliceblue;
       font-size:50%;
       font-weight:500;
+      display:flex;
     }
 
 div {
