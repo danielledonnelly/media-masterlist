@@ -10,150 +10,153 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Media Masterlist</title>
   </head>
-<body>
-  <script src="script.js"></script>
-  <header ><img width="600" class = "image"
-    src ="images\media-masterlist.png" id="logo" alt="Media Masterlist - Edit the table below to create a list of your favourite games!"/>
-<!--    <button type="button" class="btn btn-light">Home</button>
-    <button type="button" class="btn btn-light">About</button>
-    <button type="button" class="btn btn-light">Share</button> -->
-  </header>
-  <div class="tbl-container bdr">
-  <table id="game-table" class="table table-striped table-dark">
-    <thead>
-      <tr>
-        <th scope="col">Title</th>
-        <th scope="col">Score</th>
-        <th scope="col">Platform</th>
-        <th scope="col">Genre</th>
-        <th scope="col">Status</th>
-        <th scope="col">Comments</th>
-      </tr>
-    </thead>
-    <tbody id="game-table-body">
-      <tr contenteditable>
-        <th scope="row" contenteditable>
-        <td><select>
-          <option></option>
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-          <option>6</option>
-          <option>7</option>
-          <option>8</option>
-          <option>9</option>
-          <option>10</option>
-        </select></td>
-        <!--I found a way to make a placeholder field, but it doesn't match the styling-->
-        <td><input placeholder="PC"></td>
-        <td></td>
-        <td><select>
-          <option></option>
-          <option>Want to Play</option>
-          <option>Currently Playing</option>
-          <option>Completed</option>
-          <option>Dropped</option></td>
-        <td></td>
-      </tr>
-      <tr contenteditable>
-        <th scope="row"></th>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr contenteditable>
-        <th scope="row"></th>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr contenteditable>
-        <th scope="row"></th>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr contenteditable>
-        <th scope="row"></th>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr contenteditable>
-        <th scope="row"></th>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr contenteditable>
-        <th scope="row"></th>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr contenteditable>
-        <th scope="row"></th>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr contenteditable>
-        <th scope="row"></th>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr contenteditable>
-        <th scope="row"></th>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
+  <body>
+    <script src="script.js"></script>
+    <header ><img width="600" class = "image"
+      src ="images\media-masterlist.png" id="logo" alt="Media Masterlist - Edit the table below to create a list of your favourite games!"/>
+      <!-- <button type="button" class="btn btn-light">Home</button>
+      <button type="button" class="btn btn-light">About</button>
+      <button type="button" class="btn btn-light">Share</button> -->
+    </header>
+    <div class="tbl-container bdr">
+    <table id="game-table" class="table table-striped table-dark">
+      <thead>
+        <tr>
+          <th scope="col">Title</th>
+          <th scope="col">Score</th>
+          <th scope="col">Platform</th>
+          <th scope="col">Genre</th>
+          <th scope="col">Status</th>
+          <th scope="col">Comments</th>
+        </tr>
+      </thead>
+      <tbody id="game-table-body">
+        <tr contenteditable>
+          <th scope="row" contenteditable>
+          <td>
+            <!-- <select>
+            <option></option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+          </select> -->
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Change this text
+            </button>
+            <div id="score-dropdown" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <button class="dropdown-item" id="score1">1</button>
+              <button class="dropdown-item" id="score2">2</button>
+              <button class="dropdown-item" id="score3">3</button>
+            </div>
+          </div>
+        </td>
+          <!--I found a way to make a placeholder field, but it doesn't match the styling-->
+          <td>
+            <!-- <input placeholder="PC"> -->
+
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+          </td>
+          <td></td>
+          <td><select>
+            <option></option>
+            <option>Want to Play</option>
+            <option>Currently Playing</option>
+            <option>Completed</option>
+            <option>Dropped</option></td>
+          <td></td>
+        </tr>
+        <tr contenteditable>
+          <th scope="row"></th>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr contenteditable>
+          <th scope="row"></th>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr contenteditable>
+          <th scope="row"></th>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr contenteditable>
+          <th scope="row"></th>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr contenteditable>
+          <th scope="row"></th>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr contenteditable>
+          <th scope="row"></th>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr contenteditable>
+          <th scope="row"></th>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr contenteditable>
+          <th scope="row"></th>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr contenteditable>
+          <th scope="row"></th>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        
+      </tbody>
       
-      <!-- <div id="my-test-div">Hellooooo</div> -->
-    </tbody>
-    
-  </table>
-  </div>
-  <button class="btn-light" id="button1">Clear</button>
-  <!-- I tried for ages to make a button that would clear the rows in Javascript, but couldn't do it. 
-  ChatGPT ended up writing this solution for me, but I don't understand it.-->
-  <script>
-    document.getElementById('button1').addEventListener('click', function() {
-        // Clear text content of cells in the tbody
-        var table = document.getElementById('game-table');
-        var tbody = table.getElementsByTagName('tbody')[0];
-        var rows = tbody.getElementsByTagName('tr');
+    </table>
+    <!-- <div id="my-test-div">Hellooooo</div> -->
+    </div>
+    <button class="btn-light" id="button1">Clear</button>
 
-        for (var i = 0; i < rows.length; i++) {
-            var cells = rows[i].cells;
-
-            for (var j = 0; j < cells.length; j++) {
-                cells[j].textContent = '';
-            }
-        }
-    });
-</script>
-  </html>
-
- 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
