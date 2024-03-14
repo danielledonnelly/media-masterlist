@@ -92,15 +92,12 @@ how woulc i attach it to a button?*/
 
         //this was attempt 1 to save dropdown value
         const myScoreSelButton = document.getElementById("dropdownMenuButton1"); 
-
-
+        
         const mySel = document.getElementById("score-dropdown"); 
         const mySelChildren = mySel.children
         
 
         function myFunc(event) {
-            console.log('skchskcskjfncekjfnc')
-            console.log(event.target)
             //console.log(event.target.value)
             console.log(event.target.innerText)
             myScoreSelButton.innerText = event.target.innerText
