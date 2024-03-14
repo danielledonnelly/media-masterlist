@@ -73,22 +73,22 @@ how woulc i attach it to a button?*/
   
     function initialize (){
 
-        // I tried for ages to make a button that would clear the rows in Javascript, but couldn't do it. 
-        // ChatGPT ended up writing this solution for me, but I don't understand it.
-        document.getElementById('button1').addEventListener('click', function() {
-            // Clear text content of cells in the tbody
-            var table = document.getElementById('game-table');
-            var tbody = table.getElementsByTagName('tbody')[0];  // [tbody]  // tbody
-            var rows = tbody.getElementsByTagName('tr'); // [tr, tr, tr, tr, tr]
+        // // I tried for ages to make a button that would clear the rows in Javascript, but couldn't do it. 
+        // // ChatGPT ended up writing this solution for me, but I don't understand it.
+        // document.getElementById('button1').addEventListener('click', function() {
+        //     // Clear text content of cells in the tbody
+        //     var table = document.getElementById('game-table');
+        //     var tbody = table.getElementsByTagName('tbody')[0];  // [tbody]  // tbody
+        //     var rows = tbody.getElementsByTagName('tr'); // [tr, tr, tr, tr, tr]
 
-            for (var i = 0; i < rows.length; i++) {      // 5 things, length is 5, indexes 0-4 exist, so we want up to 4 which is the one "< 5"
-            var cells = rows[i].cells;
+        //     for (var i = 0; i < rows.length; i++) {      // 5 things, length is 5, indexes 0-4 exist, so we want up to 4 which is the one "< 5"
+        //     var cells = rows[i].cells;
 
-                for (var j = 0; j < cells.length; j++) { // 8 cells, length is 8, indexes 0-7 exist, so we want up to 7 which is the one "< 8"
-                    cells[j].textContent = '';
-                }
-            }
-        });
+        //         for (var j = 0; j < cells.length; j++) { // 8 cells, length is 8, indexes 0-7 exist, so we want up to 7 which is the one "< 8"
+        //             cells[j].textContent = '';
+        //         }
+        //     }
+        // });
 
         //this was attempt 1 to save dropdown value
         const myScoreSelButton = document.getElementById("dropdownMenuButton1"); 
