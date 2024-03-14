@@ -56,12 +56,17 @@ document.getElementById('button1').addEventListener('click', function() {
 });
 
 //this was attempt 1 to save dropdown value
-const mySel = document.getElementById("score"); 
-mySel.addEventListener("change",function() { 
-  localStorage.setItem("selValue",this.value); // save it 
-}); 
-let val = localStorage.getItem("selValue"); 
-if (val) mySel.value=val; // set the dropdown 
-// trigger the change in case there are other events on the select 
-mySel.onchange();  
-return mySel;
+// const mySel = document.getElementById("score"); 
+// mySel.addEventListener("change",function() { 
+//   localStorage.setItem("selValue",this.value); // save it 
+// }); 
+// let val = localStorage.getItem("selValue"); 
+// if (val) mySel.value=val; // set the dropdown 
+// // trigger the change in case there are other events on the select 
+// mySel.onchange();  
+// return mySel;
+
+function onChange(val) {
+  // `val` is the value
+}
+
