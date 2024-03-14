@@ -38,35 +38,86 @@ how woulc i attach it to a button?*/
 
 
 
-// I tried for ages to make a button that would clear the rows in Javascript, but couldn't do it. 
-// ChatGPT ended up writing this solution for me, but I don't understand it.
-document.getElementById('button1').addEventListener('click', function() {
-    // Clear text content of cells in the tbody
-    var table = document.getElementById('game-table');
-    var tbody = table.getElementsByTagName('tbody')[0];  // [tbody]  // tbody
-    var rows = tbody.getElementsByTagName('tr'); // [tr, tr, tr, tr, tr]
+// // I tried for ages to make a button that would clear the rows in Javascript, but couldn't do it. 
+// // ChatGPT ended up writing this solution for me, but I don't understand it.
+// document.getElementById('button1').addEventListener('click', function() {
+//     // Clear text content of cells in the tbody
+//     var table = document.getElementById('game-table');
+//     var tbody = table.getElementsByTagName('tbody')[0];  // [tbody]  // tbody
+//     var rows = tbody.getElementsByTagName('tr'); // [tr, tr, tr, tr, tr]
 
-    for (var i = 0; i < rows.length; i++) {      // 5 things, length is 5, indexes 0-4 exist, so we want up to 4 which is the one "< 5"
-      var cells = rows[i].cells;
+//     for (var i = 0; i < rows.length; i++) {      // 5 things, length is 5, indexes 0-4 exist, so we want up to 4 which is the one "< 5"
+//       var cells = rows[i].cells;
 
-        for (var j = 0; j < cells.length; j++) { // 8 cells, length is 8, indexes 0-7 exist, so we want up to 7 which is the one "< 8"
-            cells[j].textContent = '';
+//         for (var j = 0; j < cells.length; j++) { // 8 cells, length is 8, indexes 0-7 exist, so we want up to 7 which is the one "< 8"
+//             cells[j].textContent = '';
+//         }
+//     }
+// });
+
+// //this was attempt 1 to save dropdown value
+// const mySel = document.getElementById("score-dropdown"); 
+
+// mySel.addEventListener('click', function() {
+
+//     console.log('skchskcskjfncekjfnc')
+// })
+
+
+
+(function(window, document) {
+
+    // code that should be taken care of right away
+  
+    window.onload = initialize;
+  
+    function initialize (){
+
+        // I tried for ages to make a button that would clear the rows in Javascript, but couldn't do it. 
+        // ChatGPT ended up writing this solution for me, but I don't understand it.
+        document.getElementById('button1').addEventListener('click', function() {
+            // Clear text content of cells in the tbody
+            var table = document.getElementById('game-table');
+            var tbody = table.getElementsByTagName('tbody')[0];  // [tbody]  // tbody
+            var rows = tbody.getElementsByTagName('tr'); // [tr, tr, tr, tr, tr]
+
+            for (var i = 0; i < rows.length; i++) {      // 5 things, length is 5, indexes 0-4 exist, so we want up to 4 which is the one "< 5"
+            var cells = rows[i].cells;
+
+                for (var j = 0; j < cells.length; j++) { // 8 cells, length is 8, indexes 0-7 exist, so we want up to 7 which is the one "< 8"
+                    cells[j].textContent = '';
+                }
+            }
+        });
+
+        //this was attempt 1 to save dropdown value
+        const myScoreSelButton = document.getElementById("dropdownMenuButton1"); 
+
+
+        const mySel = document.getElementById("score-dropdown"); 
+        const mySelChildren = mySel.children
+        
+
+        function myFunc(event) {
+            console.log('skchskcskjfncekjfnc')
+            console.log(event.target)
+            //console.log(event.target.value)
+            console.log(event.target.innerText)
+            myScoreSelButton.innerText = event.target.innerText
         }
+        
+
+        for (var i = 0; i < 10; i++) {
+            mySelChildren[i].addEventListener('click', myFunc)
+        }
+
+
+
+
+        // for (var i = 0; i < 3; i++) {    // the thing will happen 3 times 
+        //     // do this thing
+        // }
+
     }
-});
-
-//this was attempt 1 to save dropdown value
-// const mySel = document.getElementById("score"); 
-// mySel.addEventListener("change",function() { 
-//   localStorage.setItem("selValue",this.value); // save it 
-// }); 
-// let val = localStorage.getItem("selValue"); 
-// if (val) mySel.value=val; // set the dropdown 
-// // trigger the change in case there are other events on the select 
-// mySel.onchange();  
-// return mySel;
-
-function onChange(val) {
-  // `val` is the value
-}
-
+  
+  })(window, document);
