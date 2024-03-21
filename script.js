@@ -128,6 +128,16 @@ how woulc i attach it to a button?*/
             mySels[1].children[i].addEventListener('click', myFunc2)
         }
 
+        function myFunc3(event) {
+            console.log(event.target)
+            myScoreSelButtons[2].innerText = event.target.innerText
+        }
+        
+        for (var i = 0; i < 10; i++) {
+            mySels[2].children[i].addEventListener('click', myFunc3)
+        }
+        
+
         // for (var i = 0; i < 3; i++) {    // the thing will happen 3 times 
         //     // do this thing
         // }
