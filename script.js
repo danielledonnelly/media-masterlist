@@ -90,26 +90,44 @@ how woulc i attach it to a button?*/
         //     }
         // });
 
-        //this was attempt 1 to save dropdown value
-        const myScoreSelButton = document.getElementById("dropdownMenuButton1"); 
+        //below is commented out while I attempt class name solution
+        // //this was attempt 1 to save dropdown value
+        // const myScoreSelButton = document.getElementsByClass("score-dropdown-class"); 
         
-        const mySel = document.getElementById("score-dropdown"); 
-        const mySelChildren = mySel.children
-        
+        // const mySel = document.getElementsByClass("score-dropdown-class"); 
+        // const mySelChildren = mySel.children
 
-        function myFunc(event) {
-            //console.log(event.target.value)
-            console.log(event.target.innerText)
-            myScoreSelButton.innerText = event.target.innerText
+        // function myFunc(event) {
+        //     //console.log(event.target.value)
+        //     console.log(event.target.innerText)
+        //     myScoreSelButton.innerText = event.target.innerText
+        // }
+
+        // for (var i = 0; i < 10; i++) {
+        //     mySelChildren[i].addEventListener('click', myFunc)
+        // }
+
+        const myScoreSelButtons = document.getElementsByClassName("score-dropdown-class"); 
+        const mySels = document.getElementsByClassName("score-menu-dropdown-class"); 
+
+        function myFunc1(event) {
+            console.log(event.target)
+            myScoreSelButtons[0].innerText = event.target.innerText
         }
         
-
         for (var i = 0; i < 10; i++) {
-            mySelChildren[i].addEventListener('click', myFunc)
+            mySels[0].children[i].addEventListener('click', myFunc1)
         }
-
-
-
+        
+        
+        function myFunc2(event) {
+            console.log(event.target)
+            myScoreSelButtons[1].innerText = event.target.innerText
+        }
+        
+        for (var i = 0; i < 10; i++) {
+            mySels[1].children[i].addEventListener('click', myFunc2)
+        }
 
         // for (var i = 0; i < 3; i++) {    // the thing will happen 3 times 
         //     // do this thing
