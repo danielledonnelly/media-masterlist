@@ -90,52 +90,50 @@ how woulc i attach it to a button?*/
         //     }
         // });
 
-        //below is commented out while I attempt class name solution
-        // //this was attempt 1 to save dropdown value
-        // const myScoreSelButton = document.getElementsByClass("score-dropdown-class"); 
-        
-        // const mySel = document.getElementsByClass("score-dropdown-class"); 
-        // const mySelChildren = mySel.children
-
-        // function myFunc(event) {
-        //     //console.log(event.target.value)
-        //     console.log(event.target.innerText)
-        //     myScoreSelButton.innerText = event.target.innerText
-        // }
-
-        // for (var i = 0; i < 10; i++) {
-        //     mySelChildren[i].addEventListener('click', myFunc)
-        // }
-
-        const myScoreSelButtons = document.getElementsByClassName("score-dropdown-class"); 
-        const mySels = document.getElementsByClassName("score-menu-dropdown-class"); 
+        const myScoreSelButtons = document.getElementsByClassName("score-dropdown-class"); // there are 11 of these
+        const mySels = document.getElementsByClassName("score-menu-dropdown-class"); // there are 11 of these
 
 
-        function createEventListener(j) {
+        function createEventListener(i) {
             return function(event) {
                 console.log(event.target);
-                myScoreSelButtons[j].innerText = event.target.innerText;
+                myScoreSelButtons[i].innerText = event.target.innerText;
             };
         }
 
-        for (var j = 0; j < 10; j++) {
-            for (var i = 0; i < 10; i++) {
-                mySels[j].children[i].addEventListener('click', createEventListener(j));
+        const rowsCount = myScoreSelButtons.length
+        for (var i = 0; i < rowsCount; i++) {
+            const numOfOptionsPerRow = mySels[i].children.length
+            for (var j = 0; j < numOfOptionsPerRow; j++) {
+                mySels[i].children[j].addEventListener('click', createEventListener(i));
             }
         }
 
-        //I DON'T DESERVE CREDIT FOR THE TWO BLOCKS OF CODE ABOVE I USED CHATGPT SORRY
+        
+        //we're on the 0th row at its 0th option
+        //we're on the 0th row at its 1st option
+        //we're on the 0th row at its 2nd option
+        // ..........
+        //we're on the 9th row at its 0th option
+        // ..........
+        //we're on the 9th row at its 9th option
+        //i represents each row/dropdown, j represents each option within each row/dropdown
 
-        function myFunc1(event) {
-            console.log(event.target)
-            myScoreSelButtons[0].innerText = event.target.innerText
-        }
+        //I DON'T DESERVE CREDIT FOR THE TWO BLOCKS OF CODE ABOVE I USED CHATGPT SORRY
+        //I asked it to explain and have a very basic understanding of why this works
+        //
+
+
+        // function myFunc1(event) {
+        //     console.log(event.target)
+        //     myScoreSelButtons[0].innerText = event.target.innerText
+        // }
         
-        for (var i = 0; i < 10; i++) {
-            mySels[j].children[i].addEventListener('click', myFunc1)
-        }
+        // for (var j = 0; j < 10; j++) {
+        //     mySels[i].children[j].addEventListener('click', myFunc1)
+        // }
+
         
-        //next step is figuring out how to wrap in a loop instead of writing out each time
 
         // for (var i = 0; i < 3; i++) {    // the thing will happen 3 times 
         //     // do this thing
