@@ -135,23 +135,6 @@ how woulc i attach it to a button?*/
             mySels[j].children[i].addEventListener('click', myFunc1)
         }
         
-        function myFunc2(event) {
-            console.log(event.target)
-            myScoreSelButtons[j].innerText = event.target.innerText
-        }
-        
-        for (var i = 0; i < 10; i++) {
-            mySels[j].children[i].addEventListener('click', myFunc2)
-        }
-
-        function myFunc3(event) {
-            console.log(event.target)
-            myScoreSelButtons[j].innerText = event.target.innerText
-        }
-        
-        for (var i = 0; i < 10; i++) {
-            mySels[j].children[i].addEventListener('click', myFunc3)
-        }
         //next step is figuring out how to wrap in a loop instead of writing out each time
 
         // for (var i = 0; i < 3; i++) {    // the thing will happen 3 times 
