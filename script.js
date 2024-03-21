@@ -110,33 +110,49 @@ how woulc i attach it to a button?*/
         const myScoreSelButtons = document.getElementsByClassName("score-dropdown-class"); 
         const mySels = document.getElementsByClassName("score-menu-dropdown-class"); 
 
+
+        function createEventListener(j) {
+            return function(event) {
+                console.log(event.target);
+                myScoreSelButtons[j].innerText = event.target.innerText;
+            };
+        }
+
+        for (var j = 0; j < 10; j++) {
+            for (var i = 0; i < 10; i++) {
+                mySels[j].children[i].addEventListener('click', createEventListener(j));
+            }
+        }
+
+        //I DON'T DESERVE CREDIT FOR THE TWO BLOCKS OF CODE ABOVE I USED CHATGPT SORRY
+
         function myFunc1(event) {
             console.log(event.target)
             myScoreSelButtons[0].innerText = event.target.innerText
         }
         
         for (var i = 0; i < 10; i++) {
-            mySels[0].children[i].addEventListener('click', myFunc1)
+            mySels[j].children[i].addEventListener('click', myFunc1)
         }
         
         function myFunc2(event) {
             console.log(event.target)
-            myScoreSelButtons[1].innerText = event.target.innerText
+            myScoreSelButtons[j].innerText = event.target.innerText
         }
         
         for (var i = 0; i < 10; i++) {
-            mySels[1].children[i].addEventListener('click', myFunc2)
+            mySels[j].children[i].addEventListener('click', myFunc2)
         }
 
         function myFunc3(event) {
             console.log(event.target)
-            myScoreSelButtons[2].innerText = event.target.innerText
+            myScoreSelButtons[j].innerText = event.target.innerText
         }
         
         for (var i = 0; i < 10; i++) {
-            mySels[2].children[i].addEventListener('click', myFunc3)
+            mySels[j].children[i].addEventListener('click', myFunc3)
         }
-        
+        //next step is figuring out how to wrap in a loop instead of writing out each time
 
         // for (var i = 0; i < 3; i++) {    // the thing will happen 3 times 
         //     // do this thing
