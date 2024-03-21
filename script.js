@@ -119,7 +119,6 @@ how woulc i attach it to a button?*/
             mySels[0].children[i].addEventListener('click', myFunc1)
         }
         
-        
         function myFunc2(event) {
             console.log(event.target)
             myScoreSelButtons[1].innerText = event.target.innerText
