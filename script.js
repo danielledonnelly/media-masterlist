@@ -139,6 +139,13 @@ how woulc i attach it to a button?*/
         //     // do this thing
         // }
 
+        function addRow() {
+        // Get the table element in which you want to add row
+        let table = document.getElementById("game-table");
+        // Create a row using the inserRow() method and
+        // specify the index where you want to add the row
+        let row = game-table-body.insertRow(-1); // We are adding at the end
+        }
     }
   
   })(window, document);
