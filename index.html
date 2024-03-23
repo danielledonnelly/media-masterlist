@@ -100,7 +100,7 @@
               <button class="dropdown-item" id="score7" value="7">7</button>
               <button class="dropdown-item" id="score8" value="8">8</button>
               <button class="dropdown-item" id="score9" value="9">9</button>
-              <button class="dropdown-item" id="score10" value="10">10</button></td>
+              <button class="dropdown-item" id="score10" value="10">10</button></div></td>
           <td></td>
           <td></td>
           <td></td>
@@ -122,7 +122,7 @@
               <button class="dropdown-item" id="score7" value="7">7</button>
               <button class="dropdown-item" id="score8" value="8">8</button>
               <button class="dropdown-item" id="score9" value="9">9</button>
-              <button class="dropdown-item" id="score10" value="10">10</button></td>
+              <button class="dropdown-item" id="score10" value="10">10</button></div></td>
           <td></td>
           <td></td>
           <td></td>
@@ -144,7 +144,7 @@
               <button class="dropdown-item" id="score7" value="7">7</button>
               <button class="dropdown-item" id="score8" value="8">8</button>
               <button class="dropdown-item" id="score9" value="9">9</button>
-              <button class="dropdown-item" id="score10" value="10">10</button></td>
+              <button class="dropdown-item" id="score10" value="10">10</button></div></td>
           <td></td>
           <td></td>
           <td></td>
@@ -166,7 +166,7 @@
               <button class="dropdown-item" id="score7" value="7">7</button>
               <button class="dropdown-item" id="score8" value="8">8</button>
               <button class="dropdown-item" id="score9" value="9">9</button>
-              <button class="dropdown-item" id="score10" value="10">10</button></td>
+              <button class="dropdown-item" id="score10" value="10">10</button></div></td>
           <td></td>
           <td></td>
           <td></td>
@@ -188,7 +188,7 @@
               <button class="dropdown-item" id="score7" value="7">7</button>
               <button class="dropdown-item" id="score8" value="8">8</button>
               <button class="dropdown-item" id="score9" value="9">9</button>
-              <button class="dropdown-item" id="score10" value="10">10</button></td>
+              <button class="dropdown-item" id="score10" value="10">10</button></div></td>
           <td></td>
           <td></td>
           <td></td>
@@ -210,7 +210,7 @@
               <button class="dropdown-item" id="score7" value="7">7</button>
               <button class="dropdown-item" id="score8" value="8">8</button>
               <button class="dropdown-item" id="score9" value="9">9</button>
-              <button class="dropdown-item" id="score10" value="10">10</button></td>
+              <button class="dropdown-item" id="score10" value="10">10</button></div></td>
           <td></td>
           <td></td>
           <td></td>
@@ -232,7 +232,7 @@
               <button class="dropdown-item" id="score7" value="7">7</button>
               <button class="dropdown-item" id="score8" value="8">8</button>
               <button class="dropdown-item" id="score9" value="9">9</button>
-              <button class="dropdown-item" id="score10" value="10">10</button></td>
+              <button class="dropdown-item" id="score10" value="10">10</button></div></td>
           <td></td>
           <td></td>
           <td></td>
@@ -254,7 +254,7 @@
               <button class="dropdown-item" id="score7" value="7">7</button>
               <button class="dropdown-item" id="score8" value="8">8</button>
               <button class="dropdown-item" id="score9" value="9">9</button>
-              <button class="dropdown-item" id="score10" value="10">10</button></td>
+              <button class="dropdown-item" id="score10" value="10">10</button></div></td>
           <td></td>
           <td></td>
           <td></td>
@@ -276,7 +276,7 @@
               <button class="dropdown-item" id="score7" value="7">7</button>
               <button class="dropdown-item" id="score8" value="8">8</button>
               <button class="dropdown-item" id="score9" value="9">9</button>
-              <button class="dropdown-item" id="score10" value="10">10</button></td>
+              <button class="dropdown-item" id="score10" value="10">10</button></div></td>
           <td></td>
           <td></td>
           <td></td>
@@ -316,7 +316,23 @@
          c4.innerText = " "
          c5.innerText = " "
          c6.innerText = " "
+        
+         // Create a new button when adding a row
+         // Button is not yet usable
+         let button = document.createElement("button");
+         button.innerText = "Score"; 
+         button.setAttribute("name", "score");
+         button.setAttribute("class", "btn btn-secondary dropdown-toggle score-dropdown-class");
+         button.setAttribute("type", "button");
+         button.setAttribute("id", "dropdownMenuButton1");
+         button.setAttribute("data-toggle", "dropdown");
+         button.setAttribute("aria-haspopup", "true");
+         button.setAttribute("aria-expanded", "false");
+        
          
+         // Append the button to the second cell
+         c2.appendChild(button);
+
          // Append cells to row
          row.appendChild(c1);
          row.appendChild(c2);
