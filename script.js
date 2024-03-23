@@ -108,7 +108,7 @@ how woulc i attach it to a button?*/
                 mySels[i].children[j].addEventListener('click', createEventListener(i));
             }
         }
-
+    }
         
         //we're on the 0th row at its 0th option
         //we're on the 0th row at its 1st option
@@ -138,14 +138,20 @@ how woulc i attach it to a button?*/
         // for (var i = 0; i < 3; i++) {    // the thing will happen 3 times 
         //     // do this thing
         // }
+        //- Using a function pointer:
+    //     document.getElementById("add-row").onclick = addRow();
+    //     function addRow() {
+    //         console.log('skchskcskjfncekjfnc')
+    //         function addRow() {
+    //             // Get the table element in which you want to add row
+    //             let table = document.getElementById("game-table");
+    //             // Create a row using the insertRow() method and
+    //             // specify the index where you want to add the row
+    //             let row = table.insertRow(-1); // We are adding at the end
+    //             }
 
-        function addRow() {
-        // Get the table element in which you want to add row
-        let table = document.getElementById("game-table");
-        // Create a row using the inserRow() method and
-        // specify the index where you want to add the row
-        let row = game-table-body.insertRow(-1); // We are adding at the end
-        }
-    }
+    //     }
+
+    // }
   
   })(window, document);
