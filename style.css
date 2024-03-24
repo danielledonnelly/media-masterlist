@@ -22,3 +22,16 @@ div {
     color: white !important;
 }
 
+.dropdown-menu{
+    color: black !important;
+    background-color: #545B62 !important;
+    width: 100% !important;
+    align-items: center !important;
+}
+
+.dropdown-item{
+    width: 100% !important;
+    width: 100px;
+    align-items: center !important;
+    
+}
