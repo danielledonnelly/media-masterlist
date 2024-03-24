@@ -109,7 +109,10 @@ how woulc i attach it to a button?*/
             }
         }
     }
-        
+
+    
+   
+    
         //we're on the 0th row at its 0th option
         //we're on the 0th row at its 1st option
         //we're on the 0th row at its 2nd option
@@ -118,11 +121,6 @@ how woulc i attach it to a button?*/
         // ..........
         //we're on the 9th row at its 9th option
         //i represents each row/dropdown, j represents each option within each row/dropdown
-
-        //I DON'T DESERVE CREDIT FOR THE TWO BLOCKS OF CODE ABOVE I USED CHATGPT SORRY
-        //I asked it to explain and have a very basic understanding of why this works
-        //
-
 
         // function myFunc1(event) {
         //     console.log(event.target)

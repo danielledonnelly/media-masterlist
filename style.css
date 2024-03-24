@@ -14,3 +14,11 @@ header {
 div {
     width: 100%;
     }
+
+.transparent {
+    /* how do I change the placeholder color? seems to be impossible even when overrided with important*/
+    background-color: transparent !important;
+    border-color: transparent !important;
+    color: white !important;
+}
+
