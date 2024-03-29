@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() { //This may appear like it causes the Add Row button adds TWO rows instead of one when operating within the CodeSwing, but it ensures everything works correctly when working in the browser.
 (function(window, document) {
     // This contains code that should be taken care of right away
     window.onload = initialize;
@@ -35,8 +35,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // Get the Add Row button
     let addRowButton = document.getElementById("add-row");
 
-    // Add event listener to button
+    // Add event listener to Add Row button
     addRowButton.addEventListener('click', addRow);
+
+    //Get the Clear button
+    let clearButton = document.getElementById("clear");
+
+    // Add event listener to Clear button
+    clearButton.addEventListener('click', clearTable);
+
+    //Get the Delete button
+    let deleteButton = document.getElementById("delete");
+
+    // Add event listener to Clear button
+    deleteButton.addEventListener('click', deleteRow);
 
 })(window, document);
 
@@ -126,4 +138,48 @@ function addRow() {
     // Append row to table body
     table.appendChild(row);
 };
+
+
 });
+
+//This defines what happens when we click the clear button.
+function clearTable() {
+    // Get all elements with class "score-dropdown-class"
+    let buttons = document.querySelectorAll('.dropdown-toggle');
+
+    // Iterate through each button
+    buttons.forEach(button => {
+        // Set the inner text of each button to "Score"
+        button.innerText = "Score";
+    });
+
+    // Get the table body element
+    let tableBody = document.getElementById("game-table-body");
+
+    // Iterate through each row
+    for (let i = 0; i < tableBody.rows.length; i++) {
+        let row = tableBody.rows[i];
+
+        // Iterate through each cell in the row
+        for (let j = 0; j < row.cells.length; j++) {
+            let cell = row.cells[j];
+
+            // If it's not the second column, clear the inner text
+            if (j !== 1) {
+                cell.innerText = "";
+            }
+        }
+    }
+}
+
+// Function to delete the last row
+function deleteRow() {
+    // Get the table body element
+    let table = document.getElementById("game-table-body");
+
+    // Check if there's more than one row
+    if (table.rows.length > 1) {
+        // Remove the last row
+        table.deleteRow(-1);
+    }
+}
