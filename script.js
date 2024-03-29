@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', function() {
 (function(window, document) {
     // This contains code that should be taken care of right away
     window.onload = initialize;
@@ -36,8 +37,8 @@
 
     // Add event listener to button
     addRowButton.addEventListener('click', addRow);
-        
-  })(window, document);
+
+})(window, document);
 
 //This defines what happens when we add a row (this happens 9 times when page loads, and occurs whenever Add Row button is clicked)
 function addRow() {
@@ -124,4 +125,5 @@ function addRow() {
 
     // Append row to table body
     table.appendChild(row);
-}
+};
+});
