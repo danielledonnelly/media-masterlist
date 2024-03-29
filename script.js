@@ -59,6 +59,13 @@ function addRow() {
     c4.innerText = " ";
     c5.innerText = " ";
     c6.innerText = " ";
+
+    // Make appropriate cells editable
+    c1.setAttribute("contenteditable", "true");
+    c3.setAttribute("contenteditable", "true");
+    c4.setAttribute("contenteditable", "true");
+    c5.setAttribute("contenteditable", "true");
+    c6.setAttribute("contenteditable", "true");
         
     // Create a new dropdown menu for the score
     let dropdown = document.createElement("div");
