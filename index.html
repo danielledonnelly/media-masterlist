@@ -12,49 +12,39 @@
   </head>
   <body>
     <script src="script.js"></script>
-    <header ><img width="600" class = "image"
+    <!--This is the banner at the top of the screen-->
+    <header><img width="600" class = "image"
       src ="images\media-masterlist.png" id="logo" alt="Media Masterlist - Edit the table below to create a list of your favourite games!"/>
-      <!-- <button type="button" class="btn btn-light">Home</button>
+      <!-- This is placeholder code for buttons at the top of screen
+      <button type="button" class="btn btn-light">Home</button>
       <button type="button" class="btn btn-light">About</button>
       <button type="button" class="btn btn-light">Share</button> -->
     </header>
+    
+    <!-- This contains info about the table and column headings, which are editable -->
     <div class="tbl-container bdr">
     <table id="game-table" class="table table-striped table-dark">
       <thead>
         <tr>
-          <th scope="col">Title</th>
-          <th scope="col">Score</th>
+          <th scope="col" contenteditable>Title</th>
+          <th scope="col" contenteditable>Score</th>
           <!--I want to remove the platform column, but it looks weird when I do-->
-          <th scope="col">Platform</th>
-          <th scope="col">Genre</th>
-          <th scope="col">Status</th>
-          <th scope="col">Comments</th>
+          <th scope="col" contenteditable>Platform</th>
+          <th scope="col" contenteditable>Genre</th>
+          <th scope="col" contenteditable>Status</th>
+          <th scope="col" contenteditable>Comments</th>
         </tr>
       </thead>
       <tbody id="game-table-body">
-        <tr contenteditable>
-          <th scope="row" contenteditable>
+        <tr>
+          <th contenteditable scope="row">
           <td>
-            <!-- <select>
-            <option></option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            <option>6</option>
-            <option>7</option>
-            <option>8</option>
-            <option>9</option>
-            <option>10</option>
-          </select> -->
           <div class="dropdown">
             <button name="score" class="btn btn-secondary dropdown-toggle score-dropdown-class" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Score
             </button>
             <!--
-              there HAS to be a better way to do this
-              also, you shouldn't be able to backspace the stars away
+              there HAS to be a better way to do this spacing
             -->
             <div name="score" id="score-dropdown" class="dropdown-menu score-menu-dropdown-class" aria-labelledby="dropdownMenuButton1">
               <button class="dropdown-item" id="score1" value="1">&emsp;&emsp;&ensp;&nbsp;⭐&nbsp;&emsp;&emsp;&ensp;</button>
