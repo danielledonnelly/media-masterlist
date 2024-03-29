@@ -8,15 +8,15 @@ header {
       color: aliceblue;
       font-size:50%;
       font-weight:500;
-      display:flex;
+      display: flex;
     }
 
 div {
     width: 100%;
     }
 
-.transparent {
-    /* how do I change the placeholder color? seems to be impossible even when overrided with important*/
+/* The transparent class is here for if I add any placeholder fields */
+.transparent { 
     background-color: transparent !important;
     border-color: transparent !important;
     color: white !important;
@@ -31,7 +31,6 @@ div {
 
 .dropdown-item{
     width: 100% !important;
-    width: 100px;
     align-items: center !important;
     
 }

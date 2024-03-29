@@ -1,29 +1,30 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <link href="script.js">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Media Masterlist</title>
-  </head>
-  <body>
-    <script src="script.js"></script>
-    <!--This is the banner at the top of the screen-->
-    <header><img width="600" class = "image"
-      src ="images\media-masterlist.png" id="logo" alt="Media Masterlist - Edit the table below to create a list of your favourite games!"/>
-      <!-- This is placeholder code for buttons at the top of screen
-      <button type="button" class="btn btn-light">Home</button>
-      <button type="button" class="btn btn-light">About</button>
-      <button type="button" class="btn btn-light">Share</button> -->
-    </header>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link href="script.js">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Media Masterlist</title>
+</head>
+<body>
+  <!-- JavaScript link -->
+  <script src="script.js"></script>
+  <!--This is the banner at the top of the screen-->
+  <header>
+    <img width="600" class = "image" src ="images\media-masterlist.png" id="logo" alt="Media Masterlist - Edit the table below to create a list of your favourite games!"/>
+    <!-- This is placeholder code for buttons at the top of the screen
+    <button type="button" class="btn btn-light">Home</button>
+    <button type="button" class="btn btn-light">About</button>
+    <button type="button" class="btn btn-light">Share</button> -->
+  </header>
     
-    <!-- This contains info about the table and column headings, which are editable -->
-    <div class="tbl-container bdr">
+  <div class="tbl-container bdr">
     <table id="game-table" class="table table-striped table-dark">
+      <!-- This is the table head, which contains editable headers -->
       <thead>
         <tr>
           <th scope="col" contenteditable>Title</th>
@@ -35,38 +36,34 @@
           <th scope="col" contenteditable>Comments</th>
         </tr>
       </thead>
+
+      <!-- This is the table body, where all cells except "Score" are editable.-->
+      <!-- Each <tr> is a row, and each <td> is an individual cell.  -->
       <tbody id="game-table-body">
         <tr>
-          <th contenteditable scope="row">
-          <td>
+          <td contenteditable scope="row"><td>
           <div class="dropdown">
-            <button name="score" class="btn btn-secondary dropdown-toggle score-dropdown-class" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Score
-            </button>
-            <!--
-              there HAS to be a better way to do this spacing
-            -->
+            <button name="score" class="btn btn-secondary dropdown-toggle score-dropdown-class" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Score</button>
+            <!-- there HAS to be a better way to do this star spacing -->
             <div name="score" id="score-dropdown" class="dropdown-menu score-menu-dropdown-class" aria-labelledby="dropdownMenuButton1">
-              <button class="dropdown-item" id="score1" value="1">&emsp;&emsp;&ensp;&nbsp;⭐&nbsp;&emsp;&emsp;&ensp;</button>
-              <button class="dropdown-item" id="score2" value="2">&emsp;&nbsp;&ensp;&nbsp;⭐⭐&emsp;&emsp;</button>
-              <button class="dropdown-item" id="score3" value="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⭐⭐⭐&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-              <button class="dropdown-item" id="score4" value="4">&nbsp;&nbsp;&nbsp;⭐⭐⭐⭐&nbsp;&nbsp;</button>
-              <button class="dropdown-item" id="score5" value="5">⭐⭐⭐⭐⭐</button>
+                <button class="dropdown-item" id="score1" value="1">&emsp;&emsp;&ensp;&nbsp;⭐&nbsp;&emsp;&emsp;&ensp;</button>
+                <button class="dropdown-item" id="score2" value="2">&emsp;&nbsp;&ensp;&nbsp;⭐⭐&emsp;&emsp;</button>
+                <button class="dropdown-item" id="score3" value="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⭐⭐⭐&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                <button class="dropdown-item" id="score4" value="4">&nbsp;&nbsp;&nbsp;⭐⭐⭐⭐&nbsp;&nbsp;</button>
+                <button class="dropdown-item" id="score5" value="5">⭐⭐⭐⭐⭐</button>
             </div>
           </div>
-        </td>
-          <!--I found a way to make a placeholder field, but it doesn't match the styling-->
-          <td>
+          <td contenteditable>
+            <!--I found a way to make a placeholder field, but it doesn't match the styling-->
             <!-- <input placeholder="PC"> 
-            Commented out because I don't want it anymore (i did figure out how to make it transparent though)
             <div class="input-group mb-3">
-              <input type="text" class="transparent" placeholder="PC" aria-label="PC" aria-describedby="basic-addon1" >
-            </div>
-          -->
+            <input type="text" class="transparent" placeholder="PC" aria-label="PC" aria-describedby="basic-addon1" >
+            </div>-->
           </td>
           <td></td>
           <td>
-            <!-- <select>
+            <!-- This is a status dropdown I changed my mind on.
+            <select>
             <option></option>
             <option>Want to Play</option>
             <option>Currently Playing</option>
@@ -76,131 +73,18 @@
         </tr>
         
       </tbody>
-      
     </table>
-    <!-- <div id="my-test-div">Hellooooo</div> -->
-    </div>
-    <button id="add-row" class="btn btn-secondary">Add Row</button>
-    <!--Clear function below not yet defined, just planned-->
-    <button id="clear" class="btn btn-secondary" onclick="clear()">Clear</button>
-    <button id="delete" class="btn btn-secondary" onclick="delet()">Delete Row</button>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    
-    
-    <!-- 
-    addRow function only works when it's in html with script tags 
-    when I try to add it to the JavaScript but it won't work
+  </div>
+  <!-- The lines above mark the end of the table and table container div -->
+  <!-- The lines below are table buttons for various functions -->
+  <button id="add-row" class="btn btn-secondary">Add Row</button>
+  <!--Clear and delete function below not yet defined, just planned-->
+  <button id="clear" class="btn btn-secondary" onclick="clear()">Clear</button>
+  <button id="delete" class="btn btn-secondary" onclick="delet()">Delete Row</button>
 
-    get div, add event listener in javascript
-  
-    <script>
-      function addRow() {
-        // Get the table body element in which you want to add row
-        let table = document.getElementById("game-table-body");
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     
-        // Create row element
-        let row = document.createElement("tr");
-    
-        // Create cells
-        let c1 = document.createElement("td");
-        let c2 = document.createElement("td");
-        let c3 = document.createElement("td");
-        let c4 = document.createElement("td");
-        let c5 = document.createElement("td");
-        let c6 = document.createElement("td");
-    
-        // Insert data to cells
-        c1.innerText = " ";
-        c3.innerText = " ";
-        c4.innerText = " ";
-        c5.innerText = " ";
-        c6.innerText = " ";
-    
-        // Create a new dropdown menu for the score
-        let dropdown = document.createElement("div");
-        dropdown.setAttribute("class", "dropdown");
-    
-        // Create the score button
-        let button = document.createElement("button");
-        button.innerText = "Score";
-        button.setAttribute("class", "btn btn-secondary dropdown-toggle");
-        button.setAttribute("type", "button");
-        button.setAttribute("id", "dropdownMenuButton1");
-        button.setAttribute("data-toggle", "dropdown");
-        button.setAttribute("aria-haspopup", "true");
-        button.setAttribute("aria-expanded", "false");
-    
-        // Create the dropdown menu
-        let dropdownMenu = document.createElement("div");
-        dropdownMenu.setAttribute("class", "dropdown-menu");
-    
-      // Define star emojis
-      const stars = ["⭐", "⭐⭐", "⭐⭐⭐", "⭐⭐⭐⭐", "⭐⭐⭐⭐⭐"];
-
-      // Create dropdown items for star ratings
-      for (let i = 0; i < stars.length; i++) {
-        let dropdownItem = document.createElement("button");
-        dropdownItem.setAttribute("class", "dropdown-item");
-        dropdownItem.setAttribute("type", "button");
-        dropdownItem.setAttribute("value", i + 1); // Set value from 1 to 5
-        dropdownItem.innerText = stars[i]; // Set star emoji as inner text
-        dropdownMenu.appendChild(dropdownItem);
-            
-            // Add event listener to capture the selected value
-            dropdownItem.addEventListener('click', function() {
-                button.innerText = this.innerText; // Update button text with selected value
-                // Save the selected value to a variable or perform other actions as needed
-                console.log("Selected value:", this.value);
-            });
-            
-            dropdownMenu.appendChild(dropdownItem);
-        }
-    
-        // Append the dropdown menu to the dropdown
-        dropdown.appendChild(dropdownMenu);
-    
-        // Append the button to the dropdown
-        dropdown.appendChild(button);
-    
-        // Append the dropdown to the second cell
-        c2.appendChild(dropdown);
-    
-        // Append cells to row
-        row.appendChild(c1);
-        row.appendChild(c2);
-        row.appendChild(c3);
-        row.appendChild(c4);
-        row.appendChild(c5);
-        row.appendChild(c6);
-    
-        // Append row to table body
-        table.appendChild(row);
-    }
-   </script>
-   -->
-  </body>
-  
-  <!-- <script>
-    function addRow() {
-      // Get the table element in which you want to add row
-      let table = document.getElementById("game-table");
-      // Create a row using the insertRow() method and
-      // specify the index where you want to add the row
-      let row = table.insertRow(-1); // We are adding at the end
-      // Create table cells
-            let c1 = row.insertCell(0);
-            let c2 = row.insertCell(1);
-            let c3 = row.insertCell(2);
-         
-            // Add data to c1 and c2
-            c1.innerText = "Elon"
-            c2.innerText = 45
-            c3.innerText = "Houston"
-      }
-  </script> -->
-
-
+</body>
 </html>
-<!-- search create a tr, and append -->
