@@ -1,3 +1,9 @@
+/* This is what makes the scrollbar on the side dark */
+/* I may get rid of the scrollbar all-together in the future */
+:root {
+    color-scheme: dark;
+  }
+
 body {
     	background:#2c343b !important;
     }
