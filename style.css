@@ -49,3 +49,7 @@ div {
     
 }
 
+button {
+    background-color: transparent;
+    border: transparent;
+}

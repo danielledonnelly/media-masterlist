@@ -65,7 +65,8 @@ function addRow() {
     let c4 = document.createElement("td");
     let c5 = document.createElement("td");
     let c6 = document.createElement("td");
-        
+    let deleteCell = document.createElement("td");
+
     // Insert data to cells
     c1.innerText = " ";
     c3.innerText = " ";
@@ -79,7 +80,15 @@ function addRow() {
     c4.setAttribute("contenteditable", "true");
     c5.setAttribute("contenteditable", "true");
     c6.setAttribute("contenteditable", "true");
-        
+
+    // Create delete button with trash icon
+    let deleteButton = document.createElement("button");
+    deleteButton.classList.add("delete", "fa", "fa-trash-o"); // Add appropriate classes
+    deleteButton.style.fontSize = "24px"; // Set font size
+
+    // Append delete button to delete cell
+    deleteCell.appendChild(deleteButton);
+
     // Create a new dropdown menu for the score
     let dropdown = document.createElement("div");
     dropdown.setAttribute("class", "dropdown");
@@ -134,6 +143,7 @@ function addRow() {
     row.appendChild(c4);
     row.appendChild(c5);
     row.appendChild(c6);
+    row.appendChild(deleteCell);
 
     // Append row to table body
     table.appendChild(row);
@@ -183,3 +193,20 @@ function deleteRow() {
         table.deleteRow(-1);
     }
 }
+
+//Function to delete a SPECIFIC row
+// function deleteRow(button) {
+//     // Traverse up the DOM to find the row element
+//     let row = button.parentElement.parentElement;
+//     // Remove the row from its parent
+//     row.remove();
+// }
+// });
+//When I add things, everything stops working!
+
+// Add event listener for delete button
+document.querySelector(".delete-button").addEventListener("click", function() {
+// Get the parent row and remove it
+var row = this.closest("tr");
+        row.remove();
+        });
