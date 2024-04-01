@@ -6,21 +6,27 @@
 
 body {
     	background:#2c343b !important;
+        color: #BEADED !important;
     }
 
 header {
       text-align: center;
       padding: 1%;
-      color: aliceblue;
+      color: #BEADED !important;
       font-size:50%;
       font-weight:500;
       display: flex;
     }
 
+table {
+        color: #BEADED !
+ }
+
 thead th {
     text-align: center;
 }
 
+/* This centers the score buttons */
 td:nth-child(2) {
     text-align: center;
 }
@@ -33,7 +39,7 @@ div {
 .transparent { 
     background-color: transparent !important;
     border-color: transparent !important;
-    color: white !important;
+    color: #BEADED !important;
     text-align: center;
 }
 
