@@ -45,7 +45,8 @@
           <td contenteditable scope="row"><td>
           <div class="dropdown">
             <button name="score" class="btn btn-secondary dropdown-toggle score-dropdown-class" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Score</button>
-            <!-- there HAS to be a better way to do this star spacing -->
+            <!-- you would THINK there's a better way to do this spacing but after extensive research: no-->
+            <!-- i tried styling in css but in order to get the width to stay consistent after a value is selected, you'd have to use dynamic event listeners-->
             <div name="score" id="score-dropdown" class="dropdown-menu score-menu-dropdown-class" aria-labelledby="dropdownMenuButton1">
                 <button class="dropdown-item" id="score1" value="1">&emsp;&emsp;&ensp;&nbsp;⭐&nbsp;&emsp;&emsp;&ensp;</button>
                 <button class="dropdown-item" id="score2" value="2">&emsp;&nbsp;&ensp;&nbsp;⭐⭐&emsp;&emsp;</button>
@@ -55,11 +56,9 @@
             </div>
           </div>
           <td contenteditable>
-            <!--I found a way to make a placeholder field, but it doesn't match the styling-->
-            <!-- <input placeholder="PC"> 
-            <div class="input-group mb-3">
-            <input type="text" class="transparent" placeholder="PC" aria-label="PC" aria-describedby="basic-addon1" >
-            </div>-->
+            <!--I found a way to make a placeholder field, but i don't want to anymore -->
+            <!-- <div class="input-group mb-3">
+            <input type="text" class="transparent" placeholder="PC" aria-label="PC" aria-describedby="basic-addon1" > -->
           </td>
           <td contenteditable></td>
           <td contenteditable>

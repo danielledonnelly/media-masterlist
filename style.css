@@ -34,6 +34,7 @@ div {
     background-color: transparent !important;
     border-color: transparent !important;
     color: white !important;
+    text-align: center;
 }
 
 .dropdown-menu{
