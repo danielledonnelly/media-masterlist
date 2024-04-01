@@ -41,13 +41,13 @@ div {
     color: black !important;
     background-color: #545B62 !important;
     align-items: center !important;
-    max-width: 1.5em !important;
+    max-width: 160px !important;
 }
 
 .dropdown-item{
     width: 100% !important;
     align-items: center !important;
-    
+    max-width: 160px !important;
 }
 
 button {

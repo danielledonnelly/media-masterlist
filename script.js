@@ -47,8 +47,16 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
     //Get the Delete button
     let deleteButton = document.getElementById("delete");
 
-    // Add event listener to Clear button
+    // Add event listener to Delete button
     deleteButton.addEventListener('click', deleteRow);
+
+    // Get the Export Button
+    let exportButton = document.getElementById("export-csv-button");
+
+    // Add event listener to the export button
+    exportButton.addEventListener('click', exportTableToCSV);
+
+
 
 })(window, document);
 
@@ -210,3 +218,33 @@ document.querySelector(".delete-button").addEventListener("click", function() {
 var row = this.closest("tr");
         row.remove();
         });
+
+
+function exportTableToCSV() {
+    let csvContent = "data:text/csv;charset=utf-8,";
+            
+        // Iterate over each row in the table
+        let rows = document.querySelectorAll("table tr");
+        rows.forEach(row => {
+               let rowData = [];
+                // Iterate over each cell in the row
+                row.querySelectorAll("td").forEach(cell => {
+                    // Escape double quotes in cell value and wrap in double quotes
+                    let cellValue = '"' + cell.textContent.replace(/"/g, '""') + '"';
+                    rowData.push(cellValue);
+                });
+                // Concatenate row data into CSV string
+                csvContent += rowData.join(",") + "\n";
+            });
+        
+            // Create Blob from CSV content
+            let blob = new Blob([csvContent], { type: "text/csv;charset=utf-8" });
+        
+            // Create download link
+            let downloadLink = document.createElement("a");
+            downloadLink.href = URL.createObjectURL(blob);
+            downloadLink.download = "media_masterlist.csv";
+        
+            // Trigger download
+            downloadLink.click();
+        }
