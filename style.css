@@ -40,8 +40,8 @@ div {
 .dropdown-menu{
     color: black !important;
     background-color: #545B62 !important;
-    width: 100% !important;
     align-items: center !important;
+    max-width: 1.5em !important;
 }
 
 .dropdown-item{
