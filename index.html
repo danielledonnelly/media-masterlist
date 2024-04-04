@@ -9,7 +9,7 @@
   
   <!-- Open graph tags-->
   <meta property="og:title" content="Media Masterlist">
-  <meta property="og:description" content="Media Masterlist is the ultimate destination for rating, reviewing, and ranking your favourite media"/>"> 
+  <meta property="og:description" content="Media Masterlist is the ultimate destination for rating, reviewing, and ranking your favourite media"/> 
   <meta property="og:type" content="website"> 
   <meta property="og:image" content="images\media-masterlist.png"> 
   
@@ -42,6 +42,7 @@
           <th scope="col" contenteditable>Genre</th>
           <th scope="col" contenteditable>Status</th>
           <th scope="col" contenteditable>Comments</th>
+          <th></th>
         </tr>
       </thead>
 
@@ -55,7 +56,7 @@
             <!-- you would THINK there's a better way to do this spacing but after extensive research: no-->
             <!-- i tried styling in css but in order to get the width to stay consistent after a value is selected, you'd have to use dynamic event listeners-->
             <div name="score" id="score-dropdown" class="dropdown-menu score-menu-dropdown-class" aria-labelledby="dropdownMenuButton1">
-                <button class="dropdown-item" id="score1" value="1">&emsp;&emsp;&ensp;&nbsp;⭐&nbsp;&emsp;&emsp;&ensp;</button>
+                <button class="dropdown-item" id="score1" value="1">&emsp;&emsp;&ensp;&nbsp;⭐&emsp;&emsp;&ensp;&nbsp;</button>
                 <button class="dropdown-item" id="score2" value="2">&emsp;&nbsp;&ensp;&nbsp;⭐⭐&emsp;&emsp;</button>
                 <button class="dropdown-item" id="score3" value="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⭐⭐⭐&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
                 <button class="dropdown-item" id="score4" value="4">&nbsp;&nbsp;&nbsp;⭐⭐⭐⭐&nbsp;&nbsp;</button>
@@ -77,7 +78,7 @@
             <option>Completed</option>
             <option>Dropped</option></td> -->
           <td contenteditable></td>
-          <td><button style="font-size:24px"><i class="delete fa fa-trash-o" id="trash"></i></button></td>
+          <td><button class="delete fa fa-trash-o" style="font-size:24px"><i id="trash"></i></button></td>
         
       </tbody>
     </table>

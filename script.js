@@ -30,7 +30,16 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
             for (var j = 0; j < numOfOptionsPerRow; j++) {
                 mySels[0].children[j].addEventListener('click', myFunction);
             };
+    
+        // Create an array of trash 
+        let trashArray = document.getElementsByClassName("delete");
+        const numOfTrash = trashArray.length;
+        for (var i = 0; i < numOfTrash; i++) {
+            trashArray[i].addEventListener('click', deleteSpecificRow);     
+        };
     }
+
+        
         
     // Get the Add Row button
     let addRowButton = document.getElementById("add-row");
@@ -51,17 +60,23 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
     deleteButton.addEventListener('click', deleteRow);
 
     // Get the Export Button
-    let exportButton = document.getElementById("export-csv-button");
+    let exportButton = document.getElementById("export");
 
     // Add event listener to the export button
     exportButton.addEventListener('click', exportTableToCSV);
-
+    
 
 
 })(window, document);
 
+
+
+
+});
+
 //This defines what happens when we add a row (this happens 9 times when page loads, and occurs whenever Add Row button is clicked)
 function addRow() {
+    console.log("addRow");
     // Get the table body element in which you want to add row
     let table = document.getElementById("game-table-body");
     // Create row element
@@ -157,9 +172,6 @@ function addRow() {
     table.appendChild(row);
 };
 
-
-});
-
 //This defines what happens when we click the clear button.
 function clearTable() {
     // Get all elements with class "score-dropdown-class"
@@ -192,6 +204,7 @@ function clearTable() {
 
 // Function to delete the last row
 function deleteRow() {
+    console.log('deleteRow')
     // Get the table body element
     let table = document.getElementById("game-table-body");
 
@@ -202,22 +215,24 @@ function deleteRow() {
     }
 }
 
-//Function to delete a SPECIFIC row
-// function deleteRow(button) {
-//     // Traverse up the DOM to find the row element
-//     let row = button.parentElement.parentElement;
-//     // Remove the row from its parent
-//     row.remove();
-// }
-// });
-//When I add things, everything stops working!
+function deleteSpecificRow(event) {
+    console.log('event.target', event.target)
+    console.log('event.target.parentElement', event.target.parentElement)
+    console.log('event.target.parentElement.parentElement', event.target.parentElement.parentElement)
+    let row = event.target.parentElement.parentElement;
+    //Remove the row from its parent
+    row.remove();
+}
 
-// Add event listener for delete button
-document.querySelector(".delete-button").addEventListener("click", function() {
-// Get the parent row and remove it
-var row = this.closest("tr");
-        row.remove();
-        });
+
+
+
+
+// .addEventListener("click", function() {
+// // Get the parent row and remove it
+// var row = this.closest("tr");
+//         row.remove() ;
+//         });
 
 
 function exportTableToCSV() {
@@ -248,3 +263,27 @@ function exportTableToCSV() {
             // Trigger download
             downloadLink.click();
         }
+
+// These are equivalent
+
+const dogs = ['Spot', 'Spike', 'Fred']
+
+for (let i = 0; i < dogs.length; i++) {
+    console.log(dogs[i])
+}
+
+dogs.forEach((dog) => { // lots of super awesome array functions like .forEach .map .filter .find .findIndex
+    console.log(dog)
+})
+
+// This is not working
+
+// let trashArray = document.getElementsByClassName("delete");
+// const numOfTrash = trashArray.length;
+// for (var i = 0; i < numOfTrash; i++) {
+//     trashArray[i].addEventListener('click', deleteSpecificRow);     
+// };
+
+// trashArray.forEach((trash) => {
+//     trash.addEventListener('click', deleteSpecificRow);
+// })
