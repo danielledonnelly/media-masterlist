@@ -38,19 +38,7 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
             trashArray[i].addEventListener('click', deleteSpecificRow);     
         };
 
-        // Function to save the table data to local storage
-        function saveTableData() {
-        const tableContent = document.getElementById('media-table-body').innerHTML;
-        localStorage.setItem('mediaMasterlist', tableContent);
-        }
 
-        // Function to load the table data from local storage
-        function loadTableData() {
-        const storedContent = localStorage.getItem('mediaMasterlist');
-        if (storedContent) {
-        document.getElementById('media-table-body').innerHTML = storedContent;
-        }
-        }
 
         // Call loadTableData when the page loads
         document.addEventListener('DOMContentLoaded', loadTableData);
@@ -88,6 +76,10 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
 
     // Add event listener to the export button
     exportButton.addEventListener('click', exportTableToCSV);
+
+
+
+    
     
 
 
@@ -287,6 +279,26 @@ function exportTableToCSV() {
             // Trigger download
             downloadLink.click();
         }
+
+        // Function to save the table data to local storage
+        function saveTableData() {
+            console.log("Saving table data");
+            const tableContent = document.getElementById('media-table-body').innerHTML;
+            console.log("Table content:", tableContent);
+            localStorage.setItem('mediaMasterlist', tableContent);
+    }
+    
+            // Function to load the table data from local storage
+            function loadTableData() {
+            const storedContent = localStorage.getItem('mediaMasterlist');
+            if (storedContent) {
+            document.getElementById('media-table-body').innerHTML = tableContent;
+            }
+            }
+
+
+
+
 
 // These are equivalent
 
