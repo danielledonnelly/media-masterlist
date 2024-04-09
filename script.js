@@ -7,6 +7,32 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
 
         //This represents the amount of rows we want JavaScript to add in immediately
         //Since we have 1 row defined in HTML and want 10 rows by default, we want 9
+        
+        // Function to save table data whenever a cell's content changes
+    
+    function saveTableData() {
+    console.log("Saving table data");
+    const tableContent = document.getElementById('media-table-body').innerHTML;
+    console.log("Table content:", tableContent);
+    localStorage.setItem('mediaMasterlist', tableContent);
+    }
+
+    // Function to load table data from local storage
+    function loadTableData() {
+    console.log("Loading table data");
+    const storedContent = localStorage.getItem('mediaMasterlist');
+    if (storedContent) {
+        document.getElementById('media-table-body').innerHTML = storedContent;
+    }
+    }
+
+    // Call loadTableData when the page loads
+    document.addEventListener('DOMContentLoaded', loadTableData);
+
+    // Add event listener to save table data whenever a cell's content changes
+    document.getElementById('media-table').addEventListener('input', saveTableData);
+        
+        
         const desiredRowsCount = 9
         for (var i = 0; i < desiredRowsCount; i++) {
             addRow()
@@ -37,31 +63,6 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
         for (var i = 0; i < numOfTrash; i++) {
             trashArray[i].addEventListener('click', deleteSpecificRow);     
         };
-
-
-
-        // Call loadTableData when the page loads
-        document.addEventListener('DOMContentLoaded', loadTableData);
-
-        // Add event listener to save table data whenever a cell's content changes
-        document.getElementById('media-table').addEventListener('input', saveTableData);
-
-        // Function to save the table data to local storage
-        function saveTableData() {
-        console.log("Saving table data");
-        const tableContent = document.getElementById('media-table-body').innerHTML;
-        console.log("Table content:", tableContent);
-        localStorage.setItem('mediaMasterlist', tableContent);
-        }
-            
-        // Function to load the table data from local storage
-        function loadTableData() {
-            console.log("Loading table data");
-            const storedContent = localStorage.getItem('mediaMasterlist');
-            if (storedContent) {
-                document.getElementById('media-table-body').innerHTML = storedContent;
-            }
-        }
         
 
     }
