@@ -24,14 +24,14 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
                 document.getElementById('media-table-body').innerHTML = tableContent;
                 }
         }
-        
-        //This calls the loadTableData function since it wasn't being called.
-        loadTableData();
                     
         const desiredRowsCount = 9
         for (var i = 0; i < desiredRowsCount; i++) {
             addRow()
         };
+
+        //This calls the loadTableData function since it wasn't being called.
+        loadTableData();
 
         //Get the Score buttons
         const myScoreSelButtons = document.getElementsByClassName("score-dropdown-class"); // there are 11 of these
