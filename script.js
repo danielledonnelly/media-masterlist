@@ -10,8 +10,7 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
         
         // Function to save table data whenever a cell's content changes
 
-    // Call loadTableData when the page loads
-    document.addEventListener('DOMContentLoaded', loadTableData);
+
 
     // Add event listener to save table data whenever a cell's content changes
     document.getElementById('media-table').addEventListener('input', saveTableData);
@@ -40,6 +39,18 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
             for (var j = 0; j < numOfOptionsPerRow; j++) {
                 mySels[0].children[j].addEventListener('click', myFunction);
             };
+
+        // Function to load table data from local storage
+        //I have this function in two places which might be redundant, but it's the only way I could get the code working.
+        function loadTableData() {
+            console.log("Loading table data");
+            const tableContent = localStorage.getItem('mediaMasterlist');
+            if (tableContent) {
+                document.getElementById('media-table-body').innerHTML = tableContent;
+            }
+            }  
+
+        loadTableData();
     
         // Create an array of trash 
         let trashArray = document.getElementsByClassName("delete");
@@ -52,20 +63,25 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
     }
 
     function saveTableData() {
-    console.log("Saving table data");
-    const tableContent = document.getElementById('media-table-body').innerHTML;
-    console.log("Table content:", tableContent);
-    localStorage.setItem('mediaMasterlist', tableContent);
-    }
+        console.log("Saving table data");
+        const tableContent = document.getElementById('media-table-body').innerHTML;
+        console.log("Table content:", tableContent);
+        localStorage.setItem('mediaMasterlist', tableContent);
+        }
+    
+        // Function to load table data from local storage
+        function loadTableData() {
+        console.log("Loading table data");
+        const tableContent = localStorage.getItem('mediaMasterlist');
+        if (tableContent) {
+            document.getElementById('media-table-body').innerHTML = tableContent;
+        }
+        }  
 
-    // Function to load table data from local storage
-    function loadTableData() {
-    console.log("Loading table data");
-    const storedContent = localStorage.getItem('mediaMasterlist');
-    if (storedContent) {
-        document.getElementById('media-table-body').innerHTML = storedContent;
-    }
-    }  
+    // Call loadTableData when the page loads
+    document.addEventListener('DOMContentLoaded', loadTableData);
+
+    
         
     // Get the Add Row button
     let addRowButton = document.getElementById("add-row");
@@ -103,6 +119,8 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
 
 
 });
+
+
 
 //This defines what happens when we add a row (this happens 9 times when page loads, and occurs whenever Add Row button is clicked)
 function addRow() {
