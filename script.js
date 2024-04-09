@@ -9,30 +9,25 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
         //Since we have 1 row defined in HTML and want 10 rows by default, we want 9
         
         // Function to save table data whenever a cell's content changes
-    
-    function saveTableData() {
-    console.log("Saving table data");
-    const tableContent = document.getElementById('media-table-body').innerHTML;
-    console.log("Table content:", tableContent);
-    localStorage.setItem('mediaMasterlist', tableContent);
-    }
 
-    // Function to load table data from local storage
-    function loadTableData() {
-    console.log("Loading table data");
-    const storedContent = localStorage.getItem('mediaMasterlist');
-    if (storedContent) {
-        document.getElementById('media-table-body').innerHTML = storedContent;
-    }
-    }
+        // Call loadTableData when the page loads
+        document.addEventListener('DOMContentLoaded', loadTableData);
 
-    // Call loadTableData when the page loads
-    document.addEventListener('DOMContentLoaded', loadTableData);
-
-    // Add event listener to save table data whenever a cell's content changes
-    document.getElementById('media-table').addEventListener('input', saveTableData);
+        // Add event listener to save table data whenever a cell's content changes
+        document.getElementById('media-table').addEventListener('input', saveTableData);
         
+        // Function to load table data from local storage
+        function loadTableData() {
+            console.log("Loading table data");
+            const tableContent = localStorage.getItem('mediaMasterlist');
+            if (tableContent) {
+                document.getElementById('media-table-body').innerHTML = tableContent;
+                }
+        }
         
+        //This calls the loadTableData function since it wasn't being called.
+        loadTableData();
+                    
         const desiredRowsCount = 9
         for (var i = 0; i < desiredRowsCount; i++) {
             addRow()
@@ -67,8 +62,15 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
 
     }
 
-        
-        
+    function saveTableData() {
+        console.log("Saving table data");
+        const tableContent = document.getElementById('media-table-body').innerHTML;
+        localStorage.setItem('mediaMasterlist', tableContent);
+        }
+    
+    // Call loadTableData when the page loads
+    document.addEventListener('DOMContentLoaded', loadTableData);
+
     // Get the Add Row button
     let addRowButton = document.getElementById("add-row");
 
