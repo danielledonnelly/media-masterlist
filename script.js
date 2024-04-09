@@ -3,20 +3,13 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
         // This contains code that should be taken care of right away
         window.onload = initialize;
         function initialize (){
-             // Load the row count from localStorage or set it to the default value
-             let rowCount = loadRowCount();
-             // Add rows based on the loaded row count
-             for (let i = 0; i < rowCount; i++) {
-                 addRow();
-             }
             // Functions that are called immediately (get elements) go in inititalize
-    
-            //This represents the amount of rows we want JavaScript to add in immediately
-            //Since we have 1 row defined in HTML and want 10 rows by default, we want 9
             
             // Add event listener to save table data whenever a cell's content changes
             document.getElementById('media-table').addEventListener('input', saveTableData);
             
+                        //This represents the amount of rows we want JavaScript to add in immediately
+            //Since we have 1 row defined in HTML and want 10 rows by default, we want 9
             const desiredRowsCount = 9
             for (var i = 0; i < desiredRowsCount; i++) {
                 addRow()
@@ -79,36 +72,7 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
             }
         }
         
-        function saveRowCount(count) {
-            localStorage.setItem('mediaRowCount', count);
-        }
-
-        function loadRowCount() {
-            return parseInt(localStorage.getItem('mediaRowCount'), 10) || 0;
-        }
-
-        // Function to add a row
-        function addRow() {
-            console.log("addRow");
-            // Get the table body element in which you want to add row
-            let table = document.getElementById("media-table-body");
-            // Create row element
-            let row = document.createElement("tr");
-            // Create cells
-            let c1 = document.createElement("td");
-            let c2 = document.createElement("td");
-            let c3 = document.createElement("td");
-            let c4 = document.createElement("td");
-            let c5 = document.createElement("td");
-            let c6 = document.createElement("td");
-            let deleteCell = document.createElement("td");
-
-            // Increment row count and save it
-            let rowCount = table.getElementsByTagName('tr').length + 1;
-            saveRowCount(rowCount);
-
-            // Rest of your addRow function...
-        }
+        
     
         // Call loadTableData when the page loads
         document.addEventListener('DOMContentLoaded', loadTableData);
@@ -137,19 +101,8 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
         let exportButton = document.getElementById("export");
     
         // Add event listener to the export button
-        exportButton.addEventListener('click', exportTableToCSV);
-    
-    
-        function saveRowCount(count) {
-            localStorage.setItem('mediaRowCount', count);
-        }
+        exportButton.addEventListener('click', exportTableToCSV);    
 
-        function loadRowCount() {
-            return parseInt(localStorage.getItem('mediaRowCount'), 10) || 9; // Default to 9 if not found
-        }
-
-        
-        
     
     
     })(window, document);
