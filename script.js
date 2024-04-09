@@ -282,15 +282,17 @@ function exportTableToCSV() {
 
         // Function to save the table data to local storage
         function saveTableData() {
-            console.log("Saving table data");
-            const tableContent = document.getElementById('media-table-body').innerHTML;
-            localStorage.setItem('mediaMasterlist', tableContent);
+        console.log("Saving table data");
+        const tableContent = document.getElementById('media-table-body').innerHTML;
+        console.log("Table content:", tableContent);
+        localStorage.setItem('mediaMasterlist', tableContent);
         }
     
         // Function to load the table data from local storage
         function loadTableData() {
-            const storedContent = localStorage.getItem('mediaMasterlist');
-            if (storedContent) {
+        console.log("Loading table data");
+        const storedContent = localStorage.getItem('mediaMasterlist');
+        if (storedContent) {
             document.getElementById('media-table-body').innerHTML = storedContent;
             }
         }
