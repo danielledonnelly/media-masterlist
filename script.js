@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
 function addRow() {
     console.log("addRow");
     // Get the table body element in which you want to add row
-    let table = document.getElementById("game-table-body");
+    let table = document.getElementById("media-table-body");
     // Create row element
     let row = document.createElement("tr");
     // Create cells
@@ -184,7 +184,7 @@ function clearTable() {
     });
 
     // Get the table body element
-    let tableBody = document.getElementById("game-table-body");
+    let tableBody = document.getElementById("media-table-body");
 
     // Iterate through each row
     for (let i = 0; i < tableBody.rows.length; i++) {
@@ -206,7 +206,7 @@ function clearTable() {
 function deleteRow() {
     console.log('deleteRow')
     // Get the table body element
-    let table = document.getElementById("game-table-body");
+    let table = document.getElementById("media-table-body");
 
     // Check if there's more than one row
     if (table.rows.length > 1) {
