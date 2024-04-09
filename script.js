@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
             };
 
         // Function to load table data from local storage
-        //I have this function in two places which might be redundant, but it's the only way I could get the code working.
+        //I have this function in two places which might be redundant, but it's the only way I could get the code
         function loadTableData() {
             console.log("Loading table data");
             const tableContent = localStorage.getItem('mediaMasterlist');
@@ -67,16 +67,16 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
         const tableContent = document.getElementById('media-table-body').innerHTML;
         console.log("Table content:", tableContent);
         localStorage.setItem('mediaMasterlist', tableContent);
-        }
+    }
     
-        // Function to load table data from local storage
-        function loadTableData() {
+    // Function to load table data from local storage
+    function loadTableData() {
         console.log("Loading table data");
         const tableContent = localStorage.getItem('mediaMasterlist');
         if (tableContent) {
             document.getElementById('media-table-body').innerHTML = tableContent;
         }
-        }  
+    }  
 
     // Call loadTableData when the page loads
     document.addEventListener('DOMContentLoaded', loadTableData);
