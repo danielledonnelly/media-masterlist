@@ -38,53 +38,28 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
             trashArray[i].addEventListener('click', deleteSpecificRow);     
         };
 
-        //Function to save table data
+        // Function to save the table data to local storage
         function saveTableData() {
-            const tableData = [];
-            const tableRows = document.querySelectorAll('#media-table-body tr');
-        
-            tableRows.forEach(row => {
-                const rowData = [];
-                row.querySelectorAll('td').forEach(cell => {
-                    rowData.push(cell.innerText);
-                });
-                tableData.push(rowData);
-            });
-        
-            localStorage.setItem('mediaMasterlist', JSON.stringify(tableData));
+        const tableContent = document.getElementById('media-table-body').innerHTML;
+        localStorage.setItem('mediaMasterlist', tableContent);
         }
 
-        // Function to load table data
+        // Function to load the table data from local storage
         function loadTableData() {
-            const storedData = localStorage.getItem('mediaMasterlist');
-        
-            if (storedData) {
-                const tableData = JSON.parse(storedData);
-                const tableBody = document.getElementById('media-table-body');
-        
-                tableBody.innerHTML = ''; // Clear existing table rows
-        
-                tableData.forEach(rowData => {
-                    const newRow = document.createElement('tr');
-        
-                    rowData.forEach(cellData => {
-                        const newCell = document.createElement('td');
-                        newCell.textContent = cellData;
-                        newRow.appendChild(newCell);
-                    });
-        
-                    tableBody.appendChild(newRow);
-                });
-            }
+        const storedContent = localStorage.getItem('mediaMasterlist');
+        if (storedContent) {
+        document.getElementById('media-table-body').innerHTML = storedContent;
         }
-       
-        // Call loadTableData function whenever content is loaded.
-        document.addEventListener('DOMContentLoaded', function() {
-            loadTableData();
-            
-        // Add event listener to save table data when any cell content changes
+        }
+
+        // Call loadTableData when the page loads
+        document.addEventListener('DOMContentLoaded', loadTableData);
+
+        // Add event listener to save table data whenever a cell's content changes
         document.getElementById('media-table').addEventListener('input', saveTableData);
-        });
+
+        
+        
 
     }
 
