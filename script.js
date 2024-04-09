@@ -284,7 +284,6 @@ function exportTableToCSV() {
         function saveTableData() {
             console.log("Saving table data");
             const tableContent = document.getElementById('media-table-body').innerHTML;
-            console.log("Table content:", tableContent);
             localStorage.setItem('mediaMasterlist', tableContent);
         }
     
