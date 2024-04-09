@@ -12,9 +12,9 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
             addRow()
         };
 
-        //We get the Score buttons
+        //Get the Score buttons
         const myScoreSelButtons = document.getElementsByClassName("score-dropdown-class"); // there are 11 of these
-        //We get the Score button options that can be selected
+        //Get the Score button options that can be selected
         const mySels = document.getElementsByClassName("score-menu-dropdown-class"); // there are 11 of these
 
         function myFunction(event) {
@@ -37,6 +37,55 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
         for (var i = 0; i < numOfTrash; i++) {
             trashArray[i].addEventListener('click', deleteSpecificRow);     
         };
+
+        //Function to save table data
+        function saveTableData() {
+            const tableData = [];
+            const tableRows = document.querySelectorAll('#media-table-body tr');
+        
+            tableRows.forEach(row => {
+                const rowData = [];
+                row.querySelectorAll('td').forEach(cell => {
+                    rowData.push(cell.innerText);
+                });
+                tableData.push(rowData);
+            });
+        
+            localStorage.setItem('mediaMasterlist', JSON.stringify(tableData));
+        }
+
+        // Function to load table data
+        function loadTableData() {
+            const storedData = localStorage.getItem('mediaMasterlist');
+        
+            if (storedData) {
+                const tableData = JSON.parse(storedData);
+                const tableBody = document.getElementById('media-table-body');
+        
+                tableBody.innerHTML = ''; // Clear existing table rows
+        
+                tableData.forEach(rowData => {
+                    const newRow = document.createElement('tr');
+        
+                    rowData.forEach(cellData => {
+                        const newCell = document.createElement('td');
+                        newCell.textContent = cellData;
+                        newRow.appendChild(newCell);
+                    });
+        
+                    tableBody.appendChild(newRow);
+                });
+            }
+        }
+       
+        // Call loadTableData function whenever content is loaded.
+        document.addEventListener('DOMContentLoaded', function() {
+            loadTableData();
+            
+        // Add event listener to save table data when any cell content changes
+        document.getElementById('media-table').addEventListener('input', saveTableData);
+        });
+
     }
 
         
