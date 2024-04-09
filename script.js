@@ -3,18 +3,19 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
         // This contains code that should be taken care of right away
         window.onload = initialize;
         function initialize (){
+             // Load the row count from localStorage or set it to the default value
+             let rowCount = loadRowCount();
+             // Add rows based on the loaded row count
+             for (let i = 0; i < rowCount; i++) {
+                 addRow();
+             }
             // Functions that are called immediately (get elements) go in inititalize
     
             //This represents the amount of rows we want JavaScript to add in immediately
             //Since we have 1 row defined in HTML and want 10 rows by default, we want 9
             
-            // Function to save table data whenever a cell's content changes
-    
-    
-    
-        // Add event listener to save table data whenever a cell's content changes
-        document.getElementById('media-table').addEventListener('input', saveTableData);
-            
+            // Add event listener to save table data whenever a cell's content changes
+            document.getElementById('media-table').addEventListener('input', saveTableData);
             
             const desiredRowsCount = 9
             for (var i = 0; i < desiredRowsCount; i++) {
@@ -76,15 +77,46 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
             if (tableContent) {
                 document.getElementById('media-table-body').innerHTML = tableContent;
             }
-        }  
+        }
+        
+        function saveRowCount(count) {
+            localStorage.setItem('mediaRowCount', count);
+        }
+
+        function loadRowCount() {
+            return parseInt(localStorage.getItem('mediaRowCount'), 10) || 0;
+        }
+
+        // Function to add a row
+        function addRow() {
+            console.log("addRow");
+            // Get the table body element in which you want to add row
+            let table = document.getElementById("media-table-body");
+            // Create row element
+            let row = document.createElement("tr");
+            // Create cells
+            let c1 = document.createElement("td");
+            let c2 = document.createElement("td");
+            let c3 = document.createElement("td");
+            let c4 = document.createElement("td");
+            let c5 = document.createElement("td");
+            let c6 = document.createElement("td");
+            let deleteCell = document.createElement("td");
+
+            // Increment row count and save it
+            let rowCount = table.getElementsByTagName('tr').length + 1;
+            saveRowCount(rowCount);
+
+            // Rest of your addRow function...
+        }
     
         // Call loadTableData when the page loads
         document.addEventListener('DOMContentLoaded', loadTableData);
-    
-        
             
         // Get the Add Row button
         let addRowButton = document.getElementById("add-row");
+        let rowCount = document.getElementById('media-table-body').getElementsByTagName('tr').length;
+        saveRowCount(rowCount);
     
         // Add event listener to Add Row button
         addRowButton.addEventListener('click', addRow);
@@ -108,7 +140,14 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
         exportButton.addEventListener('click', exportTableToCSV);
     
     
-    
+        function saveRowCount(count) {
+            localStorage.setItem('mediaRowCount', count);
+        }
+
+        function loadRowCount() {
+            return parseInt(localStorage.getItem('mediaRowCount'), 10) || 9; // Default to 9 if not found
+        }
+
         
         
     
@@ -282,7 +321,7 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
     //         row.remove() ;
     //         });
     
-    
+    //Not working
     function exportTableToCSV() {
         let csvContent = "data:text/csv;charset=utf-8,";
                 
