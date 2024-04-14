@@ -18,21 +18,17 @@ header {
       display: flex;
     }
 
-.banner {
-    width: 700px; 
-    align-content: center;
-    margin: auto;
-  }
-  
-  /* Media query for screens smaller than 600px */
-  @media only screen and (max-width: 600px) {
     .banner {
-      width: 100%; 
-      align-content: center;
-      align-items: center;
-      padding: auto;
-    }
-  }
+        width: 700px; /* Default width */
+        margin: 0 auto; /* Center the banner horizontally */
+      }
+      
+      /* Media query for screens smaller than 600px */
+      @media only screen and (max-width: 600px) {
+        .banner {
+          width: 100%; /* Full width on smaller screens */
+        }
+      }
 
 table {
         color: #BEADED !
