@@ -19,7 +19,7 @@ header {
     }
 
 .banner {
-    width: 700px; 
+    width: 100%; 
   }
   
   /* Media query for screens smaller than 600px */
