@@ -20,6 +20,7 @@ header {
 
 .banner {
     width: 700px; 
+    align-content: center;
   }
   
   /* Media query for screens smaller than 600px */
@@ -27,6 +28,7 @@ header {
     .banner {
       width: 100%; 
       align-content: center;
+      align-items: center;
     }
   }
 
