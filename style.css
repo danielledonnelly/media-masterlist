@@ -18,12 +18,13 @@ body {
         display: flex;
         justify-content: center; /* Horizontally center the content */
         align-items: center; /* Vertically center the content */
+        margin: auto;
     }
 
 .banner {
-    width: 100%; /* Set banner width to 100% by default */
-    max-width: 700px; /* Limit banner width to 700px */
-    margin: 0 auto; /* Center the banner horizontally */
+    width: 100%;
+    max-width: 700px; 
+    margin: 0 auto; 
     }
       
 
