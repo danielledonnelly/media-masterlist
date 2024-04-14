@@ -21,6 +21,7 @@ header {
 .banner {
     width: 700px; 
     align-content: center;
+    margin: auto;
   }
   
   /* Media query for screens smaller than 600px */
