@@ -18,17 +18,18 @@ header {
       display: flex;
     }
 
-    .banner {
-        width: 700px; /* Default width */
-        margin: 0 auto; /* Center the banner horizontally */
-      }
+.banner {
+    width: 100%; /* Set banner width to 100% by default */
+    max-width: 700px; /* Limit banner width to 700px */
+    margin: 0 auto; /* Center the banner horizontally */
+    }
       
-      /* Media query for screens smaller than 600px */
-      @media only screen and (max-width: 600px) {
-        .banner {
-          width: 100%; /* Full width on smaller screens */
-        }
-      }
+/* Media query for screens smaller than 600px */
+@media only screen and (max-width: 600px) {
+    .banner {
+          max-width: none; /* Remove max-width restriction on smaller screens */
+    }
+}
 
 table {
         color: #BEADED !
