@@ -72,7 +72,10 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
             }
         }
         
-        
+        // Function to save row count
+        function saveRowCount(count) {
+            localStorage.setItem('rowCount', count);
+        }
     
         // Call loadTableData when the page loads
         document.addEventListener('DOMContentLoaded', loadTableData);
