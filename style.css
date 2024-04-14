@@ -35,7 +35,7 @@ header {
         }
         
     .banner {
-        max-width: 100%; /* Set banner width to 100% */
+        max-width: none;
         margin: 0; /* Remove any margin */
         }
     }
@@ -70,7 +70,6 @@ div {
 .transparent { 
     background-color: transparent !important;
     border-color: transparent !important;
-    color: #BEADED !important;
     text-align: center;
 }
 
