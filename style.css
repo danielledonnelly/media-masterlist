@@ -16,6 +16,7 @@ header {
       font-size:50%;
       font-weight:500;
       display: flex;
+      margin: auto;
     }
 
 .banner {
@@ -26,8 +27,9 @@ header {
       
 /* Media query for screens smaller than 600px */
 @media only screen and (max-width: 600px) {
-    .banner {
+    header {
           max-width: none; /* Remove max-width restriction on smaller screens */
+          margin: 0 auto;
     }
 }
 
