@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
             }
         }
         
-        // Function to save row count
+        //Define saveRowCount
         function saveRowCount(count) {
             localStorage.setItem('rowCount', count);
         }
