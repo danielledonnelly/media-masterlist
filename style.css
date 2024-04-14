@@ -16,7 +16,7 @@ header {
       font-size:50%;
       font-weight:500;
       display: flex;
-      margin: auto;
+      margin: ;
     }
 
 .banner {
@@ -30,6 +30,11 @@ header {
     header {
           max-width: none; /* Remove max-width restriction on smaller screens */
           margin: 0 auto;
+    }
+    .banner {
+        width: 100%; /* Set banner width to 100% by default */
+        max-width: 90%; /* Limit banner width to 90% of the viewport width */
+        margin: 0 auto; /* Center the banner horizontally */
     }
 }
 
