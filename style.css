@@ -2,14 +2,14 @@
 /* I may get rid of the scrollbar all-together in the future */
 :root {
     color-scheme: dark;
-  }
+}
 
 body {
-    	background:#2c343b !important;
-        color: #BEADED !important;
-    }
+    background:#2c343b !important;
+    color: #BEADED !important;
+}
 
-    header {
+header {
         text-align: center;
         padding: 1%;
         color: #BEADED !important;
@@ -19,12 +19,13 @@ body {
         justify-content: center; /* Horizontally center the content */
         align-items: center; /* Vertically center the content */
         margin: auto;
-    }
+}
 
 .banner {
     width: 100%;
     max-width: 700px; 
     margin: 0 auto; 
+    align-self: center;
     }
       
 
