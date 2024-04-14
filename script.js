@@ -21,10 +21,19 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
             const mySels = document.getElementsByClassName("score-menu-dropdown-class"); // there are 11 of these
     
             function myFunction(event) {
-                console.log(event.target);
-                myScoreSelButtons[0].innerText = event.target.innerText;
-                };
-                    // }
+                // Find the closest row to the clicked dropdown item
+                let row = event.target.closest('tr');
+                if (row) {
+                    // Find the dropdown button within the row
+                    let button = row.querySelector('.dropdown-toggle');
+                    if (button) {
+                        // Update the button's text
+                        button.innerText = event.target.innerText;
+                        // Save the dropdown values
+                        saveScoreDropdowns();
+                    }
+                }
+            }
     
             const rowsCount = myScoreSelButtons.length
             const numOfOptionsPerRow = mySels[0].children.length
