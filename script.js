@@ -268,8 +268,8 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
             for (let j = 0; j < row.cells.length; j++) {
                 let cell = row.cells[j];
     
-                // If it's not the second column, clear the inner text
-                if (j !== 1) {
+                // If it's not the second column or final column, clear the inner text
+                if (j !== 1 && j !== row.cells.length - 1) {
                     cell.innerText = "";
                 }
             }
