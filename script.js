@@ -4,7 +4,7 @@
     console.log("Saving table data");
     const tableContent = document.getElementById('media-table-body').innerHTML;
     localStorage.setItem('mediaMasterlist', tableContent);
-    console.log("Data saved to localStorage:", localStorage.getItem('mediaMasterlist'));
+    console.log("Data saved to localStorage:");
 }
 
 document.addEventListener('DOMContentLoaded', function() { //This may appear like it causes the Add Row button adds TWO rows instead of one when operating within the CodeSwing, but it ensures everything works correctly when working in the browser.
@@ -105,8 +105,11 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
 }
         
         // Function to save row count
-        function saveRowCount(count) {
-            localStorage.setItem('rowCount', count);
+        function saveRowCount() {
+            let rowCount = document.getElementById('media-table-body').getElementsByTagName('tr').length;
+            localStorage.setItem('rowCount', rowCount);
+
+            // localStorage.setItem('rowCount', 23);
         }
     
         // Call loadTableData when the page loads
@@ -275,7 +278,7 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
                 }
             }
         }
-                //This isn't working, table data is not saved as blank when clearTable is used and the page is reloaded
+        
                 saveTableData()
 
     }
@@ -314,8 +317,12 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
     
     //Not working
     function exportTableToCSV() {
-        let csvContent = "data:text/csv;charset=utf-8,";
+        // let csvContent = "data:text/csv;charset=utf-8,";
+        let csvContent = "";
                 
+        // Suggestion: use this from localStorage
+        // const mediaContent = localStorage.getItem('mediaMasterlist')
+
             // Iterate over each row in the table
             let rows = document.querySelectorAll("table tr");
             rows.forEach(row => {
@@ -324,11 +331,14 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
                     row.querySelectorAll("td").forEach(cell => {
                         // Escape double quotes in cell value and wrap in double quotes
                         let cellValue = '"' + cell.textContent.replace(/"/g, '""') + '"';
+                        console.log(cellValue)
                         rowData.push(cellValue);
                     });
                     // Concatenate row data into CSV string
                     csvContent += rowData.join(",") + "\n";
                 });
+
+                // csvContent += "hello"
             
                 // Create Blob from CSV content
                 let blob = new Blob([csvContent], { type: "text/csv;charset=utf-8" });
