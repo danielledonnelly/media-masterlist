@@ -9,22 +9,23 @@ body {
 }
 
 header {
-    text-align: center;
-    padding: 1%;
-    font-size: 50%;
-    font-weight: 0;
-    display: flex;
-    justify-content: center; /* Horizontally center the content */
-    align-items: center; /* Vertically center the content */
-    color: white;
-}
-.banner {
-    text-align: center; /* Center the content horizontally */
+        text-align: center;
+        padding: 1%;
+        font-size: 50%;
+        font-weight: 0;
+        display: flex;
+        justify-content: center; /* Horizontally center the content */
+        align-items: center; /* Vertically center the content */
+        margin: auto;
+        color: white
 }
 
-.banner img {
-    max-width: 100%; /* Ensure the image resizes responsively */
-}
+.banner {
+    width: 100%;
+    max-width: 700px; 
+    margin: 0 auto; 
+    align-self: center;
+    }
 
 @media only screen and (max-width: 600px) {
     header {
