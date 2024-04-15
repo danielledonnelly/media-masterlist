@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
         saveRowCount(rowCount);
     
         // Add event listener to Add Row button
-        addRowButton.addEventListener('click', addRow);
+        addRowButton.addEventListener('click', manualAddRow);
     
         //Get the Clear button
         let clearButton = document.getElementById("clear");
@@ -155,8 +155,12 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
     
     });
     
-    
-    
+   
+    function manualAddRow(){
+        addRow();
+        saveTableData();
+    }
+
     //This defines what happens when we add a row (this happens 9 times when page loads, and occurs whenever Add Row button is clicked)
     function addRow() {
         console.log("addRow");
