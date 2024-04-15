@@ -20,8 +20,17 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
             //Get the Score button options that can be selected
             const mySels = document.getElementsByClassName("score-menu-dropdown-class"); // there are 11 of these
     
-            function myFunction(event) {
+            const rowsCount = myScoreSelButtons.length
+            const numOfOptionsPerRow = mySels[0].children.length
+            // for (var i = 0; i < rowsCount; i++) {
+            //     const numOfOptionsPerRow = mySels[i].children.length
+                for (var j = 0; j < numOfOptionsPerRow; j++) {
+                    mySels[0].children[j].addEventListener('click', myFunction);
+                };
+    
+                function myFunction(event) {
                 // Find the closest row to the clicked dropdown item
+                console.log("myFunction")
                 let row = event.target.closest('tr');
                 if (row) {
                     // Find the dropdown button within the row
@@ -35,24 +44,8 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
                 }
             }
     
-            const rowsCount = myScoreSelButtons.length
-            const numOfOptionsPerRow = mySels[0].children.length
-            // for (var i = 0; i < rowsCount; i++) {
-            //     const numOfOptionsPerRow = mySels[i].children.length
-                for (var j = 0; j < numOfOptionsPerRow; j++) {
-                    mySels[0].children[j].addEventListener('click', myFunction);
-                };
-    
-            // Function to load table data from local storage
-            //I have this function in two places which might be redundant, but it's the only way I could get the code
-            function loadTableData() {
-                console.log("Loading table data");
-                const tableContent = localStorage.getItem('mediaMasterlist');
-                if (tableContent) {
-                    document.getElementById('media-table-body').innerHTML = tableContent;
-                }
-                }  
-    
+            //When I remove this specific line of code, 
+            //Local storage stops working and dropdowns work again.
             loadTableData();
         
             // Create an array of trash 
@@ -64,7 +57,8 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
             
     
         }
-    
+        
+        // Function to save table data to local storage
         function saveTableData() {
             console.log("Saving table data");
             const tableContent = document.getElementById('media-table-body').innerHTML;
@@ -81,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
             }
         }
         
-        //Define saveRowCount
+        // Function to save row count
         function saveRowCount(count) {
             localStorage.setItem('rowCount', count);
         }
