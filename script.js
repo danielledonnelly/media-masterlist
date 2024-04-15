@@ -18,16 +18,7 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
             //Get the Score buttons
             const myScoreSelButtons = document.getElementsByClassName("score-dropdown-class"); // there are 11 of these
             //Get the Score button options that can be selected
-            const mySels = document.getElementsByClassName("score-menu-dropdown-class"); // there are 11 of these
-    
-            const rowsCount = myScoreSelButtons.length
-            const numOfOptionsPerRow = mySels[0].children.length
-            // for (var i = 0; i < rowsCount; i++) {
-            //     const numOfOptionsPerRow = mySels[i].children.length
-                for (var j = 0; j < numOfOptionsPerRow; j++) {
-                    mySels[0].children[j].addEventListener('click', myFunction);
-                };
-    
+            
                 function myFunction(event) {
                 // Find the closest row to the clicked dropdown item
                 console.log("myFunction")
@@ -47,6 +38,31 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
             //When I remove this specific line of code, 
             //Local storage stops working and dropdowns work again.
             loadTableData();
+
+            // Get all elements with the class "dropdown-item"
+            const dropdownItems = document.querySelectorAll('.dropdown-item');
+
+            // Add event listener to each dropdown item
+            dropdownItems.forEach(item => {
+            item.addEventListener('click', function(event) {
+            
+            // Find the closest row to the clicked dropdown item
+            console.log("myFunction");
+            let row = event.target.closest('tr');
+            if (row) {
+            // Find the dropdown button within the row
+            let button = row.querySelector('.dropdown-toggle');
+            if (button) {
+                // Update the button's text
+                button.innerText = event.target.innerText;
+                // Save the dropdown values
+                saveTableData();
+            }
+        }
+    });
+});
+
+   
         
             // Create an array of trash 
             let trashArray = document.getElementsByClassName("delete");
@@ -66,14 +82,26 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
             localStorage.setItem('mediaMasterlist', tableContent);
         }
         
+        
+
+        // // Function to load table data from local storage
+        // function loadTableData() {
+        //     console.log("Loading table data");
+        //     const tableContent = localStorage.getItem('mediaMasterlist');
+        //     if (tableContent) {
+        //         document.getElementById('media-table-body').innerHTML = tableContent;
+        //     }
+        // }
+
         // Function to load table data from local storage
         function loadTableData() {
-            console.log("Loading table data");
-            const tableContent = localStorage.getItem('mediaMasterlist');
-            if (tableContent) {
-                document.getElementById('media-table-body').innerHTML = tableContent;
-            }
-        }
+        console.log("Loading table data");
+        const tableContent = localStorage.getItem('mediaMasterlist');
+        if (tableContent) {
+        // Set the innerHTML of media-table-body to the loaded table content
+        document.getElementById('media-table-body').innerHTML = tableContent;
+    }
+}
         
         // Function to save row count
         function saveRowCount(count) {
@@ -339,3 +367,4 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
     // trashArray.forEach((trash) => {
     //     trash.addEventListener('click', deleteSpecificRow);
     // })
+
