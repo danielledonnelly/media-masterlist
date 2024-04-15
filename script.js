@@ -245,6 +245,10 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
     
         // Append row to table body
         table.appendChild(row);
+
+        //For some reason, local storage stops working when I saveTableData in addRow
+        //saveTableData()
+        
     }
     
     //This defines what happens when we click the clear button.
@@ -275,7 +279,6 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
                 }
             }
         }
-                //This isn't working, table data is not saved as blank when clearTable is used and the page is reloaded
                 saveTableData()
 
     }
@@ -290,6 +293,7 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
         if (table.rows.length > 1) {
             // Remove the last row
             table.deleteRow(-1);
+            saveTableData()
         }
     }
     
@@ -300,6 +304,7 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
         let row = event.target.parentElement.parentElement;
         //Remove the row from its parent
         row.remove();
+        saveTableData()
     }
     
     
