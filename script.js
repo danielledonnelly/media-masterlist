@@ -141,7 +141,17 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
         // Add event listener to the export button
         exportButton.addEventListener('click', exportTableToCSV);    
 
-    
+        // Initialize event listeners for delete buttons
+        initializeDeleteButtons();
+
+        function initializeDeleteButtons() {
+            // Event listener for Delete buttons using event delegation
+            document.getElementById('media-table-body').addEventListener('click', function(event) {
+                if (event.target.classList.contains('delete')) {
+                    deleteSpecificRow(event);
+                }
+            });
+        }
     
     })(window, document);
     
