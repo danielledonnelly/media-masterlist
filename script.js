@@ -308,7 +308,8 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
             saveTableData()
         }
     }
-    
+
+    //
     function deleteSpecificRow(event) {
         console.log('event.target', event.target)
         console.log('event.target.parentElement', event.target.parentElement)
