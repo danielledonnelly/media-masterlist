@@ -1,3 +1,12 @@
+ // Function to save table data to local storage
+ //This is defined in the global scope because it causes bugs when placed elsewhere
+ function saveTableData() {
+    console.log("Saving table data");
+    const tableContent = document.getElementById('media-table-body').innerHTML;
+    localStorage.setItem('mediaMasterlist', tableContent);
+    console.log("Data saved to localStorage:", localStorage.getItem('mediaMasterlist'));
+}
+
 document.addEventListener('DOMContentLoaded', function() { //This may appear like it causes the Add Row button adds TWO rows instead of one when operating within the CodeSwing, but it ensures everything works correctly when working in the browser.
     (function(window, document) {
         // This contains code that should be taken care of right away
@@ -19,35 +28,37 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
             const myScoreSelButtons = document.getElementsByClassName("score-dropdown-class"); // there are 11 of these
             //Get the Score button options that can be selected
             
-                function myFunction(event) {
-                // Find the closest row to the clicked dropdown item
-                console.log("myFunction")
-                let row = event.target.closest('tr');
-                if (row) {
-                    // Find the dropdown button within the row
-                    let button = row.querySelector('.dropdown-toggle');
-                    if (button) {
-                        // Update the button's text
-                        button.innerText = event.target.innerText;
-                        // Save the dropdown values
-                        saveScoreDropdowns();
-                    }
-                }
-            }
+            //     function myFunction(event) {
+            //     // Find the closest row to the clicked dropdown item
+            //     console.log("myFunction")
+            //     let row = event.target.closest('tr');
+            //     if (row) {
+            //         // Find the dropdown button within the row
+            //         let button = row.querySelector('.dropdown-toggle');
+            //         if (button) {
+            //             // Update the button's text
+            //             button.innerText = event.target.innerText;
+            //             // Save the dropdown values
+            //             saveScoreDropdowns();
+            //         }
+            //     }
+            // }
     
             //When I remove this specific line of code, 
             //Local storage stops working and dropdowns work again.
             loadTableData();
 
+            //Below is my solution to local storage not being compatible with dropdowns
             // Get all elements with the class "dropdown-item"
             const dropdownItems = document.querySelectorAll('.dropdown-item');
 
-            // Add event listener to each dropdown item
+            // This ensures event listeners are added after loadTableData is called
             dropdownItems.forEach(item => {
+            // Add event listener to each dropdown item
             item.addEventListener('click', function(event) {
             
             // Find the closest row to the clicked dropdown item
-            console.log("myFunction");
+            console.log("Updating dropdown value");
             let row = event.target.closest('tr');
             if (row) {
             // Find the dropdown button within the row
@@ -63,7 +74,6 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
 });
 
    
-        
             // Create an array of trash 
             let trashArray = document.getElementsByClassName("delete");
             const numOfTrash = trashArray.length;
@@ -73,15 +83,6 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
             
     
         }
-        
-        // Function to save table data to local storage
-        function saveTableData() {
-            console.log("Saving table data");
-            const tableContent = document.getElementById('media-table-body').innerHTML;
-            console.log("Table content:", tableContent);
-            localStorage.setItem('mediaMasterlist', tableContent);
-        }
-        
         
 
         // // Function to load table data from local storage
@@ -274,6 +275,9 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
                 }
             }
         }
+                //This isn't working, table data is not saved as blank when clearTable is used and the page is reloaded
+                saveTableData()
+
     }
     
     // Function to delete the last row
