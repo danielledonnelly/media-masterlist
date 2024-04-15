@@ -214,7 +214,6 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
         dropdownItem.setAttribute("class", "dropdown-item");
         dropdownItem.setAttribute("type", "button");
         dropdownItem.setAttribute("value", i + 1); // Set value from 1 to 5
-        dropdownItem.innerHTML = `&emsp;&emsp;&ensp;&nbsp;${stars[i]}&emsp;&emsp;&ensp;&nbsp;`; // Set star emoji with custom spacing
         dropdownMenu.appendChild(dropdownItem);
         // Add event listener to capture the selected value
         dropdownItem.addEventListener('click', function() {
