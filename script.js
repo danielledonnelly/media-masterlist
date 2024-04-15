@@ -133,6 +133,12 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
     
         // Add event listener to Delete button
         deleteButton.addEventListener('click', deleteRow);
+
+         // Get the Save Table button
+         let saveButton = document.getElementById("save");
+    
+         // Add event listener to the export button
+         saveButton.addEventListener('click', saveTableData);
     
         // Get the Export Button
         let exportButton = document.getElementById("export");
@@ -281,7 +287,7 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
                 }
             }
         }
-                saveTableData()
+        saveTableData()
 
     }
     
