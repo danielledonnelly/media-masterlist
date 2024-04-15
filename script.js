@@ -24,7 +24,8 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
             }
 
             // Add event listener to save table data whenever a cell's content changes
-            document.getElementById('media-table-body').addEventListener('input', saveTableData);
+            //THIS WAS COMMENTED OUR FOR SAVE TABLE BUTTON
+            // document.getElementById('media-table-body').addEventListener('input', saveTableData);
     
             //Get the Score buttons
             const myScoreSelButtons = document.getElementsByClassName("score-dropdown-class"); // there are 11 of these
@@ -69,19 +70,13 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
                 // Update the button's text
                 button.innerText = event.target.innerText;
                 // Save the dropdown values
-                saveTableData();
+                // THIS WAS COMMENTED OUT FOR SAVE TABLE BUTTON
+                // saveTableData();
             }
         }
     });
 });
 
-   
-            // Create an array of trash 
-            let trashArray = document.getElementsByClassName("delete");
-            const numOfTrash = trashArray.length;
-            for (var i = 0; i < numOfTrash; i++) {
-                trashArray[i].addEventListener('click', deleteSpecificRow);     
-            };
             
     
         }
@@ -137,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
          // Get the Save Table button
          let saveButton = document.getElementById("save");
     
-         // Add event listener to the export button
+         // Add event listener to the Save Table button
          saveButton.addEventListener('click', saveTableData);
     
         // Get the Export Button
@@ -158,7 +153,8 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
    
     function manualAddRow(){
         addRow();
-        saveTableData();
+        // THIS WAS COMMENTED OUT FOR THE SAVE TABLE BUTTON
+        // saveTableData();
     }
 
     //This defines what happens when we add a row (this happens 9 times when page loads, and occurs whenever Add Row button is clicked)
@@ -291,7 +287,9 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
                 }
             }
         }
-        saveTableData()
+        
+        // THIS WAS COMMENTED OUT FOR THE SAVE TABLE BUTTON
+        // saveTableData()
 
     }
     
@@ -301,15 +299,15 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
         // Get the table body element
         let table = document.getElementById("media-table-body");
     
-        // Check if there's more than one row
-        if (table.rows.length > 1) {
-            // Remove the last row
+            // I originally had this set so that you couldn't delete all rows, but I prefer not restricting this
             table.deleteRow(-1);
-            saveTableData()
+            // THIS WAS COMMENTED OUT FOR THE SAVE TABLE BUTTON
+            // saveTableData()
         }
-    }
+    
 
     //
+    
     function deleteSpecificRow(event) {
         console.log('event.target', event.target)
         console.log('event.target.parentElement', event.target.parentElement)
