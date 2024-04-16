@@ -325,7 +325,8 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
         let row = event.target.parentElement.parentElement;
         //Remove the row from its parent
         row.remove();
-        saveTableData()
+        // THIS WAS COMMENTED OUT FOR THE SAVE TABLE BUTTON
+        // saveTableData()
     }
     
     
