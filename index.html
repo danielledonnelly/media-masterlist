@@ -23,7 +23,19 @@
   <script src="script.js"></script>
   <!--This is the banner at the top of the screen-->
   <header>
-    <img width="700" class = "banner image" src ="images\media-masterlist.png" id="logo" alt="Media Masterlist - The ultimate destination for rating, reviewing, and ranking your favourite media"/>
+    <div class="container">
+      <div class="logo">
+          Media Masterlist &nbsp;&nbsp;&nbsp;
+      </div>
+      <nav>
+          <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">FAQs</a></li>
+          </ul>
+      </nav>
+  </div>
+    <!-- <img width="700" class = "banner image" src ="images\media-masterlist.png" id="logo" alt="Media Masterlist - The ultimate destination for rating, reviewing, and ranking your favourite media"/> -->
     <!-- <p>Fill out the table below to create a list of your favourite media. Every cell of this table is editable, making this page perfect whether you're looking to create a top 10 list of your favourite books or a ranking of all the video games you've played.</p> -->
     <!-- This is placeholder code for buttons at the top of the screen
     <button type="button" class="btn btn-light">Home</button>
@@ -87,8 +99,6 @@
   <!-- The lines above mark the end of the table and table container div -->
   
 <!-- The lines below are table buttons for various functions -->
-<button id="about" class="btn btn-secondary">About</button>
-<button id="faqs" class="btn btn-secondary">FAQs</button>
 <span class="mx-2"></span> <!-- Small break -->
 <button id="add-row" class="btn btn-secondary">Add Row</button>
 <button id="delete" class="btn btn-secondary">Delete Row</button>
