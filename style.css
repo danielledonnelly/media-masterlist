@@ -57,8 +57,8 @@ div {
 }
 
 .dropdown-menu{
-    color: black !important;
-    background-color: #545B62 !important;
+    color: #303235 !important;
+    background-color: #303235 !important;
     align-items: center !important;
     max-width: 160px !important;
 }
