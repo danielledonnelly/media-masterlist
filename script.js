@@ -329,6 +329,86 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
         // saveTableData()
     }
     
+function exportTableToCSV() {
+    // Get the table element
+    let table = document.getElementById("media-table");
+
+    // Initialize the CSV content with headers
+    let csvContent = "data:text/csv;charset=utf-8,";
+    let headers = [];
+    for (let i = 0; i < table.rows[0].cells.length; i++) {
+        headers.push(table.rows[0].cells[i].innerText.trim());
+    }
+    csvContent += headers.join(",") + "\r\n";
+
+    // Iterate over rows and cells to get the table data
+    for (let i = 1; i < table.rows.length; i++) {
+        let rowData = [];
+        for (let j = 0; j < table.rows[i].cells.length; j++) {
+            // Get the inner text of each cell and remove any commas
+            let cellData = table.rows[i].cells[j].innerText.trim().replace(/,/g, "");
+
+            // If it's the score column, replace stars with UTF-8 character
+            if (j === 1) {
+                cellData = cellData.replace(/⭐/g, "\u2605");
+            }
+
+            rowData.push(cellData);
+        }
+        // Concatenate row data with commas and add to CSV content
+        csvContent += rowData.join(",") + "\r\n";
+    }
+
+    // Create a virtual anchor element to trigger the download
+    let encodedUri = encodeURI(csvContent);
+    let link = document.createElement("a");
+    link.setAttribute("href", encodedUri);
+    link.setAttribute("download", "media_masterlist.csv");
+    document.body.appendChild(link); // Required for Firefox
+    link.click();
+}
+
+function exportTableToCSV() {
+    // Get the table element
+    let table = document.getElementById("media-table");
+
+    // Initialize the CSV content with headers
+    let csvContent = "data:text/csv;charset=utf-8,";
+    let headers = [];
+    for (let i = 0; i < table.rows[0].cells.length; i++) {
+        headers.push(table.rows[0].cells[i].innerText.trim());
+    }
+    csvContent += headers.join(",") + "\r\n";
+
+    // Iterate over rows and cells to get the table data
+    for (let i = 1; i < table.rows.length; i++) {
+        let rowData = [];
+        for (let j = 0; j < table.rows[i].cells.length; j++) {
+            // Get the inner text of each cell and remove any commas
+            let cellData = table.rows[i].cells[j].innerText.trim().replace(/,/g, "");
+
+            // If it's the score column, convert stars to numbers
+            if (j === 1) {
+                cellData = cellData.split("⭐").length - 1; // Count the number of stars
+            }
+
+            rowData.push(cellData);
+        }
+        // Concatenate row data with commas and add to CSV content
+        csvContent += rowData.join(",") + "\r\n";
+    }
+
+    // Create a virtual anchor element to trigger the download
+    let encodedUri = encodeURI(csvContent);
+    let link = document.createElement("a");
+    link.setAttribute("href", encodedUri);
+    link.setAttribute("download", "media_masterlist.csv");
+    document.body.appendChild(link); // Required for Firefox
+    link.click();
+}   
+    
+    // Add event listener to the export button
+    exportButton.addEventListener('click', exportTableToCSV);
     
     
     
@@ -339,35 +419,35 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
     //         row.remove() ;
     //         });
     
-    //Not working
-    function exportTableToCSV() {
-        let csvContent = "data:text/csv;charset=utf-8,";
+    // //Not working
+    // function exportTableToCSV() {
+    //     let csvContent = "data:text/csv;charset=utf-8,";
                 
-            // Iterate over each row in the table
-            let rows = document.querySelectorAll("table tr");
-            rows.forEach(row => {
-                   let rowData = [];
-                    // Iterate over each cell in the row
-                    row.querySelectorAll("td").forEach(cell => {
-                        // Escape double quotes in cell value and wrap in double quotes
-                        let cellValue = '"' + cell.textContent.replace(/"/g, '""') + '"';
-                        rowData.push(cellValue);
-                    });
-                    // Concatenate row data into CSV string
-                    csvContent += rowData.join(",") + "\n";
-                });
+    //         // Iterate over each row in the table
+    //         let rows = document.querySelectorAll("table tr");
+    //         rows.forEach(row => {
+    //                let rowData = [];
+    //                 // Iterate over each cell in the row
+    //                 row.querySelectorAll("td").forEach(cell => {
+    //                     // Escape double quotes in cell value and wrap in double quotes
+    //                     let cellValue = '"' + cell.textContent.replace(/"/g, '""') + '"';
+    //                     rowData.push(cellValue);
+    //                 });
+    //                 // Concatenate row data into CSV string
+    //                 csvContent += rowData.join(",") + "\n";
+    //             });
             
-                // Create Blob from CSV content
-                let blob = new Blob([csvContent], { type: "text/csv;charset=utf-8" });
+    //             // Create Blob from CSV content
+    //             let blob = new Blob([csvContent], { type: "text/csv;charset=utf-8" });
             
-                // Create download link
-                let downloadLink = document.createElement("a");
-                downloadLink.href = URL.createObjectURL(blob);
-                downloadLink.download = "media_masterlist.csv";
+    //             // Create download link
+    //             let downloadLink = document.createElement("a");
+    //             downloadLink.href = URL.createObjectURL(blob);
+    //             downloadLink.download = "media_masterlist.csv";
             
-                // Trigger download
-                downloadLink.click();
-            }
+    //             // Trigger download
+    //             downloadLink.click();
+    //         }
     
     
     
