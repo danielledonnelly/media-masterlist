@@ -53,10 +53,10 @@
         <tr>
           <td contenteditable scope="row"><td>
           <div class="dropdown">
-            <button name="score" class="btn btn-dark dropdown-toggle score-dropdown-class" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Score</button>
+            <button name="score"  class="btn btn-secondary dropdown-toggle score-dropdown-class" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Score</button>
             <!-- you would THINK there's a better way to do this spacing but after extensive research: no-->
             <!-- i tried styling in css but in order to get the width to stay consistent after a value is selected, you'd have to use dynamic event listeners-->
-            <div name="score" id="score-dropdown" class="dropdown-menu score-menu-dropdown-" aria-labelledby="dropdownMenuButton1">
+            <div name="score" id="score-dropdown" class="dropdown-menu score-menu-dropdown-class" aria-labelledby="dropdownMenuButton1">
                 <button class="dropdown-item" id="score1" value="1"><!--&emsp;&emsp;&ensp;&nbsp;-->⭐<!--&emsp;&emsp;&ensp;&nbsp;--></button>
                 <button class="dropdown-item" id="score2" value="2"><!--&emsp;&nbsp;&ensp;&nbsp;-->⭐⭐<!--&emsp;&emsp;--></button>
                 <button class="dropdown-item" id="score3" value="3"><!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->⭐⭐⭐<!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--></button>
@@ -86,14 +86,16 @@
   </div>
   <!-- The lines above mark the end of the table and table container div -->
   
-  <!-- The lines below are table buttons for various functions -->
-  <button id="about" class="btn btn-light">About</button>
-  <button id="faqs" class="btn btn-light">FAQs</button>
-  <button id="add-row" class="btn btn-secondary">Add Row</button>
-  <button id="delete" class="btn btn-secondary">Delete Row</button>
-  <button id="save" class="btn btn-secondary">Save Table</button>
-  <button id="clear" class="btn btn-secondary">Clear Table</button>
-  <button id="export" class="btn btn-secondary">Export</button>
+<!-- The lines below are table buttons for various functions -->
+<button id="about" class="btn btn-secondary">About</button>
+<button id="faqs" class="btn btn-secondary">FAQs</button>
+<span class="mx-2"></span> <!-- Small break -->
+<button id="add-row" class="btn btn-secondary">Add Row</button>
+<button id="delete" class="btn btn-secondary">Delete Row</button>
+<button id="save" class="btn btn-secondary">Save Table</button>
+<button id="clear" class="btn btn-secondary">Clear Table</button>
+<button id="export" class="btn btn-secondary">Export</button>
+  
 
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
