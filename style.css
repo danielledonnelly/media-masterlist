@@ -90,6 +90,14 @@ header {
 color: #ccc; /* Change the color on hover */
 }
 
+li{
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+li:hover {
+  color: #ccc; /* Change the color on hover */
+  }
+
 .subtitle {
   font-size: 16px;
   color: white;
@@ -148,4 +156,16 @@ span {
 
 .btn-secondary:hover {
   background-color: #434a50 !important; /* Adjust the background color on hover */
+}
+
+#about-section {
+  display: none;
+  margin: 0 auto; /* Center the about section horizontally */
+  max-width: 1300px; /* Set a maximum width to limit the width of the about section */
+  text-align: center;
+  text-align: justify; /* Justify the text to ensure straight lines on both ends */
+}
+
+#about-section p {
+  font-size: 14px !important;
 }

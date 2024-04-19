@@ -30,8 +30,8 @@
     <span class="subtitle">Welcome to the ultimate destination for reviewing and ranking your favourite media!</span>
       <nav>
           <ul>
-              <li><a href="#">About</a></li>
-              <li><a href="#">FAQs</a></li>
+              <li id="about">About</li>
+              <li id="faqs">FAQs</a></li>
           </ul>
       </nav>
   </div>
@@ -42,7 +42,15 @@
     <button type="button" class="btn btn-light">About</button>
     <button type="button" class="btn btn-light">Share</button> -->
   </header>
-    
+
+  <div id="about-section" style="display: none;">
+    <!-- About section content goes here -->
+    <p>
+      Whether you're looking to create a top 10 list of your favourite novels or rate some video games you've recently played, Media Masterlist has you covered. 
+      You can fill the table below with data, add or delete rows, edit column titles, save your progress, and export the table as a spreadsheet. 
+      Check out this example of what your finished list might look like.</p>
+</div>
+
   <div class="tbl-container bdr">
     <table id="media-table" class="table table-hover table-dark">
       <!-- This is the table head, which contains editable headers -->

@@ -114,19 +114,19 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
         let rowCount = document.getElementById('media-table-body').getElementsByTagName('tr').length;
         saveRowCount(rowCount);
     
-        // Add event listener to Add Row button
+        // Add event listener to the Add Row button
         addRowButton.addEventListener('click', manualAddRow);
     
         //Get the Clear button
         let clearButton = document.getElementById("clear");
     
-        // Add event listener to Clear button
+        // Add event listener to the Clear button
         clearButton.addEventListener('click', clearTable);
     
         //Get the Delete button
         let deleteButton = document.getElementById("delete");
     
-        // Add event listener to Delete button
+        // Add event listener to the Delete button
         deleteButton.addEventListener('click', deleteRow);
 
          // Get the Save Table button
@@ -135,11 +135,17 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
          // Add event listener to the Save Table button
          saveButton.addEventListener('click', saveTableData);
     
-        // Get the Export Button
+        // Get the Export button
         let exportButton = document.getElementById("export");
     
-        // Add event listener to the export button
-        exportButton.addEventListener('click', exportTableToCSV);    
+        // Add event listener to the Export button
+        exportButton.addEventListener('click', exportTableToCSV);
+        
+        //Get the About button
+        let aboutButton = document.getElementById("about");
+
+        // Add event listener to the About button
+        document.getElementById('about').addEventListener('click', clickAbout);
 
         // Initialize event listeners for delete buttons
         initializeDeleteButtons();
@@ -370,11 +376,14 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
         link.click();
     }
     
-    
-       
-             
-    
-    
+// JavaScript function to generate about section content
+function clickAbout() {
+    var aboutSection = document.getElementById('about-section');
+    aboutSection.style.display = aboutSection.style.display === 'none' ? 'block' : 'none';
+}
+
+// Call the generateAboutContent function when the "About" button is clicked
+document.getElementById('about').addEventListener('click', generateAboutContent);
     
 
     
