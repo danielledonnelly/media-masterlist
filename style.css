@@ -135,3 +135,12 @@ footer p {
 span {
   width: 100%;
 }
+
+.btn-secondary {
+  background-color:#30363c !important;
+  border-color: rgb(88, 88, 88) !important;
+}
+
+.btn-secondary:hover {
+  background-color: #434a50 !important; /* Adjust the background color on hover */
+}
