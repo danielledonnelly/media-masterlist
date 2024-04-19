@@ -67,6 +67,8 @@ button {
 header {
   background-color: #2d2f32;
   padding: 20px 0;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .container {
@@ -78,16 +80,18 @@ header {
 }
 
 .logo {
+  max-width: 150px;
   color: white;
   font-size: 20px; 
 }
 
 .subtitle {
-  font-size: 16px; 
+  font-size: 16px;
   color: white;
-  margin-left: 3%; /* Push the subtitle to the right */
-  margin-right: 3%; /* Push the subtitle to the left */
+  flex-grow: 1;
+  text-align: center;
 }
+
 
 nav ul {
   font-size: 16px;
@@ -111,6 +115,12 @@ nav ul li a {
   color: #fff;
 }
 
+/* Adjusting hover effect */
+nav ul li a:hover {
+  color: #ccc; /* Change the color on hover */
+  text-decoration: none; /* Remove the underline on hover */
+}
+
 footer {
   background-color: #2d2f32;
   padding: 20px 0;
@@ -120,4 +130,8 @@ footer {
 
 footer p {
   font-size: 14px;
+}
+
+span {
+  width: 100%;
 }
