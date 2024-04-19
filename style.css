@@ -83,6 +83,11 @@ header {
   max-width: 150px;
   color: white;
   font-size: 20px; 
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.logo:hover {
+color: #ccc; /* Change the color on hover */
 }
 
 .subtitle {
