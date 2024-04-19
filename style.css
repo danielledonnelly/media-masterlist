@@ -1,139 +1,123 @@
 /* This is what makes the scrollbar on the side dark */
 /* I may get rid of the scrollbar all-together in the future */
 :root {
-    color-scheme: dark;
+  color-scheme: dark;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #111 !important;
-    color: #fff;
-  }
-
-
-
+  font-family: Arial, sans-serif;
+  background-color: #2d2f32 !important;
+  color: #fff!important;
+}
 
 .banner {
-    width: 100%;
-    max-width: 700px; 
-    margin: 0 auto; 
-    align-self: center;
-    }
-      
+  width: 100%;
+  max-width: 700px; 
+  margin: 0 auto; 
+  align-self: center;
+}
+    
 p {
-    font-size: medium;
-    font-weight: 0;
-    padding-left: 20%;
-    padding-right: 20%;
-    padding-top: 1%;
-    margin: auto;
+  font-size: medium;
+  font-weight: 0;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 1%;
+  margin: auto;
 }
 
 thead th {
-    text-align: center;
+  text-align: center;
 }
 
 /* This centers the score buttons */
 td:nth-child(2) {
-    text-align: center;
+  text-align: center;
 }
 
 div {
-    width: 100%;
-    }
+  width: 100%;
+}
 
 /* The transparent class is here for if I add any placeholder fields */
 .transparent { 
-    background-color: transparent !important;
-    border-color: transparent !important;
-    text-align: center;
+  background-color: transparent !important;
+  border-color: transparent !important;
+  text-align: center;
 }
 
 .dropdown-menu{
-    color: black !important;
-    background-color: #545B62 !important;
-    align-items: center !important;
-    max-width: 160px !important;
+  background-color: #545B62 !important;
+  align-items: center !important;
+  max-width: 160px !important;
 }
 
 .dropdown-item{
-    width: 100% !important;
-    align-items: center !important;
-    max-width: 160px !important;
+  width: 100% !important;
+  align-items: center !important;
+  max-width: 160px !important;
 }
 
 button {
-    background-color: transparent;
-    border: transparent;
+  background-color: transparent;
+  border: transparent;
 }
 
-.header-content {
-    float: left;
-    margin-left: 20px;
-  }
-  
-  .header-content img {
-    width: auto;
-    height: 100px; /* Adjust height as needed */
-  }
-  
-  nav ul {
-    float: right;
-  }
-  
-  nav ul li {
-    display: inline-block;
-    margin-left: 20px;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: #fff;
-  }
-  
-  .main-content {
-    padding: 20px 0;
-    text-align: center;
-  }
-  
-  .main-content h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-  }
-  
-  .main-content p {
-    font-size: 18px;
-    margin-bottom: 40px;
-  }
-  
-  footer {
-    background-color: #222;
-    padding: 20px 0;
-    text-align: center;
-  }
-  
-  footer p {
-    font-size: 14px;
-  }
-  
-  .container {
-  width: 90%;
-  margin: 0 auto;
-  overflow: hidden;
-}
-
+/* Header CSS */
 header {
-  background-color: #222;
+  background-color: #2d2f32;
   padding: 20px 0;
 }
+
 .container {
-    width: 90%;
-    margin: 0 auto;
-    overflow: hidden;
-  }
-  
-  header {
-    background-color: #222;
-    padding: 20px 0;
-  }
-  
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  font-size: 20px; 
+}
+
+.subtitle {
+  font-size: 16px; 
+  color: white;
+  margin-left: 3%; /* Push the subtitle to the right */
+  margin-right: 3%; /* Push the subtitle to the left */
+}
+
+nav ul {
+  font-size: 16px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Updated */
+  align-items: center; /* Added */
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li:first-child {
+  margin-left: 0; /* Remove left margin for the first child */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+footer {
+  background-color: #2d2f32;
+  padding: 20px 0;
+  margin-top: 20px;
+  text-align: center;
+}
+
+footer p {
+  font-size: 14px;
+}
