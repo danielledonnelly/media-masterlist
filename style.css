@@ -6,7 +6,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #2d2f32 !important;
+  background-color: #313439 !important;
   color: #fff!important;
 }
 
@@ -47,7 +47,7 @@ div {
 }
 
 .dropdown-menu{
-  background-color: #545B62 !important;
+  background-color: #313439 !important;
   align-items: center !important;
   max-width: 160px !important;
 }
@@ -65,7 +65,7 @@ button {
 
 /* Header CSS */
 header {
-  background-color: #2d2f32;
+  background-color: #313439;
   padding: 20px 0;
   justify-content: space-between;
   align-items: center;
