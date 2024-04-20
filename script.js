@@ -370,20 +370,19 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
         link.click();
     }
     
-    document.addEventListener("DOMContentLoaded", function() {
-        const aboutSection = document.getElementById("about-section");
-        const faqSection = document.getElementById("faq-section");
-      
-        document.getElementById("about").addEventListener("click", function() {
-          aboutSection.style.display = "block";
-          faqSection.style.display = "none";
-        });
-      
-        document.getElementById("faqs").addEventListener("click", function() {
-          aboutSection.style.display = "none";
-          faqSection.style.display = "block";
-        });
-      });
+// This function toggles the visibility of the about section
+document.addEventListener("DOMContentLoaded", function() {
+    var aboutButton = document.getElementById("about");
+    var aboutSection = document.getElementById("about-section");
+    
+    aboutButton.addEventListener("click", function() {
+      if (aboutSection.style.display === "none") {
+        aboutSection.style.display = "block";
+      } else {
+        aboutSection.style.display = "none";
+      }
+    });
+  });
 
     
     

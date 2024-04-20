@@ -181,24 +181,35 @@ span {
   text-align: center;
 }
 
+#faq-section h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color:white;
+}
+
 #faq-section {
-  display: flex;
-  justify-content: center; /* Center the content horizontally */
-  align-items: center; /* Center the content vertically */
-  margin: 0 auto; /* Center the about section horizontally */
-  min-width: 1200px;
-  max-width: 1400px; /* Set a maximum width to limit the width of the about section */
-  text-align: justify; /* Justify the text to ensure straight lines on both ends */
+  margin: 0 auto; /* Center the section horizontally */
+  max-width: 800px;
+  font-size: 16px;
+  padding-left: 200px;
+  padding-right: 200px;
+  margin-bottom: 30px;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: justify;
 }
 
-#faq-section p {
-  font-size: 14px !important;
-  text-align: center;
+#faq-section a {
+  color: #007bff;
+  text-decoration: none;
 }
 
-.white-text{
-  color: #0099ff;
+#faq-section a:hover {
+  text-decoration: underline;
 }
+
+
 
 li {
   list-style-type: none;
