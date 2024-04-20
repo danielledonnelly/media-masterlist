@@ -140,12 +140,6 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
     
         // Add event listener to the Export button
         exportButton.addEventListener('click', exportTableToCSV);
-        
-        //Get the About button
-        let aboutButton = document.getElementById("about");
-
-        // Add event listener to the About button
-        aboutButton.addEventListener('click', clickAbout);
 
         // Initialize event listeners for delete buttons
         initializeDeleteButtons();
@@ -376,15 +370,20 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
         link.click();
     }
     
-// JavaScript function to generate about section content
-function clickAbout() {
-    var aboutSection = document.getElementById('about-section');
-    aboutSection.style.display = aboutSection.style.display === 'none' ? 'block' : 'none';
-}
-
-// Call the generateAboutContent function when the "About" button is clicked
-document.getElementById('about').addEventListener('click', generateAboutContent);
-    
+    document.addEventListener("DOMContentLoaded", function() {
+        const aboutSection = document.getElementById("about-section");
+        const faqSection = document.getElementById("faq-section");
+      
+        document.getElementById("about").addEventListener("click", function() {
+          aboutSection.style.display = "block";
+          faqSection.style.display = "none";
+        });
+      
+        document.getElementById("faqs").addEventListener("click", function() {
+          aboutSection.style.display = "none";
+          faqSection.style.display = "block";
+        });
+      });
 
     
     
