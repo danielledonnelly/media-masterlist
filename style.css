@@ -20,8 +20,6 @@ body {
 p {
   font-size: medium;
   font-weight: 0;
-  padding-left: 20%;
-  padding-right: 20%;
   padding-top: 1%;
   margin: auto;
 }
@@ -135,7 +133,7 @@ nav ul li a:hover {
 }
 
 footer {
-  background-color: #2d2f32;
+  background-color: #343A40;
   padding: 20px 0;
   margin-top: 20px;
   text-align: center;
@@ -143,6 +141,7 @@ footer {
 
 footer p {
   font-size: 14px;
+  
 }
 
 span {
@@ -159,13 +158,35 @@ span {
 }
 
 #about-section {
-  display: none;
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
   margin: 0 auto; /* Center the about section horizontally */
-  max-width: 1300px; /* Set a maximum width to limit the width of the about section */
-  text-align: center;
+  min-width: 1200px;
+  max-width: 1400px; /* Set a maximum width to limit the width of the about section */
   text-align: justify; /* Justify the text to ensure straight lines on both ends */
 }
 
 #about-section p {
   font-size: 14px !important;
+  text-align: center;
+}
+
+#about-section-faq {
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  margin: 0 auto; /* Center the about section horizontally */
+  min-width: 1200px;
+  max-width: 1400px; /* Set a maximum width to limit the width of the about section */
+  text-align: justify; /* Justify the text to ensure straight lines on both ends */
+}
+
+#about-section-faq p {
+  font-size: 14px !important;
+  text-align: center;
+}
+
+.white-text{
+  color: #0099ff;
 }

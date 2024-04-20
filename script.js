@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function() { //This may appear lik
         let aboutButton = document.getElementById("about");
 
         // Add event listener to the About button
-        document.getElementById('about').addEventListener('click', clickAbout);
+        aboutButton.addEventListener('click', clickAbout);
 
         // Initialize event listeners for delete buttons
         initializeDeleteButtons();
