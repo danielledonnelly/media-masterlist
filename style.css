@@ -172,7 +172,7 @@ span {
   text-align: center;
 }
 
-#about-section-faq {
+#faq-section {
   display: flex;
   justify-content: center; /* Center the content horizontally */
   align-items: center; /* Center the content vertically */
@@ -182,10 +182,11 @@ span {
   text-align: justify; /* Justify the text to ensure straight lines on both ends */
 }
 
-#about-section-faq p {
+#faq-section p {
   font-size: 14px !important;
   text-align: center;
 }
+
 
 .white-text{
   color: #0099ff;
