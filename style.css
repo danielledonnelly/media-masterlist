@@ -63,7 +63,7 @@ button {
 
 /* Header CSS */
 header {
-  background-color: #313439;
+  background-color: #343A40;;
   padding: 20px 0;
   justify-content: space-between;
   align-items: center;
@@ -209,7 +209,10 @@ span {
   text-decoration: underline;
 }
 
-
+#logo-link {
+  color: white;
+  text-decoration: none; /* Removes underline */
+}
 
 li {
   list-style-type: none;
