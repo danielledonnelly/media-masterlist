@@ -174,10 +174,11 @@ span {
   min-width: 1200px;
   max-width: 1400px; /* Set a maximum width to limit the width of the about section */
   text-align: justify; /* Justify the text to ensure straight lines on both ends */
+  font-style: bold !important;
 }
 
 #about-section p {
-  font-size: 14px !important;
+  font-size: 16px !important;
   text-align: center;
 }
 
