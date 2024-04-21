@@ -118,8 +118,8 @@ nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  display: flex; /* Updated */
-  align-items: center; /* Added */
+  display: flex;
+  align-items: center; 
 }
 
 nav ul li {
