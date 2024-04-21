@@ -137,8 +137,11 @@ nav ul li a {
 
 /* Adjusting hover effect */
 nav ul li a:hover {
-  color: #ccc; /* Change the color on hover */
   text-decoration: none; /* Remove the underline on hover */
+}
+
+.dropdown-item:hover {
+  background-color: #43494E !important;
 }
 
 footer {
