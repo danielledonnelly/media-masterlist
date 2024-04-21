@@ -82,6 +82,10 @@ button {
   background-color: #434a50 !important; /* Adjust the background color on hover */
 }
 
+.dropdown-item:hover {
+  background-color: #43494E !important;
+}
+
 /* Header CSS */
 
 header {
@@ -107,7 +111,7 @@ header {
 }
 
 .logo:hover {
-color: #ccc; /* Change the color on hover */
+color: #ccc !important; /* Change the color on hover */
 }
 
 .subtitle {
@@ -164,16 +168,6 @@ li:hover {
 #faqs:hover {
     color: #ccc !important;
   }
-  
-/* Adjusting hover effect */
-
-nav ul li a:hover {
-  text-decoration: none; /* Remove the underline on hover */
-}
-
-.dropdown-item:hover {
-  background-color: #43494E !important;
-}
 
 /* Footer Styles */
 
@@ -235,7 +229,6 @@ span {
   font-size: 18px;
   margin-bottom: 10px;
   color: white;
-  background-color: #343A40;
 }
 
 #faq-section {
@@ -253,6 +246,11 @@ span {
 
 #faq-section a:hover {
   text-decoration: underline;
+}
+
+.question{
+  background-color: #343A40;
+  padding: 3%;
 }
 
 /* List Styles */
