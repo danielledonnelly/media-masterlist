@@ -226,3 +226,7 @@ li {
   background-color:  #343A40;
   padding: 20px;
 }
+
+.delete:hover {
+  color: #ccc;
+}
