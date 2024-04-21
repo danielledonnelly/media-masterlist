@@ -432,15 +432,15 @@ document.addEventListener("DOMContentLoaded", function() {
     
     // These are equivalent
     
-    const dogs = ['Spot', 'Spike', 'Fred']
+    // const dogs = ['Spot', 'Spike', 'Fred']
     
-    for (let i = 0; i < dogs.length; i++) {
-        console.log(dogs[i])
-    }
+    // for (let i = 0; i < dogs.length; i++) {
+    //     console.log(dogs[i])
+    // }
     
-    dogs.forEach((dog) => { // lots of super awesome array functions like .forEach .map .filter .find .findIndex
-        console.log(dog)
-    })
+    // dogs.forEach((dog) => { // lots of super awesome array functions like .forEach .map .filter .find .findIndex
+    //     console.log(dog)
+    // })
     
     // This is not working
     
