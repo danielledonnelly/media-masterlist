@@ -1,5 +1,5 @@
-/* This is what makes the scrollbar on the side dark */
-/* I may get rid of the scrollbar all-together in the future */
+/* General Styles */
+
 :root {
   color-scheme: dark;
 }
@@ -19,22 +19,34 @@ body {
     
 p {
   font-size: medium;
-  font-weight: 0;
   padding-top: 1%;
   margin: auto;
 }
 
-thead th {
-  text-align: center;
-}
+/* Table Styles */
 
-/* This centers the score buttons */
+thead th,
 td:nth-child(2) {
   text-align: center;
 }
 
-div {
+div,
+.transparent { 
   width: 100%;
+}
+
+/* Dropdown Styles */
+
+.dropdown-menu{
+  background-color: #313439 !important;
+  align-items: center !important;
+  max-width: 160px !important;
+}
+
+.dropdown-item{
+  width: 100% !important;
+  align-items: center !important;
+  max-width: 160px !important;
 }
 
 /* The transparent class is here for if I add any placeholder fields */
@@ -50,18 +62,24 @@ div {
   max-width: 160px !important;
 }
 
-.dropdown-item{
-  width: 100% !important;
-  align-items: center !important;
-  max-width: 160px !important;
-}
+/* Button Styles */
 
 button {
   background-color: transparent;
   border: transparent;
 }
 
+.btn-secondary {
+  background-color: #30363c !important;
+  border-color: rgb(88, 88, 88) !important;
+}
+
+.btn-secondary:hover {
+  background-color: #434a50 !important;
+}
+
 /* Header CSS */
+
 header {
   background-color: #343A40;
   padding: 20px 0;
@@ -88,12 +106,47 @@ header {
 color: #ccc; /* Change the color on hover */
 }
 
+.subtitle {
+  font-size: 16px;
+  color: white;
+  flex-grow: 1;
+  text-align: center;
+}
+
+/* Navigation Styles */
+
+nav ul {
+  font-size: 16px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li:first-child {
+  margin-left: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+nav ul li a:hover {
+  text-decoration: none;
+}
+
 li{
   cursor: pointer; /* Change cursor to pointer on hover */
 }
 
 li:hover {
-  color: #ccc; /* Change the color on hover */
+  color: #ccc !important; /* Change the color on hover */
   }
 
 
@@ -105,37 +158,15 @@ li:hover {
   color: white;
   }
 
-.subtitle {
-  font-size: 16px;
-  color: white;
-  flex-grow: 1;
-  text-align: center;
-}
+#faqs:hover {
+    color: #ccc !important;
+  }
+  
 
 
-nav ul {
-  font-size: 16px;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center; 
-}
-
-nav ul li {
-  margin-left: 20px;
-}
-
-nav ul li:first-child {
-  margin-left: 0; /* Remove left margin for the first child */
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #fff;
-}
 
 /* Adjusting hover effect */
+
 nav ul li a:hover {
   text-decoration: none; /* Remove the underline on hover */
 }
@@ -143,6 +174,8 @@ nav ul li a:hover {
 .dropdown-item:hover {
   background-color: #43494E !important;
 }
+
+/* Footer Styles */
 
 footer {
   background-color: #343A40;
@@ -153,7 +186,7 @@ footer {
 
 footer p {
   font-size: 14px;
-  
+  color: #fff; /* Preserve the original color */
 }
 
 span {
@@ -169,30 +202,53 @@ span {
   background-color: #434a50 !important; /* Adjust the background color on hover */
 }
 
+/* Miscellaneous */
+
+.static {
+  cursor: default;
+}
+
+.static:hover {
+  color: white;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: white;
+  flex-grow: 1;
+  text-align: center;
+}
+
+span {
+  width: 100%;
+}
+
+/* Sections Styles */
+
 #about-section {
   display: flex;
-  justify-content: center; /* Center the content horizontally */
-  align-items: center; /* Center the content vertically */
-  margin: 0 auto; /* Center the about section horizontally */
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
   min-width: 1200px;
-  max-width: 1400px; /* Set a maximum width to limit the width of the about section */
-  text-align: justify; /* Justify the text to ensure straight lines on both ends */
+  max-width: 1400px;
+  text-align: justify;
 }
 
 #about-section p {
-  font-size: 16px !important;
+  font-size: 16px;
   text-align: center;
 }
 
 #faq-section h3 {
   font-size: 18px;
   margin-bottom: 10px;
-  color:white;
+  color: white;
   background-color: #343A40;
 }
 
 #faq-section {
-  margin: 0 auto; /* Center the section horizontally */
+  margin: 0 auto;
   max-width: 800px;
   font-size: 16px;
   padding-left: 200px;
@@ -204,29 +260,20 @@ span {
   text-align: justify;
 }
 
-#faq-section a {
-  color: #007bff;
-  text-decoration: none;
-}
-
 #faq-section a:hover {
   text-decoration: underline;
 }
 
-#logo-link {
-  color: white;
-  text-decoration: none; /* Removes underline */
-}
+/* List Styles */
 
 li {
   list-style-type: none;
 }
 
-.question{
-  background-color:  #343A40;
-  padding: 20px;
-}
+/* Interaction Styles */
 
-.delete:hover {
-  color: #ccc;
+.delete:hover,
+#faqs:hover,
+#faqs:hover a {
+  color: #ccc !important;
 }
