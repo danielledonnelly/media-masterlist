@@ -64,6 +64,11 @@ div,
 
 /* Button Styles */
 
+.logo a:hover {
+  text-decoration: none !important;
+  color: #ccc !important;
+}
+
 button {
   background-color: transparent;
   border: transparent;
@@ -108,10 +113,12 @@ header {
   color: white;
   font-size: 20px; 
   cursor: pointer; /* Change cursor to pointer on hover */
+  text-decoration: none;
 }
 
 .logo:hover {
 color: #ccc !important; /* Change the color on hover */
+text-decoration: none;
 }
 
 .subtitle {
@@ -208,6 +215,14 @@ span {
   width: 100%;
 }
 
+.light-link {
+  color:lightblue
+}
+
+.light-link:hover{
+    color:lightblue
+  }
+
 /* Sections Styles */
 
 #about-section {
@@ -262,6 +277,8 @@ li {
 /* Interaction Styles */
 
 .delete:hover,
+#about:hover,
+#about:hover a,
 #faqs:hover,
 #faqs:hover a {
   color: #ccc !important;
