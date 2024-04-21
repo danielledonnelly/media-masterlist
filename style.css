@@ -71,11 +71,15 @@ button {
 
 .btn-secondary {
   background-color: #30363c !important;
-  border-color: rgb(88, 88, 88) !important;
+  border-color: #565656 !important;
 }
 
 .btn-secondary:hover {
   background-color: #434a50 !important;
+}
+
+.btn-secondary:hover {
+  background-color: #434a50 !important; /* Adjust the background color on hover */
 }
 
 /* Header CSS */
@@ -149,7 +153,6 @@ li:hover {
   color: #ccc !important; /* Change the color on hover */
   }
 
-
 .static{
   cursor:default
 }
@@ -162,9 +165,6 @@ li:hover {
     color: #ccc !important;
   }
   
-
-
-
 /* Adjusting hover effect */
 
 nav ul li a:hover {
@@ -191,15 +191,6 @@ footer p {
 
 span {
   width: 100%;
-}
-
-.btn-secondary {
-  background-color:#30363c !important;
-  border-color: rgb(88, 88, 88) !important;
-}
-
-.btn-secondary:hover {
-  background-color: #434a50 !important; /* Adjust the background color on hover */
 }
 
 /* Miscellaneous */
