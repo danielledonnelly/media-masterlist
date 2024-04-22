@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
         function initialize (){
             // Functions that are called immediately (get elements) go in initialize
 
+            // NOTE: I have removed the function below and added 10 rows in the HTML to make things cleaner when initialization occurs
             // This represents the amount of rows we want JavaScript to add in immediately
             // Since we have 1 row defined in HTML and want 10 rows by default, we want 9
             // const desiredRowsCount = 9;

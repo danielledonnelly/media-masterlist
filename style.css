@@ -75,6 +75,10 @@ button {
   border: transparent;
 }
 
+.buttons button {
+  margin-right: 10px;
+}
+
 .btn-secondary {
   background-color: #30363c !important;
   border-color: #565656 !important;
