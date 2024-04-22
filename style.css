@@ -77,6 +77,16 @@ button {
 
 .buttons button {
   margin-right: 10px;
+  align-self: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.buttons button {
+  margin: 0 5px; /* Adjust the margin between buttons as needed */
 }
 
 .btn-secondary {
@@ -246,8 +256,8 @@ span {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  min-width: 1200px;
-  max-width: 1400px;
+  min-width: 80%;
+  max-width: 100%;
   text-align: justify;
 }
 
@@ -301,38 +311,37 @@ li {
 
 @media only screen and (max-width: 767px) {
   .banner {
-    max-width: 100%;
-    padding: 0 10px; /* Adjust padding for smaller screens */
+    padding: 0 10px; 
   }
   
   .container {
-    flex-direction: column; /* Stack items vertically on smaller screens */
-    text-align: center; /* Center-align items on smaller screens */
+    flex-direction: column;
+    text-align: center; 
   }
   
   .logo {
-    margin-bottom: 10px; /* Add some spacing below the logo */
+    margin-bottom: 10px; 
   }
   
   .buttons {
-    margin-top: 20px; /* Add space above the buttons */
+    margin-top: 20px; 
   }
   
   .buttons button {
-    margin: 5px; /* Add margin around the buttons */
+    margin: 5px; 
   }
   
   footer {
-    padding: 20px; /* Add padding to the footer */
+    padding: 20px;
+    text-align: center;
   }
   
   #about-section {
-    min-width: auto; /* Remove minimum width constraint */
-    max-width: 100%; /* Adjust max-width for smaller screens */
-    padding: 0 10px; /* Adjust padding for smaller screens */
+    min-width: auto; 
+    padding: 0 10px; 
   }
   
   #faq-section {
-    padding: 0 10px; /* Adjust padding for smaller screens */
+    padding: 0 10px;
   }
 }
