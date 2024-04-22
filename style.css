@@ -9,7 +9,7 @@ table {
 }
 
 tr {
-  border-top: 2px solid #505050 !important; 
+  border-top: 1px solid #505050 !important; 
   border-bottom: 1px solid #505050 !important; /* Add a bottom border to each table row */
 }
 
