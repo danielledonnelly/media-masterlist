@@ -347,6 +347,7 @@ li {
   #about-section {
     min-width: auto; 
     padding: 0 10px; 
+    font-size: smaller;
   }
   
   #faq-section {
