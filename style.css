@@ -371,4 +371,8 @@ li {
   .table {
     max-width: 100%;
   }
+
+  tr {
+    max-width: 100%;
+  }
 }
