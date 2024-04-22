@@ -4,6 +4,10 @@
   color-scheme: dark;
 }
 
+table {
+  border-collapse: collapse; /* Ensure that borders collapse properly */
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #313439 !important;
