@@ -16,12 +16,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // This represents the amount of rows we want JavaScript to add in immediately
             // Since we have 1 row defined in HTML and want 10 rows by default, we want 9
-            const desiredRowsCount = 9;
-            if (!saveTableData.triggered) {
-                for (let i = 0; i < desiredRowsCount; i++) {
-                    addRow();
-                }
-            }
+            // const desiredRowsCount = 9;
+            // if (!saveTableData.triggered) {
+            //     for (let i = 0; i < desiredRowsCount; i++) {
+            //         addRow();
+            //     }
+            // }
 
             // Add event listener to save table data whenever a cell's content changes
             // This was commented out to accommodate the manual save button
