@@ -377,10 +377,10 @@ li {
     display: none;
   }
 
-    /* Reduce font size for all elements */
-    body, p, h1, h2, h3, h4, h5, h6, span, div, a, button, input, select, textarea {
-      font-size: 14px; /* Adjust the font size as needed */
-    }
+  .buttons .btn {
+    font-size: 12px;
+    height: 50px;
+}
 
     /* Reduce font size for all elements including table headers */
   body,
@@ -402,5 +402,6 @@ li {
   th {
     font-size: 14px; /* Adjust the font size as needed */
   }
+
 
 }
