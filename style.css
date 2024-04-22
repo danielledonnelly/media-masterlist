@@ -350,15 +350,15 @@ li {
     white-space: nowrap;
   }
 
-  /* Make score dropdowns smaller */
-  .dropdown-menu.score-menu-dropdown-class {
-    font-size: 12px; /* Adjust the font size for the dropdown items */
-    max-width: 100px;
+  .score-menu-dropdown-class {
+    font-size: 5px !important; /* Adjust the font size for the dropdown items */
+    max-width: 100px; /* Adjust the maximum width of the dropdown menu */
   }
 
-  .dropdown-toggle.score-dropdown-class {
-    font-size: 12px; /* Adjust the font size for the dropdown toggle button */
+  .score-dropdown-class {
+    font-size: 12px !important; /* Adjust the font size for the dropdown toggle button */
     padding: 0.25rem 0.5rem; /* Adjust the padding as needed */
+    min-width: 80px; /* Adjust the minimum width of the dropdown toggle button */
   }
 
   /* Set a consistent vertical height for items with the class 'buttons' */

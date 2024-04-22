@@ -212,6 +212,18 @@ function addRow() {
         dropdownMenu.appendChild(dropdownItem);
     }
 
+
+    // This is the chunk of code that got my font size working to be smaller on smaller screens
+    let dropdownToggle = button;
+    let dropdownMenu = dropdownMenu;
+
+    // Apply CSS rules to the dropdown toggle button
+    dropdownToggle.classList.add("btn", "btn-secondary", "dropdown-toggle", "score-dropdown-class");
+
+    // Apply CSS rules to the dropdown menu
+    dropdownMenu.classList.add("dropdown-menu", "score-menu-dropdown-class");
+
+    
     // Append the dropdown menu to the dropdown
     dropdown.appendChild(dropdownMenu);
 
