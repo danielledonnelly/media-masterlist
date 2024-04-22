@@ -83,6 +83,7 @@ button {
 .buttons {
   display: flex;
   justify-content: center;
+  width: 100vw; /* Set the width to 100% of the viewport width */
 }
 
 .buttons button {
