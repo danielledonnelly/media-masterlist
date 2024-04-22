@@ -360,6 +360,10 @@ li {
     display: none;
   }
 
+  .btn-secondary{
+    font-size: smaller;
+  }
+
   p {
     font-size: smaller;
   }
