@@ -353,6 +353,7 @@ li {
   /* Make score dropdowns smaller */
   .dropdown-menu.score-menu-dropdown-class {
     font-size: 12px; /* Adjust the font size for the dropdown items */
+    max-width: 100px;
   }
 
   .dropdown-toggle.score-dropdown-class {
