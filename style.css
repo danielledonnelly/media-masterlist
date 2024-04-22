@@ -350,6 +350,10 @@ li {
     white-space: nowrap;
   }
 
+  .dropdown-item {
+    font-size: small;
+  }
+
   /* Set a consistent vertical height for items with the class 'buttons' */
   .buttons {
     display: flex;
@@ -359,7 +363,7 @@ li {
 
   /* Style buttons within the 'buttons' span */
   .buttons button {
-    height: 60px;
+    max-height: 60px;
   }
 
   .subtitle {
