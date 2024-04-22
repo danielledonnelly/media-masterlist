@@ -341,12 +341,26 @@ li {
   table {
     width: 100%;
     max-width: 100%;
-    overflow-x: auto;
     display: block;
   }
 
   /* Ensure table cells don't wrap */
   table td {
     white-space: nowrap;
+  }
+
+  /* Set a consistent vertical height for items with the class 'buttons' */
+  .buttons {
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Style buttons within the 'buttons' span */
+  .buttons button {
+    height: 60px;
+  }
+
+  .subtitle{
+    display: none;
   }
 }
