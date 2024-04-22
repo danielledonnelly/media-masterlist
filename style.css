@@ -367,4 +367,8 @@ li {
   p {
     font-size: smaller;
   }
+
+  tr {
+    max-width: 30%;
+  }
 }
