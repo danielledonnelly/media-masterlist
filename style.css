@@ -96,6 +96,10 @@ button {
   background-color: #43494E !important;
 }
 
+.delete {
+  font-size: 22px;
+}
+
 /* Header CSS */
 
 header {

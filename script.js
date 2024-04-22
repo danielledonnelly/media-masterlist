@@ -96,11 +96,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add event listener to the Clear button
     clearButton.addEventListener('click', clearTable);
 
-    // Get the Delete button
-    let deleteButton = document.getElementById("delete");
+    // // Get the Delete button
+    // let deleteButton = document.getElementById("delete");
 
-    // Add event listener to the Delete button
-    deleteButton.addEventListener('click', deleteRow);
+    // // Add event listener to the Delete button
+    // deleteButton.addEventListener('click', deleteRow);
 
     // Get the Save Table button
     let saveButton = document.getElementById("save");
@@ -167,7 +167,7 @@ function addRow() {
     // Create delete button with trash icon
     let deleteButton = document.createElement("button");
     deleteButton.classList.add("delete", "fa", "fa-trash-o"); // Add appropriate classes
-    deleteButton.style.fontSize = "24px"; // Set font size
+    deleteButton.style.fontSize = "22px"; // Set font size
 
     // Append delete button to delete cell
     deleteCell.appendChild(deleteButton);
