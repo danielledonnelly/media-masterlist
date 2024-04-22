@@ -128,10 +128,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
-// This was a work-around solution for a prior issue
 function manualAddRow() {
     addRow();
-    
+    // T
     // saveTableData();
 }
 
