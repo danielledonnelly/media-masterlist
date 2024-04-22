@@ -342,6 +342,7 @@ li {
     width: 100%;
     max-width: 100%;
     display: block;
+    overflow-x: auto;
   }
 
   /* Ensure table cells don't wrap */
@@ -351,6 +352,7 @@ li {
 
   /* Set a consistent vertical height for items with the class 'buttons' */
   .buttons {
+    display: flex;
     justify-content: center;
     align-items: center;
   }
