@@ -350,8 +350,14 @@ li {
     white-space: nowrap;
   }
 
-  .dropdown-item {
-    font-size: small;
+  /* Make score dropdowns smaller */
+  .dropdown-menu.score-menu-dropdown-class {
+    font-size: 12px; /* Adjust the font size for the dropdown items */
+  }
+
+  .dropdown-toggle.score-dropdown-class {
+    font-size: 12px; /* Adjust the font size for the dropdown toggle button */
+    padding: 0.25rem 0.5rem; /* Adjust the padding as needed */
   }
 
   /* Set a consistent vertical height for items with the class 'buttons' */
