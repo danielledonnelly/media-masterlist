@@ -359,4 +359,8 @@ li {
   .subtitle {
     display: none;
   }
+
+  p {
+    font-size: smaller;
+  }
 }
