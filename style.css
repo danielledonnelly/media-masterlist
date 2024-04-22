@@ -328,7 +328,9 @@ li {
   }
   
   .buttons button {
-    margin: 5px; 
+    margin-right: 10px;
+    width: 120px; /* Adjust the width as needed */
+    height: 60px; /* Adjust the height as needed */
   }
   
   footer {
