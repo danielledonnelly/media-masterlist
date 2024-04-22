@@ -368,7 +368,7 @@ li {
     font-size: smaller;
   }
 
-  tbody {
+  .table {
     max-width: 100%;
   }
 }
