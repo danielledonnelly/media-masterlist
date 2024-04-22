@@ -51,275 +51,233 @@
     </p>
     </div>
 
-  <div class="tbl-container bdr">
-    <table id="media-table" class="table table-hover table-dark">
-      <!-- This is the table head, which contains editable headers -->
-      <thead>
-        <tr class="thead">
-          <th scope="col" contenteditable>Title</th>
-          <th scope="col" contenteditable>Score</th>
-          <!--I want to remove the platform column, but it looks weird when I do-->
-          <!-- <th scope="col" contenteditable>Platform</th> -->
-          <th scope="col" contenteditable>Genre</th>
-          <th scope="col" contenteditable>Status</th>
-          <th scope="col" contenteditable>Comments</th>
-          <th></th>
-        </tr>
-      </thead>
-
-      <!-- This is the table body -->
-      <!-- Each <tr> is a row, and each <td> is an individual cell  -->
-      <tbody id="media-table-body">
-        <tr>
-          <td contenteditable scope="row"><td>
-          <div class="dropdown">
-            <button name="score"  class="btn btn-secondary dropdown-toggle score-dropdown-class" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Score</button>
-            <!-- you would THINK there's a better way to do this spacing but after extensive research: no-->
-            <!-- i tried styling in css but in order to get the width to stay consistent after a value is selected, you'd have to use dynamic event listeners-->
-            <div name="score" id="score-dropdown" class="dropdown-menu score-menu-dropdown-class" aria-labelledby="dropdownMenuButton1">
-                <button class="dropdown-item" id="score1" value="1"><!--&emsp;&emsp;&ensp;&nbsp;-->⭐<!--&emsp;&emsp;&ensp;&nbsp;--></button>
-                <button class="dropdown-item" id="score2" value="2"><!--&emsp;&nbsp;&ensp;&nbsp;-->⭐⭐<!--&emsp;&emsp;--></button>
-                <button class="dropdown-item" id="score3" value="3"><!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->⭐⭐⭐<!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--></button>
-                <button class="dropdown-item" id="score4" value="4"><!--&nbsp;&nbsp;&nbsp;-->⭐⭐⭐⭐<!--&nbsp;&nbsp;--></button>
-                <button class="dropdown-item" id="score5" value="5">⭐⭐⭐⭐⭐</button>
-            </div>
-          </div>
-          <td contenteditable></td>
-          <td contenteditable>
-            <!-- This is a status dropdown I changed my mind on.
-            <select>
-            <option></option>
-            <option>Want to Play</option>
-            <option>Currently Playing</option>
-            <option>Completed</option>
-            <option>Dropped</option></td> -->
-          <td contenteditable></td>
-          <td><button class="delete fa fa-trash-o" style="font-size:22px"><i id="trash"></i></button></td>
-          <tr>
-            <td contenteditable scope="row"><td>
-            <div class="dropdown">
-              <button name="score"  class="btn btn-secondary dropdown-toggle score-dropdown-class" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Score</button>
-              <!-- you would THINK there's a better way to do this spacing but after extensive research: no-->
-              <!-- i tried styling in css but in order to get the width to stay consistent after a value is selected, you'd have to use dynamic event listeners-->
-              <div name="score" id="score-dropdown" class="dropdown-menu score-menu-dropdown-class" aria-labelledby="dropdownMenuButton1">
-                  <button class="dropdown-item" id="score1" value="1"><!--&emsp;&emsp;&ensp;&nbsp;-->⭐<!--&emsp;&emsp;&ensp;&nbsp;--></button>
-                  <button class="dropdown-item" id="score2" value="2"><!--&emsp;&nbsp;&ensp;&nbsp;-->⭐⭐<!--&emsp;&emsp;--></button>
-                  <button class="dropdown-item" id="score3" value="3"><!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->⭐⭐⭐<!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--></button>
-                  <button class="dropdown-item" id="score4" value="4"><!--&nbsp;&nbsp;&nbsp;-->⭐⭐⭐⭐<!--&nbsp;&nbsp;--></button>
-                  <button class="dropdown-item" id="score5" value="5">⭐⭐⭐⭐⭐</button>
-              </div>
-            </div>
-            <td contenteditable></td>
-            <td contenteditable>
-              <!-- This is a status dropdown I changed my mind on.
-              <select>
-              <option></option>
-              <option>Want to Play</option>
-              <option>Currently Playing</option>
-              <option>Completed</option>
-              <option>Dropped</option></td> -->
-            <td contenteditable></td>
-            <td><button class="delete fa fa-trash-o" style="font-size:22px"><i id="trash"></i></button></td>
-            <tr>
-              <td contenteditable scope="row"><td>
-              <div class="dropdown">
-                <button name="score"  class="btn btn-secondary dropdown-toggle score-dropdown-class" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Score</button>
-                <!-- you would THINK there's a better way to do this spacing but after extensive research: no-->
-                <!-- i tried styling in css but in order to get the width to stay consistent after a value is selected, you'd have to use dynamic event listeners-->
-                <div name="score" id="score-dropdown" class="dropdown-menu score-menu-dropdown-class" aria-labelledby="dropdownMenuButton1">
-                    <button class="dropdown-item" id="score1" value="1"><!--&emsp;&emsp;&ensp;&nbsp;-->⭐<!--&emsp;&emsp;&ensp;&nbsp;--></button>
-                    <button class="dropdown-item" id="score2" value="2"><!--&emsp;&nbsp;&ensp;&nbsp;-->⭐⭐<!--&emsp;&emsp;--></button>
-                    <button class="dropdown-item" id="score3" value="3"><!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->⭐⭐⭐<!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--></button>
-                    <button class="dropdown-item" id="score4" value="4"><!--&nbsp;&nbsp;&nbsp;-->⭐⭐⭐⭐<!--&nbsp;&nbsp;--></button>
-                    <button class="dropdown-item" id="score5" value="5">⭐⭐⭐⭐⭐</button>
-                </div>
-              </div>
-              <td contenteditable></td>
-              <td contenteditable>
-                <!-- This is a status dropdown I changed my mind on.
-                <select>
-                <option></option>
-                <option>Want to Play</option>
-                <option>Currently Playing</option>
-                <option>Completed</option>
-                <option>Dropped</option></td> -->
-              <td contenteditable></td>
-              <td><button class="delete fa fa-trash-o" style="font-size:22px"><i id="trash"></i></button></td>
+    <div class="tbl-container bdr">
+      <table id="media-table" class="table table-hover table-dark">
+          <!-- This is the table head, which contains editable headers -->
+          <thead>
+              <tr class="thead">
+                  <th scope="col" contenteditable>Title</th>
+                  <th scope="col" contenteditable>Score</th>
+                  <th scope="col" contenteditable>Genre</th>
+                  <th scope="col" contenteditable>Status</th>
+                  <th scope="col" contenteditable>Comments</th>
+                  <th scope="col"></th>
+              </tr>
+          </thead>
+  
+          <!-- This is the table body -->
+          <!-- Each <tr> is a row, and each <td> is an individual cell  -->
+          <tbody id="media-table-body">
               <tr>
-                <td contenteditable scope="row"><td>
-                <div class="dropdown">
-                  <button name="score"  class="btn btn-secondary dropdown-toggle score-dropdown-class" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Score</button>
-                  <!-- you would THINK there's a better way to do this spacing but after extensive research: no-->
-                  <!-- i tried styling in css but in order to get the width to stay consistent after a value is selected, you'd have to use dynamic event listeners-->
-                  <div name="score" id="score-dropdown" class="dropdown-menu score-menu-dropdown-class" aria-labelledby="dropdownMenuButton1">
-                      <button class="dropdown-item" id="score1" value="1"><!--&emsp;&emsp;&ensp;&nbsp;-->⭐<!--&emsp;&emsp;&ensp;&nbsp;--></button>
-                      <button class="dropdown-item" id="score2" value="2"><!--&emsp;&nbsp;&ensp;&nbsp;-->⭐⭐<!--&emsp;&emsp;--></button>
-                      <button class="dropdown-item" id="score3" value="3"><!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->⭐⭐⭐<!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--></button>
-                      <button class="dropdown-item" id="score4" value="4"><!--&nbsp;&nbsp;&nbsp;-->⭐⭐⭐⭐<!--&nbsp;&nbsp;--></button>
-                      <button class="dropdown-item" id="score5" value="5">⭐⭐⭐⭐⭐</button>
-                  </div>
-                </div>
-                <td contenteditable></td>
-                <td contenteditable>
-                  <!-- This is a status dropdown I changed my mind on.
-                  <select>
-                  <option></option>
-                  <option>Want to Play</option>
-                  <option>Currently Playing</option>
-                  <option>Completed</option>
-                  <option>Dropped</option></td> -->
-                <td contenteditable></td>
-                <td><button class="delete fa fa-trash-o" style="font-size:22px"><i id="trash"></i></button></td>
-                <tr>
-                  <td contenteditable scope="row"><td>
-                  <div class="dropdown">
-                    <button name="score"  class="btn btn-secondary dropdown-toggle score-dropdown-class" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Score</button>
-                    <!-- you would THINK there's a better way to do this spacing but after extensive research: no-->
-                    <!-- i tried styling in css but in order to get the width to stay consistent after a value is selected, you'd have to use dynamic event listeners-->
-                    <div name="score" id="score-dropdown" class="dropdown-menu score-menu-dropdown-class" aria-labelledby="dropdownMenuButton1">
-                        <button class="dropdown-item" id="score1" value="1"><!--&emsp;&emsp;&ensp;&nbsp;-->⭐<!--&emsp;&emsp;&ensp;&nbsp;--></button>
-                        <button class="dropdown-item" id="score2" value="2"><!--&emsp;&nbsp;&ensp;&nbsp;-->⭐⭐<!--&emsp;&emsp;--></button>
-                        <button class="dropdown-item" id="score3" value="3"><!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->⭐⭐⭐<!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--></button>
-                        <button class="dropdown-item" id="score4" value="4"><!--&nbsp;&nbsp;&nbsp;-->⭐⭐⭐⭐<!--&nbsp;&nbsp;--></button>
-                        <button class="dropdown-item" id="score5" value="5">⭐⭐⭐⭐⭐</button>
-                    </div>
-                  </div>
-                  <td contenteditable></td>
-                  <td contenteditable>
-                    <!-- This is a status dropdown I changed my mind on.
-                    <select>
-                    <option></option>
-                    <option>Want to Play</option>
-                    <option>Currently Playing</option>
-                    <option>Completed</option>
-                    <option>Dropped</option></td> -->
-                  <td contenteditable></td>
-                  <td><button class="delete fa fa-trash-o" style="font-size:22px"><i id="trash"></i></button></td>
-                  <tr>
-                    <td contenteditable scope="row"><td>
-                    <div class="dropdown">
-                      <button name="score"  class="btn btn-secondary dropdown-toggle score-dropdown-class" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Score</button>
-                      <!-- you would THINK there's a better way to do this spacing but after extensive research: no-->
-                      <!-- i tried styling in css but in order to get the width to stay consistent after a value is selected, you'd have to use dynamic event listeners-->
-                      <div name="score" id="score-dropdown" class="dropdown-menu score-menu-dropdown-class" aria-labelledby="dropdownMenuButton1">
-                          <button class="dropdown-item" id="score1" value="1"><!--&emsp;&emsp;&ensp;&nbsp;-->⭐<!--&emsp;&emsp;&ensp;&nbsp;--></button>
-                          <button class="dropdown-item" id="score2" value="2"><!--&emsp;&nbsp;&ensp;&nbsp;-->⭐⭐<!--&emsp;&emsp;--></button>
-                          <button class="dropdown-item" id="score3" value="3"><!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->⭐⭐⭐<!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--></button>
-                          <button class="dropdown-item" id="score4" value="4"><!--&nbsp;&nbsp;&nbsp;-->⭐⭐⭐⭐<!--&nbsp;&nbsp;--></button>
-                          <button class="dropdown-item" id="score5" value="5">⭐⭐⭐⭐⭐</button>
-                      </div>
-                    </div>
-                    <td contenteditable></td>
-                    <td contenteditable>
-                      <!-- This is a status dropdown I changed my mind on.
-                      <select>
-                      <option></option>
-                      <option>Want to Play</option>
-                      <option>Currently Playing</option>
-                      <option>Completed</option>
-                      <option>Dropped</option></td> -->
-                    <td contenteditable></td>
-                    <td><button class="delete fa fa-trash-o" style="font-size:22px"><i id="trash"></i></button></td>
-                    <tr>
-                      <td contenteditable scope="row"><td>
+                  <td contenteditable=></td>
+                  <td contenteditable scope="row">
                       <div class="dropdown">
-                        <button name="score"  class="btn btn-secondary dropdown-toggle score-dropdown-class" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Score</button>
-                        <!-- you would THINK there's a better way to do this spacing but after extensive research: no-->
-                        <!-- i tried styling in css but in order to get the width to stay consistent after a value is selected, you'd have to use dynamic event listeners-->
-                        <div name="score" id="score-dropdown" class="dropdown-menu score-menu-dropdown-class" aria-labelledby="dropdownMenuButton1">
-                            <button class="dropdown-item" id="score1" value="1"><!--&emsp;&emsp;&ensp;&nbsp;-->⭐<!--&emsp;&emsp;&ensp;&nbsp;--></button>
-                            <button class="dropdown-item" id="score2" value="2"><!--&emsp;&nbsp;&ensp;&nbsp;-->⭐⭐<!--&emsp;&emsp;--></button>
-                            <button class="dropdown-item" id="score3" value="3"><!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->⭐⭐⭐<!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--></button>
-                            <button class="dropdown-item" id="score4" value="4"><!--&nbsp;&nbsp;&nbsp;-->⭐⭐⭐⭐<!--&nbsp;&nbsp;--></button>
-                            <button class="dropdown-item" id="score5" value="5">⭐⭐⭐⭐⭐</button>
-                        </div>
-                      </div>
-                      <td contenteditable></td>
-                      <td contenteditable>
-                        <!-- This is a status dropdown I changed my mind on.
-                        <select>
-                        <option></option>
-                        <option>Want to Play</option>
-                        <option>Currently Playing</option>
-                        <option>Completed</option>
-                        <option>Dropped</option></td> -->
-                      <td contenteditable></td>
-                      <td><button class="delete fa fa-trash-o" style="font-size:22px"><i id="trash"></i></button></td>
-                      <tr>
-                        <td contenteditable scope="row"><td>
-                        <div class="dropdown">
-                          <button name="score"  class="btn btn-secondary dropdown-toggle score-dropdown-class" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Score</button>
-                          <!-- you would THINK there's a better way to do this spacing but after extensive research: no-->
-                          <!-- i tried styling in css but in order to get the width to stay consistent after a value is selected, you'd have to use dynamic event listeners-->
+                          <button name="score" class="btn btn-secondary dropdown-toggle score-dropdown-class" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Score</button>
                           <div name="score" id="score-dropdown" class="dropdown-menu score-menu-dropdown-class" aria-labelledby="dropdownMenuButton1">
-                              <button class="dropdown-item" id="score1" value="1"><!--&emsp;&emsp;&ensp;&nbsp;-->⭐<!--&emsp;&emsp;&ensp;&nbsp;--></button>
-                              <button class="dropdown-item" id="score2" value="2"><!--&emsp;&nbsp;&ensp;&nbsp;-->⭐⭐<!--&emsp;&emsp;--></button>
-                              <button class="dropdown-item" id="score3" value="3"><!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->⭐⭐⭐<!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--></button>
-                              <button class="dropdown-item" id="score4" value="4"><!--&nbsp;&nbsp;&nbsp;-->⭐⭐⭐⭐<!--&nbsp;&nbsp;--></button>
+                              <button class="dropdown-item" id="score1" value="1">⭐</button>
+                              <button class="dropdown-item" id="score2" value="2">⭐⭐</button>
+                              <button class="dropdown-item" id="score3" value="3">⭐⭐⭐</button>
+                              <button class="dropdown-item" id="score4" value="4">⭐⭐⭐⭐</button>
                               <button class="dropdown-item" id="score5" value="5">⭐⭐⭐⭐⭐</button>
                           </div>
-                        </div>
-                        <td contenteditable></td>
-                        <td contenteditable>
-                          <!-- This is a status dropdown I changed my mind on.
-                          <select>
-                          <option></option>
-                          <option>Want to Play</option>
-                          <option>Currently Playing</option>
-                          <option>Completed</option>
-                          <option>Dropped</option></td> -->
-                        <td contenteditable></td>
-                        <td><button class="delete fa fa-trash-o" style="font-size:22px"><i id="trash"></i></button></td>
-                        <tr>
-                          <td contenteditable scope="row"><td>
-                          <div class="dropdown">
-                            <button name="score"  class="btn btn-secondary dropdown-toggle score-dropdown-class" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Score</button>
-                            <!-- you would THINK there's a better way to do this spacing but after extensive research: no-->
-                            <!-- i tried styling in css but in order to get the width to stay consistent after a value is selected, you'd have to use dynamic event listeners-->
-                            <div name="score" id="score-dropdown" class="dropdown-menu score-menu-dropdown-class" aria-labelledby="dropdownMenuButton1">
-                                <button class="dropdown-item" id="score1" value="1"><!--&emsp;&emsp;&ensp;&nbsp;-->⭐<!--&emsp;&emsp;&ensp;&nbsp;--></button>
-                                <button class="dropdown-item" id="score2" value="2"><!--&emsp;&nbsp;&ensp;&nbsp;-->⭐⭐<!--&emsp;&emsp;--></button>
-                                <button class="dropdown-item" id="score3" value="3"><!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->⭐⭐⭐<!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--></button>
-                                <button class="dropdown-item" id="score4" value="4"><!--&nbsp;&nbsp;&nbsp;-->⭐⭐⭐⭐<!--&nbsp;&nbsp;--></button>
-                                <button class="dropdown-item" id="score5" value="5">⭐⭐⭐⭐⭐</button>
-                            </div>
+                      </div>
+                  </td>
+                  <td contenteditable></td>
+                  <td contenteditable></td>
+                  <td contenteditable></td>
+                  <td><button class="delete fa fa-trash-o" style="font-size:22px"><i id="trash"></i></button></td>
+                </tr>
+                <tr>
+                  <td contenteditable=></td>
+                  <td contenteditable scope="row">
+                      <div class="dropdown">
+                          <button name="score" class="btn btn-secondary dropdown-toggle score-dropdown-class" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Score</button>
+                          <div name="score" id="score-dropdown" class="dropdown-menu score-menu-dropdown-class" aria-labelledby="dropdownMenuButton1">
+                              <button class="dropdown-item" id="score1" value="1">⭐</button>
+                              <button class="dropdown-item" id="score2" value="2">⭐⭐</button>
+                              <button class="dropdown-item" id="score3" value="3">⭐⭐⭐</button>
+                              <button class="dropdown-item" id="score4" value="4">⭐⭐⭐⭐</button>
+                              <button class="dropdown-item" id="score5" value="5">⭐⭐⭐⭐⭐</button>
                           </div>
-                          <td contenteditable></td>
-                          <td contenteditable>
-                            <!-- This is a status dropdown I changed my mind on.
-                            <select>
-                            <option></option>
-                            <option>Want to Play</option>
-                            <option>Currently Playing</option>
-                            <option>Completed</option>
-                            <option>Dropped</option></td> -->
-                          <td contenteditable></td>
-                          <td><button class="delete fa fa-trash-o" style="font-size:22px"><i id="trash"></i></button></td>
-                          <tr>
-                            <td contenteditable scope="row"><td>
-                            <div class="dropdown">
-                              <button name="score"  class="btn btn-secondary dropdown-toggle score-dropdown-class" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Score</button>
-                              <!-- you would THINK there's a better way to do this spacing but after extensive research: no-->
-                              <!-- i tried styling in css but in order to get the width to stay consistent after a value is selected, you'd have to use dynamic event listeners-->
-                              <div name="score" id="score-dropdown" class="dropdown-menu score-menu-dropdown-class" aria-labelledby="dropdownMenuButton1">
-                                  <button class="dropdown-item" id="score1" value="1"><!--&emsp;&emsp;&ensp;&nbsp;-->⭐<!--&emsp;&emsp;&ensp;&nbsp;--></button>
-                                  <button class="dropdown-item" id="score2" value="2"><!--&emsp;&nbsp;&ensp;&nbsp;-->⭐⭐<!--&emsp;&emsp;--></button>
-                                  <button class="dropdown-item" id="score3" value="3"><!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->⭐⭐⭐<!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--></button>
-                                  <button class="dropdown-item" id="score4" value="4"><!--&nbsp;&nbsp;&nbsp;-->⭐⭐⭐⭐<!--&nbsp;&nbsp;--></button>
-                                  <button class="dropdown-item" id="score5" value="5">⭐⭐⭐⭐⭐</button>
-                              </div>
-                            </div>
-                            <td contenteditable></td>
-                            <td contenteditable>
-                              <!-- This is a status dropdown I changed my mind on.
-                              <select>
-                              <option></option>
-                              <option>Want to Play</option>
-                              <option>Currently Playing</option>
-                              <option>Completed</option>
-                              <option>Dropped</option></td> -->
-                            <td contenteditable></td>
-                            <td><button class="delete fa fa-trash-o" style="font-size:22px"><i id="trash"></i></button></td>
+                      </div>
+                  </td>
+                  <td contenteditable></td>
+                  <td contenteditable></td>
+                  <td contenteditable></td>
+                  <td><button class="delete fa fa-trash-o" style="font-size:22px"><i id="trash"></i></button></td>
+                </tr>
+                <tr>
+                  <td contenteditable=></td>
+                  <td contenteditable scope="row">
+                      <div class="dropdown">
+                          <button name="score" class="btn btn-secondary dropdown-toggle score-dropdown-class" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Score</button>
+                          <div name="score" id="score-dropdown" class="dropdown-menu score-menu-dropdown-class" aria-labelledby="dropdownMenuButton1">
+                              <button class="dropdown-item" id="score1" value="1">⭐</button>
+                              <button class="dropdown-item" id="score2" value="2">⭐⭐</button>
+                              <button class="dropdown-item" id="score3" value="3">⭐⭐⭐</button>
+                              <button class="dropdown-item" id="score4" value="4">⭐⭐⭐⭐</button>
+                              <button class="dropdown-item" id="score5" value="5">⭐⭐⭐⭐⭐</button>
+                          </div>
+                      </div>
+                  </td>
+                  <td contenteditable></td>
+                  <td contenteditable></td>
+                  <td contenteditable></td>
+                  <td><button class="delete fa fa-trash-o" style="font-size:22px"><i id="trash"></i></button></td>
+                </tr>
+                <tr>
+                  <td contenteditable=></td>
+                  <td contenteditable scope="row">
+                      <div class="dropdown">
+                          <button name="score" class="btn btn-secondary dropdown-toggle score-dropdown-class" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Score</button>
+                          <div name="score" id="score-dropdown" class="dropdown-menu score-menu-dropdown-class" aria-labelledby="dropdownMenuButton1">
+                              <button class="dropdown-item" id="score1" value="1">⭐</button>
+                              <button class="dropdown-item" id="score2" value="2">⭐⭐</button>
+                              <button class="dropdown-item" id="score3" value="3">⭐⭐⭐</button>
+                              <button class="dropdown-item" id="score4" value="4">⭐⭐⭐⭐</button>
+                              <button class="dropdown-item" id="score5" value="5">⭐⭐⭐⭐⭐</button>
+                          </div>
+                      </div>
+                  </td>
+                  <td contenteditable></td>
+                  <td contenteditable></td>
+                  <td contenteditable></td>
+                  <td><button class="delete fa fa-trash-o" style="font-size:22px"><i id="trash"></i></button></td>
+                </tr>
+                <tr>
+                  <td contenteditable=></td>
+                  <td contenteditable scope="row">
+                      <div class="dropdown">
+                          <button name="score" class="btn btn-secondary dropdown-toggle score-dropdown-class" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Score</button>
+                          <div name="score" id="score-dropdown" class="dropdown-menu score-menu-dropdown-class" aria-labelledby="dropdownMenuButton1">
+                              <button class="dropdown-item" id="score1" value="1">⭐</button>
+                              <button class="dropdown-item" id="score2" value="2">⭐⭐</button>
+                              <button class="dropdown-item" id="score3" value="3">⭐⭐⭐</button>
+                              <button class="dropdown-item" id="score4" value="4">⭐⭐⭐⭐</button>
+                              <button class="dropdown-item" id="score5" value="5">⭐⭐⭐⭐⭐</button>
+                          </div>
+                      </div>
+                  </td>
+                  <td contenteditable></td>
+                  <td contenteditable></td>
+                  <td contenteditable></td>
+                  <td><button class="delete fa fa-trash-o" style="font-size:22px"><i id="trash"></i></button></td>
+                </tr>
+                <tr>
+                  <td contenteditable=></td>
+                  <td contenteditable scope="row">
+                      <div class="dropdown">
+                          <button name="score" class="btn btn-secondary dropdown-toggle score-dropdown-class" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Score</button>
+                          <div name="score" id="score-dropdown" class="dropdown-menu score-menu-dropdown-class" aria-labelledby="dropdownMenuButton1">
+                              <button class="dropdown-item" id="score1" value="1">⭐</button>
+                              <button class="dropdown-item" id="score2" value="2">⭐⭐</button>
+                              <button class="dropdown-item" id="score3" value="3">⭐⭐⭐</button>
+                              <button class="dropdown-item" id="score4" value="4">⭐⭐⭐⭐</button>
+                              <button class="dropdown-item" id="score5" value="5">⭐⭐⭐⭐⭐</button>
+                          </div>
+                      </div>
+                  </td>
+                  <td contenteditable></td>
+                  <td contenteditable></td>
+                  <td contenteditable></td>
+                  <td><button class="delete fa fa-trash-o" style="font-size:22px"><i id="trash"></i></button></td>
+                </tr>
+                <tr>
+                  <td contenteditable=></td>
+                  <td contenteditable scope="row">
+                      <div class="dropdown">
+                          <button name="score" class="btn btn-secondary dropdown-toggle score-dropdown-class" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Score</button>
+                          <div name="score" id="score-dropdown" class="dropdown-menu score-menu-dropdown-class" aria-labelledby="dropdownMenuButton1">
+                              <button class="dropdown-item" id="score1" value="1">⭐</button>
+                              <button class="dropdown-item" id="score2" value="2">⭐⭐</button>
+                              <button class="dropdown-item" id="score3" value="3">⭐⭐⭐</button>
+                              <button class="dropdown-item" id="score4" value="4">⭐⭐⭐⭐</button>
+                              <button class="dropdown-item" id="score5" value="5">⭐⭐⭐⭐⭐</button>
+                          </div>
+                      </div>
+                  </td>
+                  <td contenteditable></td>
+                  <td contenteditable></td>
+                  <td contenteditable></td>
+                  <td><button class="delete fa fa-trash-o" style="font-size:22px"><i id="trash"></i></button></td>
+                </tr>
+                <tr>
+                  <td contenteditable=></td>
+                  <td contenteditable scope="row">
+                      <div class="dropdown">
+                          <button name="score" class="btn btn-secondary dropdown-toggle score-dropdown-class" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Score</button>
+                          <div name="score" id="score-dropdown" class="dropdown-menu score-menu-dropdown-class" aria-labelledby="dropdownMenuButton1">
+                              <button class="dropdown-item" id="score1" value="1">⭐</button>
+                              <button class="dropdown-item" id="score2" value="2">⭐⭐</button>
+                              <button class="dropdown-item" id="score3" value="3">⭐⭐⭐</button>
+                              <button class="dropdown-item" id="score4" value="4">⭐⭐⭐⭐</button>
+                              <button class="dropdown-item" id="score5" value="5">⭐⭐⭐⭐⭐</button>
+                          </div>
+                      </div>
+                  </td>
+                  <td contenteditable></td>
+                  <td contenteditable></td>
+                  <td contenteditable></td>
+                  <td><button class="delete fa fa-trash-o" style="font-size:22px"><i id="trash"></i></button></td>
+                </tr>
+                <tr>
+                  <td contenteditable=></td>
+                  <td contenteditable scope="row">
+                      <div class="dropdown">
+                          <button name="score" class="btn btn-secondary dropdown-toggle score-dropdown-class" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Score</button>
+                          <div name="score" id="score-dropdown" class="dropdown-menu score-menu-dropdown-class" aria-labelledby="dropdownMenuButton1">
+                              <button class="dropdown-item" id="score1" value="1">⭐</button>
+                              <button class="dropdown-item" id="score2" value="2">⭐⭐</button>
+                              <button class="dropdown-item" id="score3" value="3">⭐⭐⭐</button>
+                              <button class="dropdown-item" id="score4" value="4">⭐⭐⭐⭐</button>
+                              <button class="dropdown-item" id="score5" value="5">⭐⭐⭐⭐⭐</button>
+                          </div>
+                      </div>
+                  </td>
+                  <td contenteditable></td>
+                  <td contenteditable></td>
+                  <td contenteditable></td>
+                  <td><button class="delete fa fa-trash-o" style="font-size:22px"><i id="trash"></i></button></td>
+                </tr>
+                <tr>
+                  <td contenteditable=></td>
+                  <td contenteditable scope="row">
+                      <div class="dropdown">
+                          <button name="score" class="btn btn-secondary dropdown-toggle score-dropdown-class" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Score</button>
+                          <div name="score" id="score-dropdown" class="dropdown-menu score-menu-dropdown-class" aria-labelledby="dropdownMenuButton1">
+                              <button class="dropdown-item" id="score1" value="1">⭐</button>
+                              <button class="dropdown-item" id="score2" value="2">⭐⭐</button>
+                              <button class="dropdown-item" id="score3" value="3">⭐⭐⭐</button>
+                              <button class="dropdown-item" id="score4" value="4">⭐⭐⭐⭐</button>
+                              <button class="dropdown-item" id="score5" value="5">⭐⭐⭐⭐⭐</button>
+                          </div>
+                      </div>
+                  </td>
+                  <td contenteditable></td>
+                  <td contenteditable></td>
+                  <td contenteditable></td>
+                  <td><button class="delete fa fa-trash-o" style="font-size:22px"><i id="trash"></i></button></td>
+                </tr>
+                <tr>
+                  <td contenteditable=></td>
+                  <td contenteditable scope="row">
+                      <div class="dropdown">
+                          <button name="score" class="btn btn-secondary dropdown-toggle score-dropdown-class" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Score</button>
+                          <div name="score" id="score-dropdown" class="dropdown-menu score-menu-dropdown-class" aria-labelledby="dropdownMenuButton1">
+                              <button class="dropdown-item" id="score1" value="1">⭐</button>
+                              <button class="dropdown-item" id="score2" value="2">⭐⭐</button>
+                              <button class="dropdown-item" id="score3" value="3">⭐⭐⭐</button>
+                              <button class="dropdown-item" id="score4" value="4">⭐⭐⭐⭐</button>
+                              <button class="dropdown-item" id="score5" value="5">⭐⭐⭐⭐⭐</button>
+                          </div>
+                      </div>
+                  </td>
+                  <td contenteditable></td>
+                  <td contenteditable></td>
+                  <td contenteditable></td>
+                  <td><button class="delete fa fa-trash-o" style="font-size:22px"><i id="trash"></i></button></td>
+                </tr>
+            
       </tbody>
     </table>
   </div>
