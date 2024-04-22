@@ -167,6 +167,7 @@ function addRow() {
     // Create delete button with trash icon
     let deleteButton = document.createElement("button");
     deleteButton.classList.add("delete", "fa", "fa-trash-o"); // Add appropriate classes
+    // You may be wondering why this is here instead of in a seperate CSS file; just trust me, it works better here
     deleteButton.style.fontSize = "22px"; // Set font size
 
     // Append delete button to delete cell

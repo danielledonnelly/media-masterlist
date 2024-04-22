@@ -97,6 +97,7 @@ button {
 }
 
 .delete {
+  /* This styling doesn't apply to newly added rows, so I've added backup styling within my JS */
   font-size: 22px;
 }
 
@@ -121,12 +122,12 @@ header {
   max-width: 150px;
   color: white;
   font-size: 20px; 
-  cursor: pointer; /* Change cursor to pointer on hover */
+  cursor: pointer; 
   text-decoration: none;
 }
 
 .logo:hover {
-color: #ccc !important; /* Change the color on hover */
+color: #ccc !important; 
 text-decoration: none;
 }
 
@@ -166,11 +167,11 @@ nav ul li a:hover {
 }
 
 li{
-  cursor: pointer; /* Change cursor to pointer on hover */
+  cursor: pointer;
 }
 
 li:hover {
-  color: #ccc !important; /* Change the color on hover */
+  color: #ccc !important; 
   }
 
 .static{
@@ -196,7 +197,7 @@ footer {
 
 footer p {
   font-size: 14px;
-  color: #fff; /* Preserve the original color */
+  color: #fff; 
 }
 
 span {
