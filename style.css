@@ -13,6 +13,10 @@ tr {
   border-bottom: 1px solid #505050 !important; /* Add a bottom border to each table row */
 }
 
+thead {
+  border-bottom: 2px solid #505050 !important; /* Add a bottom border to each table row */
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #313439 !important;
