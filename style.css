@@ -368,7 +368,7 @@ li {
     font-size: smaller;
   }
 
-  tr {
-    max-width: 30%;
+  tbody {
+    max-width: 100%;
   }
 }
