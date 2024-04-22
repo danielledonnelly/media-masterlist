@@ -168,7 +168,6 @@ function addRow() {
     // Create delete button with trash icon
     let deleteButton = document.createElement("button");
     deleteButton.classList.add("delete", "fa", "fa-trash-o"); // Add appropriate classes
-    // You may be wondering why this is here instead of in a seperate CSS file; just trust me, it works better here
     deleteButton.style.fontSize = "22px"; // Set font size
 
     // Append delete button to delete cell
@@ -176,54 +175,37 @@ function addRow() {
 
     // Create a new dropdown menu for the score
     let dropdown = document.createElement("div");
-    dropdown.setAttribute("class", "dropdown");
+    dropdown.classList.add("dropdown");
 
     // Create the score button
     let button = document.createElement("button");
     button.innerText = "Score";
-    button.setAttribute("class", "btn btn-secondary dropdown-toggle");
+    button.classList.add("btn", "btn-secondary", "dropdown-toggle");
     button.setAttribute("type", "button");
-    button.setAttribute("id", "dropdownMenuButton1");
     button.setAttribute("data-toggle", "dropdown");
     button.setAttribute("aria-haspopup", "true");
     button.setAttribute("aria-expanded", "false");
 
     // Create the dropdown menu
     let dropdownMenu = document.createElement("div");
-    dropdownMenu.setAttribute("class", "dropdown-menu");
+    dropdownMenu.classList.add("dropdown-menu");
 
     // Define star emojis
     const stars = ["⭐", "⭐⭐", "⭐⭐⭐", "⭐⭐⭐⭐", "⭐⭐⭐⭐⭐"];
 
     // Create dropdown items for star ratings
-    for (let i = 0; i < stars.length; i++) {
+    stars.forEach(star => {
         let dropdownItem = document.createElement("button");
-        dropdownItem.setAttribute("class", "dropdown-item");
+        dropdownItem.classList.add("dropdown-item");
         dropdownItem.setAttribute("type", "button");
-        dropdownItem.setAttribute("value", i + 1); // Set value from 1 to 5
-        dropdownItem.innerText = stars[i]; // Set star emoji as inner text
-        dropdownMenu.appendChild(dropdownItem);
-        // Add event listener to capture the selected value
+        dropdownItem.innerText = star; // Set star emoji as inner text
         dropdownItem.addEventListener('click', function() {
-            button.innerText = this.innerText; // Update button text with selected value
-            // Save the selected value to a variable or perform other actions as needed
-            console.log("Selected value:", this.value);
+            button.innerText = star; // Update button text with selected value
+            console.log("Selected value:", stars.indexOf(star) + 1);
         });
         dropdownMenu.appendChild(dropdownItem);
-    }
+    });
 
-
-    // This is the chunk of code that got my font size working to be smaller on smaller screens
-    let dropdownToggle = button;
-    let dropdownMenu = dropdownMenu;
-
-    // Apply CSS rules to the dropdown toggle button
-    dropdownToggle.classList.add("btn", "btn-secondary", "dropdown-toggle", "score-dropdown-class");
-
-    // Apply CSS rules to the dropdown menu
-    dropdownMenu.classList.add("dropdown-menu", "score-menu-dropdown-class");
-
-    
     // Append the dropdown menu to the dropdown
     dropdown.appendChild(dropdownMenu);
 
@@ -244,10 +226,8 @@ function addRow() {
 
     // Append row to table body
     table.appendChild(row);
-
-    // For some reason, local storage stops working when I saveTableData in addRow
-    // saveTableData()
 }
+
 
 // This defines what happens when we click the clear button.
 function clearTable() {
