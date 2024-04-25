@@ -127,7 +127,7 @@ button {
 
 .delete {
   /* This font-size styling doesn't apply to newly added rows, so I've added backup styling within my JS */
-  font-size: 22px;
+  font-size: 22px !important;
   display: flex;
   align-items: center;
   justify-content: center;
