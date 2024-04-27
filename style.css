@@ -361,14 +361,14 @@ li {
   }
 
   .dropdown-toggle {
-    font-size: 14px !important; 
+    font-size: 10px !important; 
   }
 
   .dropdown-menu {
-    font-size: 14px !important; 
+    font-size: 70% !important; 
     padding: 0.25rem 0.5rem; 
   }
-  
+
   .buttons {
     display: flex;
     justify-content: center;
