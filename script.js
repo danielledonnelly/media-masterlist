@@ -114,6 +114,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add event listener to the Export button
     exportButton.addEventListener('click', exportTableToCSV);
 
+    // Get the Clear Local Storage button
+    var localStorageButton = document.getElementById("local");
+
+    // Add event listener to the Clear Local Storage button
+    localStorageButton.addEventListener('click', clearLocalStorage);
+
+
     // Initialize event listeners for delete buttons
     initializeDeleteButtons();
 
@@ -294,6 +301,8 @@ function deleteSpecificRow(event) {
     // saveTableData()
 }
 
+
+
 function exportTableToCSV() {
     // Get the table element
     let table = document.getElementById("media-table");
@@ -337,16 +346,16 @@ function exportTableToCSV() {
     link.click();
 }
 
-// This function toggles the visibility of the about section
-document.addEventListener("DOMContentLoaded", function() {
-    var aboutButton = document.getElementById("about");
-    var aboutSection = document.getElementById("about-section");
+// // This function toggles the visibility of the about section
+// document.addEventListener("DOMContentLoaded", function() {
+//     var aboutButton = document.getElementById("about");
+//     var aboutSection = document.getElementById("about-section");
 
-    aboutButton.addEventListener("click", function() {
-        if (aboutSection.style.display === "none") {
-            aboutSection.style.display = "block";
-        } else {
-            aboutSection.style.display = "none";
-        }
-    });
-});
+//     aboutButton.addEventListener("click", function() {
+//         if (aboutSection.style.display === "none") {
+//             aboutSection.style.display = "block";
+//         } else {
+//             aboutSection.style.display = "none";
+//         }
+//     });
+// });
