@@ -72,6 +72,10 @@ div,
 
 /* Button Styles */
 
+.logo a{
+  color: #FFFFFF;
+}
+
 .logo a:hover {
   text-decoration: none !important;
   color: #ccc !important;
