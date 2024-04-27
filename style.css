@@ -3,7 +3,7 @@
 :root {
   color-scheme: dark;;
   --header:  #313439 !important;
-  --body: #2a2f37 !important;
+  --body: #282c30 !important;
   --table: #343A40 !important;
   --footer: #313439 !important;
 }
@@ -373,5 +373,9 @@ li {
 
   .subtitle {
     display: none;
+  }
+
+  .delete {
+    font-size: 22px !important;
   }
 }
