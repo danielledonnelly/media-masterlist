@@ -22,8 +22,14 @@ body {
 }
 
 table {
-background-color: var(--table) !important;
+  background-color: var(--table) !important;
+  border-collapse: collapse;
 }
+
+tr {
+  border-top: 1px solid #505050 !important; 
+  border-bottom: 1px solid #505050 !important; /* Add a bottom border to each table row */
+  }
     
 p {
   font-size: medium;
@@ -221,13 +227,14 @@ li:hover {
 /* Footer Styles */
 
 footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   background-color: var(--footer);
   margin-top: 20px;
   text-align: center;
-  width: 100vw; 
-  padding: 1%;
-  position: fixed;
-  bottom: 0;
+  box-sizing: border-box; 
+  z-index: 999;
 }
 
 footer p {
@@ -336,8 +343,8 @@ li {
 }
 
 @media only screen and (max-width: 767px) {
-  .banner {
-    padding: 0 10px; 
+  header {
+  
   }
   
   .container {
@@ -367,11 +374,14 @@ li {
   }
   
   footer {
-    background-color: #343A40;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--footer);
     margin-top: 20px;
     text-align: center;
-    width: 100vw; 
-    padding: 1%;
+    box-sizing: border-box; 
+    z-index: 999;
   }
   
   #about-section {
