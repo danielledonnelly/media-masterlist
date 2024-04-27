@@ -82,11 +82,6 @@ div,
   color: #FFFFFF;
 }
 
-.logo a:hover {
-  text-decoration: none !important;
-  color: #ccc !important;
-}
-
 button {
   background-color: transparent;
   border: transparent;
@@ -157,16 +152,10 @@ header {
   color: white;
   font-size: 20px; 
   cursor: pointer; 
-  text-decoration: none;
-}
-
-.logo a {
-  color: white;
 }
 
 .logo:hover {
-color: #ccc !important; 
-text-decoration: none;
+  color: #ccc !important; 
 }
 
 .subtitle {
@@ -198,10 +187,6 @@ nav ul li:first-child {
 nav ul li a {
   text-decoration: none;
   color: #fff;
-}
-
-nav ul li a:hover {
-  text-decoration: none;
 }
 
 li{
