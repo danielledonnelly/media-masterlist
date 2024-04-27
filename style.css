@@ -336,6 +336,11 @@ li {
 }
 
 @media only screen and (max-width: 600px) {
+
+  body{
+    overflow-x: hidden;
+  }
+
   table {
     width: 100%;
     max-width: 100%;
@@ -344,6 +349,14 @@ li {
 
   table td {
     white-space: nowrap;
+  }
+
+  .table-container {
+    overflow-x: auto; /* Enable horizontal scrolling within the table container */
+  }
+  
+  #media-table {
+    width: 100%; /* Ensure the table fills its container */
   }
 
   .score-menu-dropdown-class {
