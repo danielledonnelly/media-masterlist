@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function manualAddRow() {
     addRow();
-    // T
+    // This was removed when manual saving was added
     // saveTableData();
 }
 
