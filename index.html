@@ -25,240 +25,65 @@
   <header>
     <div class="container">
       <div class="logo">
-        <a style="color:white;" href="index.html" onclick="window.location.reload()">Media Masterlist</a>
+        <a href="index.html" onclick="window.location.reload()">Media Masterlist</a>
     </div>
     <span class="subtitle">Welcome to the ultimate destination for reviewing and ranking your favourite media!</span>
       <nav>
           <ul>
-              <li id="about">About</li>
+              <li id="about"><a href="about.html">About</a></li>
               <li id="faqs"><a href="faq.html">FAQs</a></li>
           </ul>
       </nav>
   </div>
-    <!-- <img width="700" class = "banner image" src ="images\media-masterlist.png" id="logo" alt="Media Masterlist - The ultimate destination for rating, reviewing, and ranking your favourite media"/> -->
-    <!-- <p>Fill out the table below to create a list of your favourite media. Every cell of this table is editable, making this page perfect whether you're looking to create a top 10 list of your favourite books or a ranking of all the video games you've played.</p> -->
-    <!-- This is placeholder code for buttons at the top of the screen
-    <button type="button" class="btn btn-light">Home</button>
-    <button type="button" class="btn btn-light">About</button>
-    <button type="button" class="btn btn-light">Share</button> -->
   </header>
 
-  <div id="about-section" style="display: none;">
-    <p>
-      Whether you want to create a top 10 list of your favourite novels or rate some video games, Media Masterlist has you covered.
-    <br>
-      You can fill out the table, add or delete rows, edit column titles, save your progress, and export the table as a spreadsheet.
-    </p>
-    </div>
+  <div class="tbl-container bdr">
+    <table id="media-table" class="table table-hover table-dark">
+      <!-- This is the table head, which contains editable headers -->
+      <thead>
+        <tr class="thead">
+          <th scope="col" contenteditable>Title</th>
+          <th scope="col" contenteditable>Score</th>
+          <!--I want to remove the platform column, but it looks weird when I do-->
+          <th scope="col" contenteditable>Platform</th>
+          <th scope="col" contenteditable>Genre</th>
+          <th scope="col" contenteditable>Status</th>
+          <th scope="col" contenteditable>Comments</th>
+          <th></th>
+      </thead>
 
-    <div class="tbl-container bdr">
-      <table id="media-table" class="table table-hover table-dark">
-          <!-- This is the table head, which contains editable headers -->
-          <thead>
-              <tr class="thead">
-                  <th scope="col" contenteditable>Title</th>
-                  <th scope="col" contenteditable>Score</th>
-                  <th scope="col" contenteditable>Genre</th>
-                  <th scope="col" contenteditable>Status</th>
-                  <th scope="col" contenteditable>Comments</th>
-                  <th scope="col"></th>
-              </tr>
-          </thead>
-  
-          <!-- This is the table body -->
-          <!-- Each <tr> is a row, and each <td> is an individual cell  -->
-          <tbody id="media-table-body">
-              <tr>
-                  <td contenteditable=></td>
-                  <td scope="row">
-                      <div class="dropdown">
-                          <button name="score" class="btn btn-secondary dropdown-toggle score-dropdown-class" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Score</button>
-                          <div name="score" id="score-dropdown" class="dropdown-menu score-menu-dropdown-class" aria-labelledby="dropdownMenuButton1">
-                            <button class="dropdown-item" value="1">⭐</button>
-                            <button class="dropdown-item" value="2">⭐⭐</button>
-                            <button class="dropdown-item" value="3">⭐⭐⭐</button>
-                            <button class="dropdown-item" value="4">⭐⭐⭐⭐</button>
-                            <button class="dropdown-item" value="5">⭐⭐⭐⭐⭐</button>
-                          </div>
-                      </div>
-                  </td>
-                  <td contenteditable></td>
-                  <td contenteditable></td>
-                  <td contenteditable></td>
-                  <td><button class="delete fa fa-trash-o" style="font-size:22px !important"><i id="trash"></i></button></td>
-                </tr>
-                <tr>
-                  <td contenteditable=></td>
-                  <td scope="row">
-                      <div class="dropdown">
-                          <button name="score" class="btn btn-secondary dropdown-toggle score-dropdown-class" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Score</button>
-                          <div name="score" class="dropdown-menu score-menu-dropdown-class" aria-labelledby="dropdownMenuButton1">
-                            <button class="dropdown-item" value="1">⭐</button>
-                            <button class="dropdown-item" value="2">⭐⭐</button>
-                            <button class="dropdown-item" value="3">⭐⭐⭐</button>
-                            <button class="dropdown-item" value="4">⭐⭐⭐⭐</button>
-                            <button class="dropdown-item" value="5">⭐⭐⭐⭐⭐</button>
-                          </div>
-                      </div>
-                  </td>
-                  <td contenteditable></td>
-                  <td contenteditable></td>
-                  <td contenteditable></td>
-                  <td><button class="delete fa fa-trash-o" style="font-size:22px!important"></button></td>
-                </tr>
-                <tr>
-                  <td contenteditable=></td>
-                  <td scope="row">
-                      <div class="dropdown">
-                          <button name="score" class="btn btn-secondary dropdown-toggle score-dropdown-class" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Score</button>
-                          <div name="score" class="dropdown-menu score-menu-dropdown-class" aria-labelledby="dropdownMenuButton1">
-                            <button class="dropdown-item" value="1">⭐</button>
-                            <button class="dropdown-item" value="2">⭐⭐</button>
-                            <button class="dropdown-item" value="3">⭐⭐⭐</button>
-                            <button class="dropdown-item" value="4">⭐⭐⭐⭐</button>
-                            <button class="dropdown-item" value="5">⭐⭐⭐⭐⭐</button>
-                          </div>
-                      </div>
-                  </td>
-                  <td contenteditable></td>
-                  <td contenteditable></td>
-                  <td contenteditable></td>
-                  <td><button class="delete fa fa-trash-o" style="font-size:22px!important"></button></td>
-                </tr>
-                <tr>
-                  <td contenteditable=></td>
-                  <td scope="row">
-                      <div class="dropdown">
-                          <button name="score" class="btn btn-secondary dropdown-toggle score-dropdown-class" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Score</button>
-                          <div name="score" class="dropdown-menu score-menu-dropdown-class" aria-labelledby="dropdownMenuButton1">
-                            <button class="dropdown-item" value="1">⭐</button>
-                            <button class="dropdown-item" value="2">⭐⭐</button>
-                            <button class="dropdown-item" value="3">⭐⭐⭐</button>
-                            <button class="dropdown-item" value="4">⭐⭐⭐⭐</button>
-                            <button class="dropdown-item" value="5">⭐⭐⭐⭐⭐</button>
-                          </div>
-                      </div>
-                  </td>
-                  <td contenteditable></td>
-                  <td contenteditable></td>
-                  <td contenteditable></td>
-                  <td><button class="delete fa fa-trash-o" style="font-size:22px!important"></button></td>
-                </tr>
-                <tr>
-                  <td contenteditable=></td>
-                  <td scope="row">
-                      <div class="dropdown">
-                          <button name="score" class="btn btn-secondary dropdown-toggle score-dropdown-class" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Score</button>
-                          <div name="score" class="dropdown-menu score-menu-dropdown-class" aria-labelledby="dropdownMenuButton1">
-                            <button class="dropdown-item" value="1">⭐</button>
-                            <button class="dropdown-item" value="2">⭐⭐</button>
-                            <button class="dropdown-item" value="3">⭐⭐⭐</button>
-                            <button class="dropdown-item" value="4">⭐⭐⭐⭐</button>
-                            <button class="dropdown-item" value="5">⭐⭐⭐⭐⭐</button>
-                          </div>
-                      </div>
-                  </td>
-                  <td contenteditable></td>
-                  <td contenteditable></td>
-                  <td contenteditable></td>
-                  <td><button class="delete fa fa-trash-o" style="font-size:22px!important""></button></td>
-                </tr>
-                <tr>
-                  <td contenteditable=></td>
-                  <td scope="row">
-                      <div class="dropdown">
-                          <button name="score" class="btn btn-secondary dropdown-toggle score-dropdown-class" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Score</button>
-                          <div name="score" class="dropdown-menu score-menu-dropdown-class" aria-labelledby="dropdownMenuButton1">
-                            <button class="dropdown-item" value="1">⭐</button>
-                            <button class="dropdown-item" value="2">⭐⭐</button>
-                            <button class="dropdown-item" value="3">⭐⭐⭐</button>
-                            <button class="dropdown-item" value="4">⭐⭐⭐⭐</button>
-                            <button class="dropdown-item" value="5">⭐⭐⭐⭐⭐</button>
-                          </div>
-                      </div>
-                  </td>
-                  <td contenteditable></td>
-                  <td contenteditable></td>
-                  <td contenteditable></td>
-                  <td><button class="delete fa fa-trash-o" style="font-size:22px!important""></button></td>
-                </tr>
-                <tr>
-                  <td contenteditable=></td>
-                  <td scope="row">
-                      <div class="dropdown">
-                          <button name="score" class="btn btn-secondary dropdown-toggle score-dropdown-class" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Score</button>
-                          <div name="score" class="dropdown-menu score-menu-dropdown-class" aria-labelledby="dropdownMenuButton1">
-                            <button class="dropdown-item" value="1">⭐</button>
-                            <button class="dropdown-item" value="2">⭐⭐</button>
-                            <button class="dropdown-item" value="3">⭐⭐⭐</button>
-                            <button class="dropdown-item" value="4">⭐⭐⭐⭐</button>
-                            <button class="dropdown-item" value="5">⭐⭐⭐⭐⭐</button>
-                          </div>
-                      </div>
-                  </td>
-                  <td contenteditable></td>
-                  <td contenteditable></td>
-                  <td contenteditable></td>
-                  <td><button class="delete fa fa-trash-o" style="font-size:22px!important"></button></td>
-                </tr>
-                <tr>
-                  <td contenteditable=></td>
-                  <td scope="row">
-                      <div class="dropdown">
-                          <button name="score" class="btn btn-secondary dropdown-toggle score-dropdown-class" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Score</button>
-                          <div name="score" class="dropdown-menu score-menu-dropdown-class" aria-labelledby="dropdownMenuButton1">
-                            <button class="dropdown-item" value="1">⭐</button>
-                            <button class="dropdown-item" value="2">⭐⭐</button>
-                            <button class="dropdown-item" value="3">⭐⭐⭐</button>
-                            <button class="dropdown-item" value="4">⭐⭐⭐⭐</button>
-                            <button class="dropdown-item" value="5">⭐⭐⭐⭐⭐</button>
-                          </div>
-                      </div>
-                  </td>
-                  <td contenteditable></td>
-                  <td contenteditable></td>
-                  <td contenteditable></td>
-                  <td><button class="delete fa fa-trash-o"></button></td>
-                </tr>
-                <tr>
-                  <td contenteditable=></td>
-                  <td scope="row">
-                      <div class="dropdown">
-                          <button name="score" class="btn btn-secondary dropdown-toggle score-dropdown-class" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Score</button>
-                          <div name="score" class="dropdown-menu score-menu-dropdown-class" aria-labelledby="dropdownMenuButton1">
-                            <button class="dropdown-item" value="1">⭐</button>
-                            <button class="dropdown-item" value="2">⭐⭐</button>
-                            <button class="dropdown-item" value="3">⭐⭐⭐</button>
-                            <button class="dropdown-item" value="4">⭐⭐⭐⭐</button>
-                            <button class="dropdown-item" value="5">⭐⭐⭐⭐⭐</button>
-                          </div>
-                      </div>
-                  </td>
-                  <td contenteditable></td>
-                  <td contenteditable></td>
-                  <td contenteditable></td>
-                  <td><button class="delete fa fa-trash-o"></button></td>
-                </tr>
-                <tr>
-                  <td contenteditable=></td>
-                  <td scope="row">
-                      <div class="dropdown">
-                          <button name="score" class="btn btn-secondary dropdown-toggle score-dropdown-class" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Score</button>
-                          <div name="score" class="dropdown-menu score-menu-dropdown-class" aria-labelledby="dropdownMenuButton1">
-                            <button class="dropdown-item" value="1">⭐</button>
-                            <button class="dropdown-item" value="2">⭐⭐</button>
-                            <button class="dropdown-item" value="3">⭐⭐⭐</button>
-                            <button class="dropdown-item" value="4">⭐⭐⭐⭐</button>
-                            <button class="dropdown-item" value="5">⭐⭐⭐⭐⭐</button>
-                          </div>
-                      </div>
-                  </td>
-                  <td contenteditable></td>
-                  <td contenteditable></td>
-                  <td contenteditable></td>
-                  <td><button class="delete fa fa-trash-o"></button></td>
-                </tr>
-            
+      <!-- This is the table body -->
+      <!-- Each <tr> is a row, and each <td> is an individual cell  -->
+      <tbody id="media-table-body">
+          <td contenteditable scope="row"><td>
+          <div class="dropdown">
+            <button name="score"  class="btn btn-secondary dropdown-toggle score-dropdown-class" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Score</button>
+            <!-- you would THINK there's a better way to do this spacing but after extensive research: no-->
+            <!-- i tried styling in css but in order to get the width to stay consistent after a value is selected, you'd have to use dynamic event listeners-->
+            <div name="score" id="score-dropdown" class="dropdown-menu score-menu-dropdown-class" aria-labelledby="dropdownMenuButton1">
+                <button class="dropdown-item" id="score1" value="1"><!--&emsp;&emsp;&ensp;&nbsp;-->⭐<!--&emsp;&emsp;&ensp;&nbsp;--></button>
+                <button class="dropdown-item" id="score2" value="2"><!--&emsp;&nbsp;&ensp;&nbsp;-->⭐⭐<!--&emsp;&emsp;--></button>
+                <button class="dropdown-item" id="score3" value="3"><!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->⭐⭐⭐<!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--></button>
+                <button class="dropdown-item" id="score4" value="4"><!--&nbsp;&nbsp;&nbsp;-->⭐⭐⭐⭐<!--&nbsp;&nbsp;--></button>
+                <button class="dropdown-item" id="score5" value="5">⭐⭐⭐⭐⭐</button>
+            </div>
+          </div>
+          <td contenteditable>
+            <!--I found a way to make a placeholder field, but i don't want to anymore -->
+            <!-- <div class="input-group mb-3">
+            <input type="text" class="transparent" placeholder="PC" aria-label="PC" aria-describedby="basic-addon1" > -->
+          </td>
+          <td contenteditable></td>
+          <td contenteditable>
+            <!-- This is a status dropdown I changed my mind on.
+            <select>
+            <option></option>
+            <option>Want to Play</option>
+            <option>Currently Playing</option>
+            <option>Completed</option>
+            <option>Dropped</option></td> -->
+          <td contenteditable></td>
+          <td><button class="delete fa fa-trash-o"><i id="trash"></i></button></td>
       </tbody>
     </table>
   </div>
@@ -272,6 +97,7 @@
 <button id="save" class="btn btn-secondary">Save Table</button>
 <button id="clear" class="btn btn-secondary">Clear Table</button>
 <button id="export" class="btn btn-secondary">Export</button>
+<!-- <button id="local" class="btn btn-secondary">Clear Local Storage</button> -->
 </span>
 
 <footer>

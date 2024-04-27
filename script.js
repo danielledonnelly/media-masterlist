@@ -13,16 +13,15 @@ document.addEventListener('DOMContentLoaded', function() {
         window.onload = initialize;
         function initialize (){
             // Functions that are called immediately (get elements) go in initialize
-
-            // NOTE: I have removed the function below and added 10 rows in the HTML to make things cleaner when initialization occurs
+            
             // This represents the amount of rows we want JavaScript to add in immediately
             // Since we have 1 row defined in HTML and want 10 rows by default, we want 9
-            // const desiredRowsCount = 9;
-            // if (!saveTableData.triggered) {
-            //     for (let i = 0; i < desiredRowsCount; i++) {
-            //         addRow();
-            //     }
-            // }
+            const desiredRowsCount = 9;
+            if (!saveTableData.triggered) {
+                for (let i = 0; i < desiredRowsCount; i++) {
+                    addRow();
+                }
+            }
 
             // Add event listener to save table data whenever a cell's content changes
             // This was commented out to accommodate the manual save button
@@ -114,6 +113,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add event listener to the Export button
     exportButton.addEventListener('click', exportTableToCSV);
 
+    // // Get the Clear Local Storage button
+    // var localStorageButton = document.getElementById("local");
+
+    // // Add event listener to the Clear Local Storage button
+    // localStorageButton.addEventListener('click', clearLocalStorage);
+
+
     // Initialize event listeners for delete buttons
     initializeDeleteButtons();
 
@@ -130,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function manualAddRow() {
     addRow();
-    // T
+    // This was removed when manual saving was added
     // saveTableData();
 }
 
@@ -167,8 +173,6 @@ function addRow() {
     // Create delete button with trash icon
     let deleteButton = document.createElement("button");
     deleteButton.classList.add("delete", "fa", "fa-trash-o"); // Add appropriate classes
-    // You may be wondering why this is here instead of in a seperate CSS file; just trust me, it works better here
-    deleteButton.style.fontSize = "22px"; // Set font size
 
     // Append delete button to delete cell
     deleteCell.appendChild(deleteButton);
@@ -294,6 +298,8 @@ function deleteSpecificRow(event) {
     // saveTableData()
 }
 
+
+
 function exportTableToCSV() {
     // Get the table element
     let table = document.getElementById("media-table");
@@ -337,16 +343,16 @@ function exportTableToCSV() {
     link.click();
 }
 
-// This function toggles the visibility of the about section
-document.addEventListener("DOMContentLoaded", function() {
-    var aboutButton = document.getElementById("about");
-    var aboutSection = document.getElementById("about-section");
+// // This function toggles the visibility of the about section
+// document.addEventListener("DOMContentLoaded", function() {
+//     var aboutButton = document.getElementById("about");
+//     var aboutSection = document.getElementById("about-section");
 
-    aboutButton.addEventListener("click", function() {
-        if (aboutSection.style.display === "none") {
-            aboutSection.style.display = "block";
-        } else {
-            aboutSection.style.display = "none";
-        }
-    });
-});
+//     aboutButton.addEventListener("click", function() {
+//         if (aboutSection.style.display === "none") {
+//             aboutSection.style.display = "block";
+//         } else {
+//             aboutSection.style.display = "none";
+//         }
+//     });
+// });
