@@ -108,9 +108,12 @@ button {
 }
 
 .delete {
-  /* This styling doesn't apply to newly added rows, so I've added backup styling within my JS */
-  font-size: 22px;
+  font-size: 20px !important;
+  position: relative !important;
+  top: 50% !important;
+  transform: translateY(20%) !important;
 }
+
 
 /* Header CSS */
 
