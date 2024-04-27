@@ -224,14 +224,16 @@ footer {
   background-color: var(--footer);
   margin-top: 20px;
   text-align: center;
-  width: 100vw; /* Set the width to 100% of the viewport width */
+  width: 100vw; 
   padding: 1%;
-
+  position: fixed;
+  bottom: 0;
 }
 
 footer p {
   font-size: 14px;
   color: #fff; 
+  
 }
 
 span {
@@ -368,9 +370,7 @@ li {
     background-color: #343A40;
     margin-top: 20px;
     text-align: center;
-    width: 100vw; /* Set the width to 100% of the viewport width */
-    position: fixed;
-    bottom: 0;
+    width: 100vw; 
     padding: 1%;
   }
   

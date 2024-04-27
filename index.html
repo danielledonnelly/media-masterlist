@@ -44,7 +44,6 @@
         <tr class="thead">
           <th scope="col" contenteditable>Title</th>
           <th scope="col" contenteditable>Score</th>
-          <!--I want to remove the platform column, but it looks weird when I do-->
           <th scope="col" contenteditable>Genre</th>
           <th scope="col" contenteditable>Status</th>
           <th scope="col" contenteditable>Comments</th>
@@ -54,10 +53,10 @@
       <!-- This is the table body -->
       <!-- Each <tr> is a row, and each <td> is an individual cell  -->
       <tbody id="media-table-body">
+        <tr>
           <td contenteditable scope="row"><td>
           <div class="dropdown">
             <button name="score"  class="btn btn-secondary dropdown-toggle score-dropdown-class" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Score</button>
-            
             <div name="score" id="score-dropdown" class="dropdown-menu score-menu-dropdown-class" aria-labelledby="dropdownMenuButton1">
                 <button class="dropdown-item" id="score1" value="1">⭐</button>
                 <button class="dropdown-item" id="score2" value="2">⭐⭐</button>
@@ -70,7 +69,8 @@
           <td contenteditable></td>
           <td contenteditable></td>
           <td><button class="delete fa fa-trash-o"><i id="trash"></i></button></td>
-      </tbody>
+        </tr>
+        </tbody>
     </table>
   </div>
   <!-- The lines above mark the end of the table and table container div -->
