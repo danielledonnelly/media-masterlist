@@ -9,7 +9,7 @@
 :root {
   color-scheme: dark;;
   --header:  #313439 !important;
-  --body: #282c30 !important;
+  --body: #343A40 !important;
   --table: #343A40 !important;
   --footer: #313439 !important;
 }
@@ -28,8 +28,8 @@ table {
 
 tr {
   border-top: 1px solid #505050 !important; 
-  border-bottom: 1px solid #505050 !important; /* Add a bottom border to each table row */
-  }
+  border-bottom: 1px solid #505050 !important; 
+}
     
 p {
   font-size: medium;
