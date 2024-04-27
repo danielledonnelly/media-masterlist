@@ -135,7 +135,7 @@ header {
   padding: 20px 0;
   justify-content: space-between;
   align-items: center;
-  width: 120%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -212,7 +212,7 @@ li:hover {
 /* Footer Styles */
 
 footer {
-  width: 120%;
+  width: 100%;
   background-color: var(--footer);
   margin-top: 20px;
   text-align: center;
@@ -395,7 +395,7 @@ li {
     justify-content: space-between;
     padding: 20px 0;
     align-items: center;
-    width: 150% !important;
+    width: 100% !important;
     margin: 0 auto;
   }
   
@@ -426,7 +426,7 @@ li {
   }
   
   footer {
-    width: 150% !important;
+    width: 100% !important;
     background-color: var(--footer);
     margin-top: 20px;
     text-align: center;
