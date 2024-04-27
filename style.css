@@ -1,21 +1,22 @@
 /* General Styles */
 
 :root {
-  color-scheme: dark;
+  color-scheme: dark;;
+  --header:  #313439 !important;
+  --body: #2a2f37 !important;
+  --table: #343A40 !important;
+  --footer: #313439 !important;
 }
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #313439 !important;
+  background-color: var(--body) !important;
   color: #fff!important;
   overflow-x: hidden;
 }
 
-.banner {
-  width: 100%;
-  max-width: 1000px; 
-  margin: 0 auto; 
-  align-self: center;
+table {
+background-color: var(--table) !important;
 }
     
 p {
@@ -119,7 +120,7 @@ button {
 /* Header CSS */
 
 header {
-  background-color: #343A40;
+  background-color: var(--header) !important;
   padding: 20px 0;
   justify-content: space-between;
   align-items: center;
@@ -210,7 +211,7 @@ li:hover {
 /* Footer Styles */
 
 footer {
-  background-color: #343A40;
+  background-color: var(--footer);
   margin-top: 20px;
   text-align: center;
   width: 100vw; /* Set the width to 100% of the viewport width */
