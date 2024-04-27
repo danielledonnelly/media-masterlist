@@ -335,14 +335,19 @@ li {
   .logo {
     margin-bottom: 10px; 
   }
+
+  thead th,
+  td:nth-child(2) {
+  text-align: left;
+}
   
   .buttons {
     margin-top: 20px; 
   }
   
   .buttons button {
-    width: 120px; /* Adjust the width as needed */
-    height: 60px; /* Adjust the height as needed */
+    width: 120px; 
+    height: 60px; 
   }
   
   footer {
