@@ -370,6 +370,7 @@ li {
 
   header {
     width: 120% !important;
+    justify-content: space-between;
   }
   
   .container {
@@ -399,7 +400,7 @@ li {
   }
   
   footer {
-    width: 120% !important;
+    width: 150% !important;
     background-color: var(--footer);
     margin-top: 20px;
     text-align: center;
