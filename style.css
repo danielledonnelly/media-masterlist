@@ -84,6 +84,10 @@ div,
   color: #FFFFFF;
 }
 
+.logo:hover a {
+  color: #ccc;
+}
+
 button {
   background-color: transparent;
   border: transparent;
@@ -338,6 +342,9 @@ li {
 }
 
 @media only screen and (max-width: 600px) {
+  p {
+    font-size: small;
+  }
 
   body{
     overflow-x: hidden;
@@ -446,6 +453,6 @@ li {
   }
 
   .delete {
-    font-size: 22px !important;
+    font-size: 18px !important;
   }
 }
