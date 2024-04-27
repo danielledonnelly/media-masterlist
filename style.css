@@ -262,7 +262,7 @@ span {
 }
 
 .light-link:hover{
-    color:lightblue
+    color: #ccc;
   }
 
 /* Sections Styles */
@@ -325,7 +325,49 @@ li {
   color: #ccc !important;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 600px) {
+  table {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  table td {
+    white-space: nowrap;
+  }
+
+  .score-menu-dropdown-class {
+    font-size: 12px !important; /* Adjust the font size for the dropdown items */
+    max-width: 100px; /* Adjust the maximum width of the dropdown menu */
+  }
+
+  .score-dropdown-class {
+    font-size: 12px !important; /* Adjust the font size for the dropdown toggle button */
+    padding: 0.25rem 0.5rem; /* Adjust the padding as needed */
+    min-width: 80px; /* Adjust the minimum width of the dropdown toggle button */
+  }
+
+  /* Set a consistent vertical height for items with the class 'buttons' */
+  .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Style buttons within the 'buttons' span */
+  .buttons button {
+    max-height: 60px;
+  }
+
+  .subtitle {
+    display: none;
+  }
+
+  .buttons .btn {
+    font-size: 12px;
+    height: 50px;
+}
+
   header {
     width: 100% !important;
   }
