@@ -362,7 +362,7 @@ li {
     margin-top: 20px;
     text-align: center;
     box-sizing: border-box; 
-    z-index: 999;
+    padding: 1%
   }
   
   #about-section {
