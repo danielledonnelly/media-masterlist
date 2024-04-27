@@ -230,6 +230,16 @@ span {
   width: 100%;
 }
 
+.center-span.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-span.buttons button {
+  margin: 5px; /* Adjust the margin between buttons as needed */
+}
+
 /* Miscellaneous */
 
 .center-span {
