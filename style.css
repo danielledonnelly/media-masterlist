@@ -135,7 +135,7 @@ header {
   padding: 20px 0;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   margin: 0 auto;
 }
 
@@ -212,7 +212,7 @@ li:hover {
 /* Footer Styles */
 
 footer {
-  width: 100%;
+  width: 100vw;
   background-color: var(--footer);
   margin-top: 20px;
   text-align: center;
@@ -369,7 +369,7 @@ li {
 }
 
   header {
-    width: 100% !important;
+    width: 100vw !important;
   }
   
   .container {
@@ -399,12 +399,12 @@ li {
   }
   
   footer {
-    width: 100%;
+    width: 100vw !important;
     background-color: var(--footer);
     margin-top: 20px;
     text-align: center;
     box-sizing: border-box; 
-    padding: 1%
+    padding: 1%;
   }
   
   #about-section {
