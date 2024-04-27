@@ -153,7 +153,6 @@ function addRow() {
     let c3 = document.createElement("td");
     let c4 = document.createElement("td");
     let c5 = document.createElement("td");
-    let c6 = document.createElement("td");
     let deleteCell = document.createElement("td");
 
     // Insert data to cells
@@ -161,14 +160,12 @@ function addRow() {
     c3.innerText = " ";
     c4.innerText = " ";
     c5.innerText = " ";
-    c6.innerText = " ";
 
     // Make appropriate cells editable
     c1.setAttribute("contenteditable", "true");
     c3.setAttribute("contenteditable", "true");
     c4.setAttribute("contenteditable", "true");
     c5.setAttribute("contenteditable", "true");
-    c6.setAttribute("contenteditable", "true");
 
     // Create delete button with trash icon
     let deleteButton = document.createElement("button");
@@ -230,7 +227,6 @@ function addRow() {
     row.appendChild(c3);
     row.appendChild(c4);
     row.appendChild(c5);
-    row.appendChild(c6);
     row.appendChild(deleteCell);
 
     // Append row to table body
