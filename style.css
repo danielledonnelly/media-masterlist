@@ -11,10 +11,6 @@
   box-sizing: border-box;
 }
 
-html{
-  overflow-x: hidden !important;
-}
-
 :root {
   color-scheme: dark;;
   --header:  #313439 !important;
@@ -30,6 +26,7 @@ body {
   overflow-x: hidden !important;
   margin: 0; 
   padding: 0; 
+  width: 100%;
 }
 
 table {
