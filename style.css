@@ -12,7 +12,7 @@
 }
 
 html{
-  overflow:  !important;
+  overflow: hidden !important;
 }
 
 :root {
