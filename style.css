@@ -343,7 +343,7 @@ li {
 
 @media only screen and (max-width: 600px) {
   p {
-    font-size: small;
+    font-size: 60%;
   }
 
   body{
@@ -360,7 +360,7 @@ li {
   }
 
   thead{
-    font-size: 60%;
+    font-size: 65%;
   }
 
   .table-container {
