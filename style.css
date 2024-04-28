@@ -99,9 +99,12 @@ button {
 
 .buttons {
   display: flex;
+  overflow-x: hidden;
   justify-self: center;
   justify-content: space-around !important;
   width: 100%;
+  padding: auto;
+  margin: auto;
 }
  
 .buttons button {
