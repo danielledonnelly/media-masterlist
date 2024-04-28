@@ -21,13 +21,12 @@ body {
   font-family: Arial, sans-serif;
   background-color: var(--body) !important;
   color: #fff!important;
-  overflow-x: hidden !important;
   margin: 0; 
   padding: 0; 
   width: 100%;
 }
 
-table {
+/* table {
   background-color: var(--table) !important;
   max-width: 100%;
   border-collapse: collapse;
@@ -37,7 +36,7 @@ tr {
   border-top: 1px solid #505050 !important; 
   border-bottom: 1px solid #505050 !important; 
   max-width: 100%
-}
+} */
     
 p {
   font-size: medium;
@@ -52,10 +51,10 @@ td:nth-child(2) {
   text-align: center;
 }
 
-div,
+/* div,
 .transparent { 
   width: 100%;
-}
+} */
 
 /* Dropdown Styles */
 
