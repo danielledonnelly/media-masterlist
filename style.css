@@ -362,31 +362,10 @@ li {
     height: 50px;
   }
 
-  header {
+  header, footer {
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    z-index: 999; /* Ensure header stays on top */
+    position: relative;
 }
-
-footer {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    background-color: var(--footer);
-    margin-top: 20px;
-    text-align: center;
-    box-sizing: border-box;
-    padding: 1%;
-    z-index: 999; /* Ensure footer stays on top */
-}
-
-.table-container {
-  
-}
-
 
 
 }
