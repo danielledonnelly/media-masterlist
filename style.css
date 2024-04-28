@@ -29,13 +29,14 @@ body {
 
 table {
   background-color: var(--table) !important;
-  width: 100%;
+  max-width: 100%;
   border-collapse: collapse;
 }
 
 tr {
   border-top: 1px solid #505050 !important; 
   border-bottom: 1px solid #505050 !important; 
+  max-width: 100%
 }
     
 p {
@@ -99,11 +100,12 @@ button {
 .buttons {
   display: flex;
   justify-content: center;
-  width: 100%; /* Set the width to 100% of the viewport width */
+  max-width: 100%; 
+  box-sizing: border-box;
 }
 
 .buttons button {
-  margin: 0 5px; /* Adjust the margin between buttons as needed */
+  margin: 0 5px;
   align-self: center;
 }
 
