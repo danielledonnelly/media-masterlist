@@ -222,6 +222,7 @@ footer {
   margin-top: 20px;
   text-align: center;
   box-sizing: border-box; 
+  padding: 1%;
   z-index: 999;
 }
 
