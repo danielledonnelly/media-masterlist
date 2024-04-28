@@ -102,11 +102,13 @@ button {
   display: flex;
   justify-content: center;
   width: 100%; /* Set the width to 100% of the viewport width */
+  max-width: 100%; /* Ensure buttons don't overflow */
 }
 
 .buttons button {
   margin: 0 5px; /* Adjust the margin between buttons as needed */
   align-self: center;
+  max-width: 100%; /* Ensure buttons don't overflow */
 }
 
 .btn-secondary {
