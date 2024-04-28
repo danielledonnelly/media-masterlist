@@ -51,16 +51,16 @@ td:nth-child(2) {
   text-align: center;
 }
 
-div,
-.transparent { 
-  width: 100%;
-}
-
 /* Dropdown Styles */
 
 .dropdown-menu{
   background-color: #313439 !important;
   align-items: center !important;
+  overflow-x: visible !important;
+  width: 100% !important;
+}
+
+.dropdown-menu.show {
   overflow-x: visible !important;
 }
 
