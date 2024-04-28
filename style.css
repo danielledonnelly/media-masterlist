@@ -4,11 +4,6 @@
 }
 
 /* General Styles */
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box !important; 
-}
 
 :root {
   color-scheme: dark;;
@@ -25,7 +20,6 @@ body {
   overflow-x: hidden;
   margin: 0; 
   padding: 0; 
-  overflow-x: hidden;
 }
 
 table {
@@ -37,7 +31,6 @@ table {
 tr {
   border-top: 1px solid #505050 !important; 
   border-bottom: 1px solid #505050 !important; 
-  overflow: hidden;
 }
     
 p {
@@ -53,30 +46,33 @@ td:nth-child(2) {
   text-align: center;
 }
 
+div,
+.transparent { 
+  width: 100%;
+}
+
 /* Dropdown Styles */
 
 .dropdown-menu{
   background-color: #313439 !important;
   align-items: center !important;
-  overflow-x: visible !important;
-  width: 100% !important;
-}
-
-.dropdown-menu.show {
-  overflow-x: visible !important;
 }
 
 .dropdown-item{
+  width: 100% !important;
   align-items: center !important;
-  overflow-x: visible !important;
 }
-
 
 /* The transparent class is here for if I add any placeholder fields */
 .transparent { 
   background-color: transparent !important;
   border-color: transparent !important;
   text-align: center;
+}
+
+.dropdown-menu{
+  background-color: #313439 !important;
+  align-items: center !important;
 }
 
 /* Button Styles */
@@ -136,7 +132,6 @@ header {
   align-items: center !important;
   width: 100% !important;
   right: 0 !important;
-  overflow-x: hidden;
 }
 
 .container {
@@ -173,7 +168,6 @@ nav ul {
   padding: 0;
   display: flex;
   align-items: center;
-  float: right !important;
 }
 
 nav ul li {
@@ -220,7 +214,6 @@ footer {
   padding: 1%;
   z-index: 999;
   right: 0 !important;
-  overflow-x: hidden !important;
 }
 
 footer p {
@@ -340,14 +333,14 @@ li {
 
 @media only screen and (max-width: 600px) {
   body {
-    margin: 0 !important;
+    overflow-x: hidden;
   }
   
 table {
-  margin: 0 !important;
   width: 100%;
   max-width: 100%;
-  overflow-x: auto !important;
+  display: block;
+  overflow-x: auto;
 }
 
   thead {
@@ -382,17 +375,14 @@ table {
 
   .dropdown-toggle{
     font-size: 11px !important;
-    overflow-x: visible !important;
   }
 
   .dropdown-menu{
     font-size: 11px !important;
-    overflow-x: visible !important;
   }
   
   .dropdown-item{
     font-size: 11px !important;
-    overflow-x: visible !important;
   }
  
 }
