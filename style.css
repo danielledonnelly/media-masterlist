@@ -219,7 +219,7 @@ li:hover {
 footer {
   width: 100%;
   background-color: var(--footer);
-  margin-top: 20px;
+  margin-top:5%;
   text-align: center;
   box-sizing: border-box; 
   padding: 1%;
@@ -406,6 +406,7 @@ li {
     align-items: center !important;
     width: 100% !important;
     overflow-x: hidden !important;
+    box-sizing: border-box !important;
   }
   
   .container {
