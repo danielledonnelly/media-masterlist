@@ -24,7 +24,7 @@ body {
   overflow-x: hidden;
   margin: 0; 
   padding: 0; 
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 table {
@@ -99,7 +99,7 @@ button {
 .buttons {
   display: flex;
   justify-content: center;
-  width: 100%; /* Set the width to 100% of the viewport width */
+  width: 100vw;
 }
 
 .buttons button {
@@ -341,9 +341,10 @@ li {
 }
 
 @media only screen and (max-width: 600px) {
-  body {
+  
+body {
     margin: 0 !important;
-  }
+}
   
 table {
   margin: 0 !important;
@@ -352,15 +353,15 @@ table {
   overflow-x: auto !important;
 }
 
-  thead {
+thead {
     font-size: 65%;
-  }
+}
 
-  .buttons {
+.buttons {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
   .buttons button {
     max-height: 60px;
@@ -376,11 +377,10 @@ table {
   }
   
   .container {
-    overflow: hidden;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+    flex-direction: column;
+    text-align: center; 
+    }
+  
 
   .dropdown-toggle{
     font-size: 11px !important;
