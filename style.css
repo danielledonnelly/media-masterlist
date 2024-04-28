@@ -127,10 +127,11 @@ button {
 
 header {
   background-color: var(--header) !important;
-  padding: 20px 0;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
+  padding: 20px 0 !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 100% !important;
+  right: 0 !important;
 }
 
 .container {
@@ -205,14 +206,14 @@ li:hover {
 /* Footer Styles */
 
 footer {
-  width: 100%;
+  width: 100% !important;
   background-color: var(--footer);
   margin-top:5%;
-  text-align: center;
-  box-sizing: border-box; 
+  text-align: center !important;
+  box-sizing: border-box !important;
   padding: 1%;
   z-index: 999;
-  right: 0;
+  right: 0 !important;
 }
 
 footer p {
@@ -334,11 +335,13 @@ li {
   body {
     overflow-x: hidden;
   }
-
-  table {
-    width: 100vw;
-    overflow-x: auto;
-  }
+  
+table {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  overflow-x: auto;
+}
 
   thead {
     font-size: 65%;
@@ -359,29 +362,8 @@ li {
   }
 
   .buttons .btn {
-    font-size: 12px;
+    font-size: 11px;
     height: 50px;
-  }
-
-  header {
-    background-color: var(--header) !important;
-    padding: 20px 0;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    position: relative; /* Ensure the header stays in its natural flow */
-    z-index: 999; /* Ensure header stays on top */
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    right: 0;
-}
-  }
-  
-  footer{
-    right: 0;
   }
   
   .container {
@@ -390,5 +372,18 @@ li {
     justify-content: space-between;
     align-items: center;
   }
+
+  .dropdown-toggle{
+    font-size: 11px !important;
+  }
+
+  .dropdown-menu{
+    font-size: 11px !important;
+  }
   
+  .dropdown-item{
+    font-size: 11px !important;
+  }
+ 
+}
 
