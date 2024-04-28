@@ -9,10 +9,6 @@
   margin: 0;
 }
 
-html {
-  overflow-x: hidden !important;
-}
-
 :root {
   color-scheme: dark;;
   --header:  #313439 !important;
@@ -28,7 +24,6 @@ body {
   overflow-x: hidden;
   margin: 0; 
   padding: 0; 
-  overflow-x: hidden !important;
 }
 
 table {
@@ -103,7 +98,7 @@ button {
 .buttons {
   display: flex;
   justify-content: center;
-  width: 100%
+  width: 100%; /* Set the width to 100% of the viewport width */
 }
 
 .buttons button {
@@ -137,12 +132,12 @@ button {
 
 header {
   background-color: var(--header) !important;
-  padding: 2% 0 !important;
+  padding: 20px 0 !important;
   justify-content: space-between !important;
   align-items: center !important;
-  width: 100vw !important;
+  width: 100% !important;
   right: 0 !important;
-  overflow-x: hidden !important;
+  overflow-x: hidden;
 }
 
 .container {
@@ -183,7 +178,7 @@ nav ul {
 }
 
 nav ul li {
-  margin-left: 18%;
+  margin-left: 20px;
 }
 
 nav ul li:first-child {
@@ -218,7 +213,7 @@ li:hover {
 /* Footer Styles */
 
 footer {
-  width: 100 vw !important;
+  width: 100% !important;
   background-color: var(--footer);
   margin-top:5%;
   text-align: center !important;
@@ -243,11 +238,10 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box !important;
 }
 
 .center-span.buttons button {
-  margin: 1%;
+  margin: 5px; /* Adjust the margin between buttons as needed */
 }
 
 /* Miscellaneous */
@@ -285,7 +279,7 @@ span {
     color: #ccc;
 }
 
-/* Sections Styles */
+/* Sections Styles
 
 #about-section {
   display: flex;
@@ -310,7 +304,7 @@ span {
 
 #faq-section {
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 100%;
   font-size: 16px;
   padding-left: 200px;
   padding-right: 200px;
@@ -327,7 +321,7 @@ span {
 .question{
   background-color: #343A40;
   padding: 3%;
-}
+} */
 
 /* List Styles */
 
@@ -346,10 +340,9 @@ li {
 }
 
 @media only screen and (max-width: 600px) {
-  
-body {
+  body {
     margin: 0 !important;
-}
+  }
   
 table {
   margin: 0 !important;
@@ -358,16 +351,15 @@ table {
   overflow-x: auto !important;
 }
 
-thead {
+  thead {
     font-size: 65%;
-}
+  }
 
-.buttons {
-  box-sizing: border-box !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   .buttons button {
     max-height: 60px;
@@ -383,10 +375,11 @@ thead {
   }
   
   .container {
-    flex-direction: column;
-    text-align: center; 
-    }
-  
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   .dropdown-toggle{
     font-size: 11px !important;
