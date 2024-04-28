@@ -98,13 +98,11 @@ button {
 }
 
 .buttons {
-  display: inline-flex;
-  overflow-x: hidden;
+  display: inline-flex !important;
+  overflow-x: hidden !important;
   justify-self: center;
   justify-content: space-around !important;
   width: 100%;
-  padding: auto;
-  margin: auto;
 }
  
 .buttons button {
