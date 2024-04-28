@@ -230,12 +230,11 @@ footer p {
 span {
   width: 100%;
 }
-/* 
+
 .center-span.buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
+  justify-content: center !important;
+  align-items: center !important;
+} 
 
 .center-span.buttons button {
   margin: 5px; /* Adjust the margin between buttons as needed */
@@ -243,11 +242,10 @@ span {
 
 /* Miscellaneous */
 
-/* .center-span {
-  display: flex;
+ .center-span {
   justify-content: center;
   align-items: center;
-} */
+} 
 
 .static {
   cursor: default;
