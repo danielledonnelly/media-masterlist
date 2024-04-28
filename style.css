@@ -372,7 +372,6 @@ li {
     position: relative; /* Ensure the header stays in its natural flow */
     z-index: 999; /* Ensure header stays on top */
     width: 100%;
-    padding: 10px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -381,6 +380,9 @@ li {
 }
   }
   
+  footer{
+    right: 0;
+  }
   
   .container {
     overflow: hidden;
