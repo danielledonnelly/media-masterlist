@@ -362,10 +362,33 @@ li {
     height: 50px;
   }
 
-  header, footer {
+  header {
+    background-color: var(--header) !important;
+    padding: 20px 0;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    position: relative;
-}
+    position: relative; /* Ensure the header stays in its natural flow */
+    z-index: 999; /* Ensure header stays on top */
+  }
 
+  footer {
+    width: 100%;
+    background-color: var(--footer);
+    margin-top:5%;
+    text-align: center;
+    box-sizing: border-box; 
+    padding: 1%;
+    position: relative; /* Ensure the footer stays in its natural flow */
+    z-index: 999; /* Ensure footer stays on top */
+  }
+  
+  .container {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
 
 }
