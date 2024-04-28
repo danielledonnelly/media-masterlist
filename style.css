@@ -137,9 +137,6 @@ header {
   justify-content: space-between !important;
   align-items: center !important;
   width: 100% !important;
-  position: relative !important;
-  right: 0 !important;
-  overflow-x: hidden;
 }
 
 .container {
@@ -222,9 +219,6 @@ footer {
   box-sizing: border-box !important;
   padding: 1%;
   z-index: 999;
-  position: static;
-  right: 0 !important;
-  overflow-x: hidden !important;
 }
 
 footer p {
