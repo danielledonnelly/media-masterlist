@@ -17,7 +17,7 @@
   --footer: #313439 !important;
 }
 
-body {
+/* body {
   font-family: Arial, sans-serif;
   background-color: var(--body) !important;
   color: #fff!important;
@@ -25,7 +25,7 @@ body {
   margin: 0; 
   padding: 0; 
   width: 100%;
-}
+} */
 
 table {
   background-color: var(--table) !important;
@@ -101,11 +101,11 @@ button {
   justify-content: center;
   width: 100%; /* Set the width to 100% of the viewport width 
 } */
-
+/* 
 .buttons button {
-  margin: 0 5px; /* Adjust the margin between buttons as needed */
+  margin: 0 5px; 
   align-self: center;
-}
+} */
 
 .btn-secondary {
   background-color: #30363c !important;
@@ -230,12 +230,12 @@ footer p {
 span {
   width: 100%;
 }
-
+/* 
 .center-span.buttons {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .center-span.buttons button {
   margin: 5px; /* Adjust the margin between buttons as needed */
@@ -243,11 +243,11 @@ span {
 
 /* Miscellaneous */
 
-.center-span {
+/* .center-span {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .static {
   cursor: default;
@@ -352,11 +352,11 @@ table {
     font-size: 65%;
   }
 
-  .buttons {
+  /* .buttons {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+  } */
 
   .buttons button {
     max-height: 60px;
