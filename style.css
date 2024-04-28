@@ -19,7 +19,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: var(--body) !important; 
+  /* background-color: var(--body) !important;  */
   color: #fff!important;
   overflow-x: hidden !important;
   margin: 0; 
@@ -98,7 +98,7 @@ button {
 }
 
 .buttons {
-  display: flex;
+  display: inline-flex;
   overflow-x: hidden;
   justify-self: center;
   justify-content: space-around !important;
