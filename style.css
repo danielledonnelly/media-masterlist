@@ -29,12 +29,6 @@ body {
   color: #fff!important;
   overflow-x: hidden;
 }
-
-.banner {
-  width: 100%;
-  margin: 0 auto; 
-  align-self: center;
-}
     
 p {
   font-size: medium;
@@ -56,16 +50,8 @@ div,
 
 /* Dropdown Styles */
 
-.dropdown-menu{
-  background-color: #313439 !important;
-  align-items: center !important;
-  max-width: 160px !important;
-}
-
 .dropdown-item{
   width: 100% !important;
-  align-items: center !important;
-  max-width: 160px !important;
 }
 
 /* The transparent class is here for if I add any placeholder fields */
@@ -78,7 +64,6 @@ div,
 .dropdown-menu{
   background-color: #313439 !important;
   align-items: center !important;
-  max-width: 160px !important;
 }
 
 /* Button Styles */
@@ -94,7 +79,7 @@ button {
 }
 
 .buttons button {
-  margin-right: 10px;
+  margin-right: 1%;
   align-self: center;
 }
 
@@ -105,7 +90,7 @@ button {
 }
 
 .buttons button {
-  margin: 0 5px; /* Adjust the margin between buttons as needed */
+  margin: 0 1%; /* Adjust the margin between buttons as needed */
 }
 
 .btn-secondary {
@@ -137,7 +122,7 @@ button {
 
 header {
   background-color: #343A40;
-  padding: 20px 0;
+  padding: 2% 0;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -153,11 +138,15 @@ header {
 }
 
 .logo {
-  max-width: 150px;
+  max-width: 100%;
   color: white;
   font-size: 20px; 
   cursor: pointer; 
   text-decoration: none;
+}
+
+.logo a {
+  color: white;
 }
 
 .logo:hover {
@@ -184,7 +173,7 @@ nav ul {
 }
 
 nav ul li {
-  margin-left: 20px;
+  margin-left: 20%;
 }
 
 nav ul li:first-child {
@@ -224,8 +213,8 @@ li:hover {
 
 footer {
   background-color: #343A40;
-  padding: 20px 0;
-  margin-top: 20px;
+  padding: 2% 0;
+  margin-top: 2%;
   text-align: center;
   width: 100%; /* Set the width to 100% of the viewport width */
 
