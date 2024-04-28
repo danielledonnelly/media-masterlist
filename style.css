@@ -460,4 +460,8 @@ li {
   .delete {
     font-size: 18px !important;
   }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
 }
