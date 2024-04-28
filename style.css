@@ -1,6 +1,7 @@
 /* Set initial scale to 1 */
 @viewport {
   width: device-width;
+  zoom: 1.0;
 }
 
 /* General Styles */
@@ -340,6 +341,7 @@ li {
 @media only screen and (max-width: 600px) {
   body {
     margin: 0 !important;
+    touch-action: pan-x;
   }
   
 table {
