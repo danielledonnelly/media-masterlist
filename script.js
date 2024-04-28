@@ -142,7 +142,6 @@ function manualAddRow() {
 
 // This defines what happens when we add a row (this happens 9 times when page loads, and occurs whenever Add Row button is clicked)
 function addRow() {
-    console.log("addRow");
     // Get the table body element in which you want to add row
     let table = document.getElementById("media-table-body");
     // Create row element
@@ -166,13 +165,6 @@ function addRow() {
     c3.setAttribute("contenteditable", "true");
     c4.setAttribute("contenteditable", "true");
     c5.setAttribute("contenteditable", "true");
-
-    // Create delete button with trash icon
-    let deleteButton = document.createElement("button");
-    deleteButton.classList.add("delete", "fa", "fa-trash-o"); // Add appropriate classes
-
-    // Append delete button to delete cell
-    deleteCell.appendChild(deleteButton);
 
     // Create a new dropdown menu for the score
     let dropdown = document.createElement("div");
@@ -209,7 +201,6 @@ function addRow() {
             // Save the selected value to a variable or perform other actions as needed
             console.log("Selected value:", this.value);
         });
-        dropdownMenu.appendChild(dropdownItem);
     }
 
     // Append the dropdown menu to the dropdown
@@ -221,6 +212,13 @@ function addRow() {
     // Append the dropdown to the second cell
     c2.appendChild(dropdown);
 
+    // Create delete button with trash icon
+    let deleteButton = document.createElement("button");
+    deleteButton.classList.add("delete", "fa", "fa-trash-o");
+
+    // Append delete button to delete cell
+    deleteCell.appendChild(deleteButton);
+
     // Append cells to row
     row.appendChild(c1);
     row.appendChild(c2);
@@ -231,10 +229,8 @@ function addRow() {
 
     // Append row to table body
     table.appendChild(row);
-
-    // For some reason, local storage stops working when I saveTableData in addRow
-    // saveTableData()
 }
+
 
 // This defines what happens when we click the clear button.
 function clearTable() {
