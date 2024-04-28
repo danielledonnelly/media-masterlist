@@ -36,6 +36,7 @@ table {
 tr {
   border-top: 1px solid #505050 !important; 
   border-bottom: 1px solid #505050 !important; 
+  overflow: hidden;
 }
     
 p {
@@ -69,16 +70,12 @@ td:nth-child(2) {
   overflow-x: visible !important;
 }
 
+
 /* The transparent class is here for if I add any placeholder fields */
 .transparent { 
   background-color: transparent !important;
   border-color: transparent !important;
   text-align: center;
-}
-
-.dropdown-menu{
-  background-color: #313439 !important;
-  align-items: center !important;
 }
 
 /* Button Styles */
