@@ -371,7 +371,7 @@ li {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 999; /* Ensure header stays on top */
+    z-index: 999; 
 }
 
 footer {
@@ -383,15 +383,15 @@ footer {
     text-align: center;
     box-sizing: border-box;
     padding: 1%;
-    position: relative; /* Ensure footer stays in document flow */
+    position: relative;
     bottom: 0;
     right: 0;
-    z-index: 998; /* Ensure footer stays above other content */
+    z-index: 998; 
 }
 
+.table-container {
+    position: relative; 
+    z-index: 1; 
+}
 
-  .table-container{
-    position: relative;
-    z-index: 999;
-  }
 }
