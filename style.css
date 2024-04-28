@@ -142,7 +142,7 @@ header {
 }
 
 .container {
-  overflow: hidden;
+  overflow-x: hidden;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -374,7 +374,7 @@ table {
   }
   
   .container {
-    overflow: hidden;
+    overflow-x: hidden;
     display: flex;
     justify-content: space-between;
     align-items: center;
