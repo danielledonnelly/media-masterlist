@@ -341,7 +341,7 @@ li {
 
 @media only screen and (max-width: 600px) {
   body {
-    overflow-x: hidden !important;
+    overflow-x: !important;
     margin: 0 !important;
   }
   
@@ -349,8 +349,7 @@ table {
   margin: 0 !important;
   width: 100%;
   max-width: 100%;
-  display: block;
-  overflow-x: auto;
+  overflow-x: auto !important;
 }
 
   thead {
@@ -389,7 +388,6 @@ table {
 
   .dropdown-menu{
     font-size: 11px !important;
-    width: 30% !important;
   }
   
   .dropdown-item{
