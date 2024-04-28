@@ -56,13 +56,11 @@ div,
 .dropdown-menu{
   background-color: #313439 !important;
   align-items: center !important;
-  max-width: 160px !important;
 }
 
 .dropdown-item{
   width: 100% !important;
   align-items: center !important;
-  max-width: 160px !important;
 }
 
 /* The transparent class is here for if I add any placeholder fields */
@@ -75,7 +73,6 @@ div,
 .dropdown-menu{
   background-color: #313439 !important;
   align-items: center !important;
-  max-width: 160px !important;
 }
 
 /* Button Styles */
@@ -93,11 +90,6 @@ button {
   border: transparent;
 }
 
-.buttons button {
-  margin-right: 10px;
-  align-self: center;
-}
-
 .buttons {
   display: flex;
   justify-content: center;
@@ -106,6 +98,7 @@ button {
 
 .buttons button {
   margin: 0 5px; /* Adjust the margin between buttons as needed */
+  align-self: center;
 }
 
 .btn-secondary {
@@ -115,10 +108,6 @@ button {
 
 .btn-secondary:hover {
   background-color: #434a50 !important;
-}
-
-.btn-secondary:hover {
-  background-color: #434a50 !important; /* Adjust the background color on hover */
 }
 
 .dropdown-item:hover {
@@ -145,7 +134,6 @@ header {
 }
 
 .container {
-  margin: 0 auto;
   overflow: hidden;
   display: flex;
   justify-content: space-between;
@@ -279,7 +267,7 @@ span {
 
 .light-link:hover{
     color: #ccc;
-  }
+}
 
 /* Sections Styles */
 
@@ -401,6 +389,9 @@ li {
 }
 
   header {
+    position: fixed; /* Set position to fixed */
+    top: 0; 
+    z-index: 1000; 
     padding: 20px 0 !important;
     justify-content: space-between !important;
     align-items: center !important;
