@@ -234,7 +234,7 @@ footer p {
 } 
 
 .center-span.buttons button {
-  margin: 5px; /* Adjust the margin between buttons as needed */
+  margin: 5px; 
 }
 
 /* Miscellaneous */
@@ -364,7 +364,7 @@ table {
   
   .container {
     overflow: hidden;
-    display: flex;
+    /* display: flex; */
     justify-content: space-between;
     align-items: center;
   }
