@@ -99,6 +99,7 @@ button {
 }
 
 .buttons {
+  display: flex;
   justify-self: center;
   justify-content: space-around !important;
   width: 100%;
@@ -343,6 +344,10 @@ li {
   body {
     margin-bottom: 100% !important;
   }
+
+  header{
+    max-height: 10%;
+  }
   
 table {
   margin-top: 17%;
@@ -400,7 +405,7 @@ table {
   }
 
   footer {
-    height: 8%
+    max-height: 8%
   }
  
   footer p {
