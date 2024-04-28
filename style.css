@@ -224,7 +224,7 @@ footer {
   box-sizing: border-box !important;
   padding: 1%;
   z-index: 999;
-  position: fixed !important;
+  position: static;
   right: 0 !important;
   overflow-x: hidden !important;
 }
