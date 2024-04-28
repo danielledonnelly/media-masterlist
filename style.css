@@ -339,9 +339,11 @@ li {
 @media only screen and (max-width: 600px) {
   body {
     overflow-x: hidden;
+    margin: 0 !important;
   }
   
 table {
+  margin: 0 !important;
   width: 100%;
   max-width: 100%;
   display: block;
