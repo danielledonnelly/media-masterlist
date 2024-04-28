@@ -212,6 +212,7 @@ footer {
   box-sizing: border-box; 
   padding: 1%;
   z-index: 999;
+  right: 0;
 }
 
 footer p {
@@ -376,6 +377,7 @@ li {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    right: 0;
 }
   }
   
@@ -388,4 +390,3 @@ li {
   }
   
 
-}
