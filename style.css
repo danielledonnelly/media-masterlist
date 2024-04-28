@@ -389,15 +389,12 @@ li {
 }
 
   header {
-    position: fixed; /* Set position to fixed */
-    top: 0; 
-    z-index: 1000; 
-    padding: 20px 0 !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    width: 100% !important;
-    overflow-x: hidden !important;
-    box-sizing: border-box !important;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
   
   .container {
