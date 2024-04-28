@@ -364,7 +364,7 @@ li {
   }
 
   .table-container {
-    overflow-x: auto; /* Enable horizontal scrolling within the table container */
+    overflow-x: auto; 
   }
   
   #media-table {
@@ -401,11 +401,12 @@ li {
 }
 
   header {
-    justify-content: space-between;
-    padding: 20px 0;
-    align-items: center;
-    width: 100vw !important;
-    margin: 0 auto;
+    padding: 20px 0 !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    overflow-x: hidden !important;
   }
   
   .container {
