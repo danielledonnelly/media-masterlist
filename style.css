@@ -136,6 +136,7 @@ header {
   align-items: center !important;
   width: 100% !important;
   right: 0 !important;
+  overflow-x: hidden;
 }
 
 .container {
@@ -219,6 +220,7 @@ footer {
   padding: 1%;
   z-index: 999;
   right: 0 !important;
+  overflow-x: hidden !important;
 }
 
 footer p {
@@ -338,7 +340,7 @@ li {
 
 @media only screen and (max-width: 600px) {
   body {
-    overflow-x: hidden;
+    overflow-x: hidden !important;
     margin: 0 !important;
   }
   
@@ -386,6 +388,7 @@ table {
 
   .dropdown-menu{
     font-size: 11px !important;
+    width: 30% !important;
   }
   
   .dropdown-item{
