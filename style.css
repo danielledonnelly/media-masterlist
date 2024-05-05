@@ -334,7 +334,7 @@ main{
   margin-top: 60px;
 }
 
-  thead {
+thead {
     font-size: 65%;
   }
 
@@ -375,6 +375,10 @@ main{
   .dropdown-item{
     font-size: 11px !important;
     overflow-x: visible !important;
+  }
+
+  .delete {
+    font-size: 30px;
   }
 
   footer {
