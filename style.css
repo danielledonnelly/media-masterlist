@@ -108,7 +108,7 @@ button {
 main {
   margin-bottom: 80px !important;
   margin-top: 70px;
-
+  background-color: #343A40;
 }
 
 
@@ -232,10 +232,10 @@ footer {
   background-color: var(--footer);
   text-align: center !important;
   box-sizing: border-box !important;
-  z-index: 998;
-  position: fixed;
+  z-index: -1;
   left: 0;
   bottom: 0; 
+  position: fixed;
 }
 
 footer p {
@@ -248,7 +248,8 @@ footer p {
 .center-span.buttons {
   justify-content: center !important;
   align-items: center !important;
-  z-index: 999; /* Ensure buttons are on top of the footer */
+  z-index: 999; 
+  height: 50px;
 } 
 
 .center-span.buttons button {
