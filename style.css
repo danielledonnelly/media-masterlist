@@ -106,9 +106,10 @@ button {
 } 
 
 main {
-  margin-bottom: 80px !important;
+  margin-bottom: 60px !important;
   margin-top: 70px;
   background-color: #343A40;
+  
 }
 
 
@@ -249,7 +250,7 @@ footer p {
   justify-content: center !important;
   align-items: center !important;
   z-index: 999; 
-  height: 50px;
+  height: 80px;
 } 
 
 .center-span.buttons button {
@@ -285,6 +286,14 @@ span {
     color: #ccc;
 }
 
+.question {
+  background-color: #313439;
+  padding: 20px;
+}
+
+h3 {
+  font-size: 16px !important;
+}
 /* List Styles */
 
 li {
@@ -299,6 +308,10 @@ li {
 #faqs:hover,
 #faqs:hover a {
   color: #ccc !important;
+}
+
+.dropdown-menu {
+  max-width: 55px !important;
 }
 
 /* Other Pages */
