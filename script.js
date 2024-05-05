@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add event listener to the Add Row button
     addRowButton.addEventListener('click', manualAddRow);
     // Add event listener to the Add Row button (mobile)
-    addRowButton.addEventListener('touchstart', manualAddRow);
+    // addRowButton.addEventListener('touchstart', manualAddRow);
 
     // Get the Clear button
     let clearButton = document.getElementById("clear");
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add event listener to the Clear button
     clearButton.addEventListener('click', clearTable);
     // Add event listener to the Clear button (mobile)
-    clearButton.addEventListener('touchstart', clearTable);
+    // clearButton.addEventListener('touchstart', clearTable);
 
     // // Get the Delete button
     // let deleteButton = document.getElementById("delete");
@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add event listener to the Save Table button
     saveButton.addEventListener('click', saveTableData);
     // Add event listener to the Save Table button (table)
-    saveButton.addEventListener('touchstart', saveTableData);
+    // saveButton.addEventListener('touchstart', saveTableData);
 
     // Get the Export button
     let exportButton = document.getElementById("export");
@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add event listener to the Export button
     exportButton.addEventListener('click', exportTableToCSV);
     // Add event listener to the Export button (mobile)
-    exportButton.addEventListener('touchstart', exportTableToCSV);
+    // exportButton.addEventListener('touchstart', exportTableToCSV);
 
     // // Get the Clear Local Storage button
     // var localStorageButton = document.getElementById("local");
