@@ -236,7 +236,7 @@ footer {
   z-index: -1;
   left: 0;
   bottom: 0; 
-  position: fixed;
+  position: relative;
 }
 
 footer p {
@@ -288,7 +288,7 @@ span {
 
 .question {
   background-color: #313439;
-  padding: 20px;
+  padding: 40px;
 }
 
 h3 {
