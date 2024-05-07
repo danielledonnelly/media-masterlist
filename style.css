@@ -288,7 +288,12 @@ span {
 
 .question {
   background-color: #313439;
-  padding: 40px;
+  padding: 1%;
+  box-sizing: border-box !important;
+  margin-left: 10px;
+  /*margin-right doesn't seem like it's doing anything!*/
+  margin-right: 100px;
+  display: block;
 }
 
 h3 {
