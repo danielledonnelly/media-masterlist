@@ -236,7 +236,7 @@ footer {
   z-index: -1;
   left: 0;
   bottom: 0; 
-  position: relative;
+  position: fixed;
 }
 
 footer p {
