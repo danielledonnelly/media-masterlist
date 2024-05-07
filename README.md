@@ -1,3 +1,5 @@
 # media-masterlist-project
-This is a placeholder for a Get Coding project I'm working on.
-It's very basic and I'm just experimenting with table styles for now.
+
+Welcome to Media Masterlist, the ultimate destination for reviewing and ranking your favourite media!
+
+Visit the live site here: danielledonnelly.github.io/media-masterlist-project/
