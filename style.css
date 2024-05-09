@@ -19,7 +19,8 @@
 }
 
 html {
-  width: 100% !important;
+  /* width: 100% !important; */
+  margin: 0 !important;
 }
 
 main {
@@ -38,12 +39,13 @@ body {
   padding: 0; 
   width: 100% !important;
   /* height: 100% !important; */
-
+  
 
   display: flex;
   min-height: 100vh;
   flex-direction: column;
   justify-content: space-between;
+  float: left;
 } 
 
 table {
@@ -96,11 +98,6 @@ header {
 thead th,
 td:nth-child(2) {
   text-align: center;
-}
-
-div,
-.transparent { 
-  width: 100%;
 }
 
 .dropdown-menu{
@@ -222,16 +219,20 @@ li:hover {
 /* Footer Styles */
 
 footer {
-  width: 100% !important;
+  width: 100vw !important;
   height: 60px; 
   background-color: var(--footer);
   text-align: center !important;
   box-sizing: border-box !important;
   z-index: 999;
+  /* right: 0;
+  bottom: 0;  */
+  /* position: relative !important; */
+  display: flex;
   left: 0;
-  bottom: 0; 
-  position: relative !important;
-  
+  bottom: 0;
+
+  z-index: 1;
 }
 
 footer p {
