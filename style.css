@@ -39,8 +39,7 @@ table {
   background-color: var(--table) !important;
   width: 100%;
   border-collapse: collapse;
-  overflow-x: scroll;
-  
+  overflow-x: auto !important;
 }
 
 tr {
