@@ -37,6 +37,13 @@ body {
   margin: 0; 
   padding: 0; 
   width: 100% !important;
+  /* height: 100% !important; */
+
+
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
 } 
 
 table {
@@ -137,7 +144,6 @@ button {
 
 .buttons {
   display: flex;
-  justify-self: center;
   justify-content: space-around !important;
   width: 100%;
 }
@@ -221,10 +227,11 @@ footer {
   background-color: var(--footer);
   text-align: center !important;
   box-sizing: border-box !important;
-  z-index: -1;
+  z-index: 999;
   left: 0;
   bottom: 0; 
-  position: fixed;
+  position: relative !important;
+  
 }
 
 footer p {
