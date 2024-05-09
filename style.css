@@ -18,6 +18,13 @@
   --footer: #313439 !important;
 }
 
+main {
+  margin-bottom: 60px !important;
+  margin-top: 70px;
+  background-color: #343A40;
+  
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: var(--body) !important; 
@@ -47,6 +54,32 @@ p {
   margin: auto; */
 }
 
+header {
+  background-color: var(--header) !important;
+  padding: 20px 0 !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 100% !important;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: white;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.container {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 /* Table Styles */
 
 thead th,
@@ -58,8 +91,6 @@ div,
 .transparent { 
   width: 100%;
 }
-
-/* Dropdown Styles */
 
 .dropdown-menu{
   background-color: #313439 !important;
@@ -79,6 +110,13 @@ div,
 }
 
 /* Button Styles */
+
+.logo {
+  max-width: 150px;
+  color: white;
+  font-size: 20px; 
+  cursor: pointer; 
+}
 
 .logo a{
   color: #FFFFFF;
@@ -105,14 +143,6 @@ button {
   align-self: center;
 } 
 
-main {
-  margin-bottom: 60px !important;
-  margin-top: 70px;
-  background-color: #343A40;
-  
-}
-
-
 .btn-secondary {
   background-color: #30363c !important;
   border-color: #565656 !important;
@@ -132,52 +162,6 @@ main {
   position: relative !important;
   top: 50% !important;
   transform: translateY(25%) !important;
-}
-
-
-/* Header CSS */
-
-header {
-  background-color: var(--header) !important;
-  padding: 20px 0 !important;
-  justify-content: space-between !important;
-  align-items: center !important;
-  width: 100% !important;
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 999;
-}
-
-/* .table-container{
-  margin-top: 11.5%
-} */
-
-.container {
-  overflow: hidden;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-
-
-.logo {
-  max-width: 150px;
-  color: white;
-  font-size: 20px; 
-  cursor: pointer; 
-}
-
-.logo:hover {
-  color: #ccc !important; 
-}
-
-.subtitle {
-  font-size: 16px;
-  color: white;
-  flex-grow: 1;
-  text-align: center;
 }
 
 /* Navigation Styles */
@@ -324,6 +308,7 @@ li {
   padding: 32px;
 }
 
+/* Mobile Styles */
 @media only screen and (max-width: 600px) {
 
   header{
@@ -390,5 +375,12 @@ main{
   footer p {
     font-size: 11px;
     color: #fff; 
+  }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .subtitle {
+    display: none;
   }
 }
