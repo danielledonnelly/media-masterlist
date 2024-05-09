@@ -336,7 +336,6 @@ main{
     z-index: 999;
   } 
 
-
   .subtitle {
     display: none;
   }
@@ -382,5 +381,9 @@ main{
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
   .subtitle {
     display: none;
+  }
+
+  main {
+    margin-bottom: 30px !important;
   }
 }
