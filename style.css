@@ -20,7 +20,7 @@
 
 html {
   /* width: 100% !important; */
-  margin: 0 !important;
+  /* margin: 0 !important; */
 }
 
 main {
@@ -273,12 +273,14 @@ footer p {
 
 .question {
   background-color: #313439;
-  padding: 1%;
-  box-sizing: border-box !important;
-  margin-left: 10px;
-  /*margin-right doesn't seem like it's doing anything!*/
-  margin-right: 100px;
+  margin: auto;
   display: block;
+  padding: 20px;
+  margin: 20px;
+  align-content: center;
+  align-self: center;
+  /* doesn't seem to work */
+  margin-left: 20px !important;
 }
 
 h3 {
@@ -306,7 +308,8 @@ li {
 
 /* Other Pages */
 #faq-section {
-  padding: 32px;
+  padding: auto;
+  margin: auto;
 }
 
 /* Mobile Styles */
