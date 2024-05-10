@@ -120,7 +120,7 @@ td:nth-child(2) {
 /* Button Styles */
 
 .logo {
-  max-width: 150px;
+
   color: white;
   font-size: 20px; 
   cursor: pointer; 
@@ -261,17 +261,6 @@ footer p {
 
 .static:hover {
   color: white;
-}
-
-.subtitle {
-  font-size: 16px;
-  color: white;
-  flex-grow: 1;
-  text-align: center;
-}
-
-span {
-  width: 100%;
 }
 
 .light-link {
