@@ -128,7 +128,7 @@ button {
 .buttons {
   display: flex;
   justify-content: space-around !important;
-  width: 100%;
+  width: 100% !important;
   margin-bottom: 70px;
 }
  
