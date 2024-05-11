@@ -89,6 +89,7 @@ td:nth-child(2) {
   background-color: var(--body) !important;
   align-items: center !important;
   overflow-x: visible !important;
+  background-color: #30363C !important;
 }
 
 .dropdown-item{
@@ -137,7 +138,7 @@ button {
 } 
 
 .btn-secondary {
-  background-color: #30363c !important;
+  background-color: #30363C !important;
   border-color: #565656 !important;
 }
 
@@ -286,6 +287,7 @@ li {
 
 .dropdown-menu {
   max-width: 55px !important;
+  border: 10px white !important;
 }
 
 /* Mobile Styles */
