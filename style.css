@@ -80,10 +80,11 @@ header {
 
 /* Table Styles */
 
-thead th,
-td:nth-child(2) {
-  text-align: center;
+td {
+  font-size: 18px !important
 }
+
+
 
 .dropdown-menu{
   background-color: var(--body) !important;
@@ -295,6 +296,10 @@ li {
 
 @media only screen and (max-width: 600px) {
 
+  td {
+    font-size: 10px !important
+  }
+
   header{
     max-height: 60px; 
   }
@@ -324,7 +329,7 @@ li {
   }
 
   .buttons .btn {
-    font-size: 11px;
+    font-size: 10px;
     height: 50px;
   }
   
@@ -334,17 +339,17 @@ li {
   }
 
   .dropdown-toggle{
-    font-size: 11px !important;
+    font-size: 10px !important;
     overflow-x: visible !important;
   }
 
   .dropdown-menu{
-    font-size: 11px !important;
+    font-size: 10px !important;
     overflow-x: visible !important;
   }
   
   .dropdown-item{
-    font-size: 11px !important;
+    font-size: 10px !important;
     overflow-x: visible !important;
   }
 
@@ -364,6 +369,11 @@ li {
 
 /* Tablet Styles */
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
+  
+  td {
+    font-size: 18px !important
+  }
+  
   .subtitle {
     display: none;
   }
