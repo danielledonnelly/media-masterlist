@@ -16,7 +16,6 @@
 }
 
 main {
-  margin-bottom: 20px !important;
   margin-top: 70px;
   background-color: var(--body);
   width: 100% !important;
@@ -82,7 +81,7 @@ header {
 /* Table Styles */
 
 td {
-  font-size: 18px !important;
+  font-size: 14px !important;
   padding-left: 20px !important;
 }
 
@@ -134,7 +133,7 @@ button {
   display: flex;
   justify-content: space-around !important;
   width: 100% !important;
-  margin-bottom: 70px;
+  margin-bottom: 75px;
 }
  
 .buttons button {
@@ -235,7 +234,7 @@ footer p {
   justify-content: center !important;
   align-items: center !important;
   z-index: 999; 
-  height: 80px;
+  height: 60px;
 } 
 
 .center-span.buttons button {
@@ -302,7 +301,7 @@ li {
 @media only screen and (max-width: 600px) {
 
   td {
-    font-size: 10px !important
+    font-size: 11px !important
   }
 
   header{
@@ -320,7 +319,7 @@ li {
   }
 
   thead {
-    font-size: 65%;
+    font-size: 12px;
   }
 
   .buttons {
@@ -335,7 +334,7 @@ li {
 
   .buttons .btn {
     font-size: 10px;
-    height: 50px;
+    height: 40px;
   }
   
   .container {
@@ -376,7 +375,7 @@ li {
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
   
   td {
-    font-size: 18px !important
+    font-size: 14px !important
   }
   
   .subtitle {
@@ -384,7 +383,7 @@ li {
   }
 
   main {
-    margin-bottom: 30px !important;
+    margin-bottom: 0px !important;
   }
 
   .question{
