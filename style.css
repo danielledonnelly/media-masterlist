@@ -206,7 +206,7 @@ li:hover {
 /* Footer Styles */
 
 footer {
-  width: 100vw !important;
+  width: 100% !important;
   height: 60px; 
   background-color: var(--footer);
   text-align: center !important;
