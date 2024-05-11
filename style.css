@@ -211,7 +211,6 @@ footer {
   display: flex;
   left: 0;
   bottom: 0;
-  z-index: 1;
   position: fixed;
 }
 
@@ -253,14 +252,12 @@ footer p {
 
 .question {
   background-color: #313439;
-  margin: auto;
   display: block;
-  padding: 20px;
-  margin: 20px;
-  align-content: center;
-  align-self: center;
-  /* doesn't seem to work */
-  margin-left: 20px !important;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-left: 180px;
+  margin-right: 180px;
 }
 
 h3 {
@@ -269,6 +266,11 @@ h3 {
 
 li {
   list-style-type: none;
+}
+
+#faq-section{
+  margin-top: 20px !important;
+  margin-bottom: 40px !important;
 }
 
 .delete:hover,
@@ -281,11 +283,6 @@ li {
 
 .dropdown-menu {
   max-width: 55px !important;
-}
-
-#faq-section {
-  padding: auto;
-  margin: auto;
 }
 
 /* Mobile Styles */
@@ -353,6 +350,11 @@ li {
     font-size: 11px;
     color: #fff; 
   }
+
+  .question{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
 
 /* Tablet Styles */
@@ -363,5 +365,10 @@ li {
 
   main {
     margin-bottom: 30px !important;
+  }
+
+  .question{
+    margin-left: 20px;
+    margin-right: 20px;
   }
 }
