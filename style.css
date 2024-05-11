@@ -23,13 +23,9 @@ body {
   font-family: Arial, sans-serif;
   background-color: var(--body) !important; 
   color: #fff!important;
-  /* overflow-x: hidden !important; */
   margin: 0; 
   padding: 0; 
   width: 100% !important;
-  /* height: 100% !important; */
-  
-
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -51,8 +47,6 @@ tr {
     
 p {
   font-size: medium;
-  /* padding: 10px;
-  margin: auto; */
 }
 
 header {
@@ -75,7 +69,6 @@ header {
 }
 
 .container {
-  /* overflow: hidden; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -214,9 +207,6 @@ footer {
   text-align: center !important;
   box-sizing: border-box !important;
   z-index: 999;
-  /* right: 0;
-  bottom: 0;  */
-  /* position: relative !important; */
   display: flex;
   left: 0;
   bottom: 0;
@@ -275,13 +265,10 @@ footer p {
 h3 {
   font-size: 16px !important;
 }
-/* List Styles */
 
 li {
   list-style-type: none;
 }
-
-/* Interaction Styles */
 
 .delete:hover,
 #about:hover,
@@ -295,13 +282,13 @@ li {
   max-width: 55px !important;
 }
 
-/* Other Pages */
 #faq-section {
   padding: auto;
   margin: auto;
 }
 
 /* Mobile Styles */
+
 @media only screen and (max-width: 600px) {
 
   header{
@@ -360,7 +347,7 @@ main{
   }
 
   footer {
-    max-height: 60px; /* Adjusted to accommodate footer */
+    max-height: 60px; 
   }
  
   footer p {
