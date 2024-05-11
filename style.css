@@ -6,11 +6,11 @@
 
 :root {
   color-scheme: dark;
-  --header:  #313439 !important;
+  --header:  #303238 !important;
   --body: #343A40 !important;
   --table: #343A40 !important;
-  --footer: #313439 !important;
-  --faqs: #2b3039 !important;
+  --footer: #303238 !important;
+  --faqs: #323439 !important;
   --border: #505050 !important;
   --hover: #ccc !important;
 }
@@ -255,9 +255,10 @@ footer p {
 }
 
 .question {
-  background-color: #2b3039;
+  background-color: #3f464b;
   display: block;
   padding: 10px;
+  padding-top: 20px;
   padding-left: 30px;
   padding-right: 30px;
   margin-left: 180px;
@@ -356,8 +357,8 @@ li {
   }
 
   .question{
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
 
