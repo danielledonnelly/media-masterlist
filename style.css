@@ -10,12 +10,15 @@
   --body: #343A40 !important;
   --table: #343A40 !important;
   --footer: #313439 !important;
+  --faqs: #2b3039 !important;
+  --border: #505050 !important;
+  --hover: #ccc !important;
 }
 
 main {
   margin-bottom: 20px !important;
   margin-top: 70px;
-  background-color: #343A40;
+  background-color: var(--body);
   width: 100% !important;
 }
 
@@ -41,8 +44,8 @@ table {
 }
 
 tr {
-  border-top: 1px solid #505050 !important; 
-  border-bottom: 1px solid #505050 !important; 
+  border-top: 1px solid var(--border) !important; 
+  border-bottom: 1px solid var(--border) !important; 
 }
     
 p {
@@ -83,7 +86,7 @@ td:nth-child(2) {
 }
 
 .dropdown-menu{
-  background-color: #313439 !important;
+  background-color: var(--body) !important;
   align-items: center !important;
   overflow-x: visible !important;
 }
@@ -109,11 +112,11 @@ td:nth-child(2) {
 }
 
 .logo a{
-  color: #FFFFFF;
+  color: white;
 }
 
 .logo:hover a {
-  color: #ccc;
+  color: var(--hover);
 }
 
 button {
@@ -139,11 +142,11 @@ button {
 }
 
 .btn-secondary:hover {
-  background-color: #434a50 !important;
+  background-color: #434A50 !important;
 }
 
 .dropdown-item:hover {
-  background-color: #43494E !important;
+  background-color: #434A50 !important;
 }
 
 .delete {
@@ -176,7 +179,7 @@ nav ul li:first-child {
 
 nav ul li a {
   text-decoration: none;
-  color: #fff;
+  color: white;
 }
 
 li{
@@ -184,11 +187,11 @@ li{
 }
 
 li:hover {
-  color: #ccc !important; 
+  color: var(--hover) !important; 
   }
 
 .static{
-  cursor:default
+  cursor: default;
 }
 
 .static:hover {
@@ -196,7 +199,7 @@ li:hover {
   }
 
 #faqs:hover {
-    color: #ccc !important;
+    color: var(--hover) !important;
   }
 
 /* Footer Styles */
@@ -216,7 +219,7 @@ footer {
 
 footer p {
   font-size: 14px;
-  color: #fff; 
+  color: white; 
   padding: 10px;
   margin: auto;
 }
@@ -243,7 +246,7 @@ footer p {
 }
 
 .light-link {
-  color:lightblue
+  color:lightblue;
 }
 
 .light-link:hover{
@@ -251,7 +254,7 @@ footer p {
 }
 
 .question {
-  background-color: #313439;
+  background-color: #2b3039;
   display: block;
   padding: 10px;
   padding-left: 30px;
@@ -278,7 +281,7 @@ li {
 #about:hover a,
 #faqs:hover,
 #faqs:hover a {
-  color: #ccc !important;
+  color: var(--hover) !important;
 }
 
 .dropdown-menu {
@@ -348,7 +351,6 @@ li {
  
   footer p {
     font-size: 11px;
-    color: #fff; 
   }
 
   .question{
