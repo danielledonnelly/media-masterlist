@@ -285,12 +285,19 @@ li {
   margin-bottom: 60px !important;
 }
 
+a:hover,
 .delete:hover,
 #about:hover,
 #about:hover a,
 #faqs:hover,
 #faqs:hover a {
   color: var(--hover) !important;
+  text-decoration: none !important;
+}
+
+.logo{
+  color: green;
+  
 }
 
 .dropdown-menu {
