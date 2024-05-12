@@ -118,15 +118,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add event listener to the Export button
     exportButton.addEventListener('click', exportTableToCSV);
-    // Add event listener to the Export button (mobile)
-    // exportButton.addEventListener('touchstart', exportTableToCSV);
-
-    // // Get the Clear Local Storage button
-    // var localStorageButton = document.getElementById("local");
-
-    // // Add event listener to the Clear Local Storage button
-    // localStorageButton.addEventListener('click', clearLocalStorage);
-
 
     // Initialize event listeners for delete buttons
     initializeDeleteButtons();
@@ -342,17 +333,3 @@ function exportTableToCSV() {
     document.body.appendChild(link); // Required for Firefox
     link.click();
 }
-
-// // This function toggles the visibility of the about section
-// document.addEventListener("DOMContentLoaded", function() {
-//     var aboutButton = document.getElementById("about");
-//     var aboutSection = document.getElementById("about-section");
-
-//     aboutButton.addEventListener("click", function() {
-//         if (aboutSection.style.display === "none") {
-//             aboutSection.style.display = "block";
-//         } else {
-//             aboutSection.style.display = "none";
-//         }
-//     });
-// });
