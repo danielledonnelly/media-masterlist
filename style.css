@@ -252,7 +252,7 @@ footer p {
 }
 
 .light-link {
-  color:lightblue;
+  color:lightblue !important;
 }
 
 .light-link:hover{
