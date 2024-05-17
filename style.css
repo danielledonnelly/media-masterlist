@@ -133,7 +133,7 @@ button {
   display: flex;
   justify-content: space-around !important;
   width: 100% !important;
-  margin-bottom: 75px;
+  margin-bottom: 20px;
 }
  
 .buttons button {
@@ -293,11 +293,6 @@ a:hover,
 #faqs:hover a {
   color: var(--hover) !important;
   text-decoration: none !important;
-}
-
-.logo{
-  color: green;
-  
 }
 
 .dropdown-menu {
