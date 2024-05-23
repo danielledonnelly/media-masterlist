@@ -110,13 +110,12 @@ thead th {
 /* Button Styles */
 
 .logo {
-
   color: white;
   font-size: 20px; 
   cursor: pointer; 
 }
 
-.logo a{
+.logo a {
   color: white;
 }
 
