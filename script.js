@@ -213,7 +213,7 @@ function addRow() {
 
     // Create delete button with trash icon
     let deleteButton = document.createElement("button");
-    deleteButton.classList.add("delete", "fa", "fa-trash-o");
+    deleteButton.classList.add("delete", "fa", "fa-trash");
 
     // Append delete button to delete cell
     deleteCell.appendChild(deleteButton);
